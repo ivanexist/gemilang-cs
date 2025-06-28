@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  city        String
+  country     String
+  Project     Project[]
+}
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  clientid      Int
+  serviceid     Int
+  name          String
+  description   Json
+  location      String
+  yearcompleted String[]
+  images        Json?
+  url           String?  @unique
+  Client        Client   @relation(fields: [clientid], references: [id], map: "Project_clientId_fkey")
+  Service       Service  @relation(fields: [serviceid], references: [id], map: "Project_serviceId_fkey")
+}
+
+model Service {
+  id          Int       @id @default(autoincrement())
+  url         String    @unique
+  name        String
+  icon        String
+  image       String
+  description Json
+  Project     Project[]
+}
