@@ -83,7 +83,10 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                   <div className="flex flex-col gap-4 font-openSans text-lg">
                     <div className="flex pt-4">
                       <p className="font-semibold text-blue-600">
-                        Client
+                        <ReactSVG
+                          className="h-28 w-28 text-center text-blue-500 transition-colors duration-300"
+                          src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client.svg`}
+                        />
                         <span className="font-medium ml-4 text-masala-800">
                           {project.Client.name}
                         </span>
@@ -100,8 +103,8 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                     <div className="flex">
                       <p className="font-semibold text-blue-600">
                         <ReactSVG
-                          className="w-28 h-28 text-center text-blue-500 transition-colors duration-300"
-                          src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/${service.icon}`}
+                          className="text-center text-blue-500 transition-colors duration-300"
+                          src={`https://github.com/ivanexist/gemilang-cs/blob/master/public/assets/icons/kategori.svg`}
                         />
                         <span className="font-medium ml-4 text-masala-800">
                           {project.Service.name}
@@ -110,7 +113,10 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                     </div>
                     <div className="flex">
                       <p className="font-semibold text-blue-600">
-                        Year Completed
+                        <ReactSVG
+                          className="text-center text-blue-500 transition-colors duration-300"
+                          src={`https://github.com/ivanexist/gemilang-cs/blob/master/public/assets/icons/date.svg`}
+                        />
                         <span className="font-medium ml-4 text-masala-800">
                           {project.yearcompleted.join(", ")}
                         </span>
