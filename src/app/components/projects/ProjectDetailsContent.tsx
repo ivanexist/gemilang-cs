@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperCore from "swiper";
+import { ReactSVG } from "react-svg";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -98,7 +99,10 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                     </div>
                     <div className="flex">
                       <p className="font-semibold text-blue-600">
-                        Service Type
+                        <ReactSVG
+                          className="w-28 h-28 text-center text-blue-500 transition-colors duration-300"
+                          src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/${service.icon}`}
+                        />
                         <span className="font-medium ml-4 text-masala-800">
                           {project.Service.name}
                         </span>
