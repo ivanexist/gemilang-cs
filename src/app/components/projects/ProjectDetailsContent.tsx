@@ -92,9 +92,15 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                       </p>
                     </div>
                     <div className="flex">
-                      <p className="font-semibold text-blue-600">
-                        Location
-                        <span className="font-medium ml-4 text-masala-800">
+                      <p className="flex font-semibold text-blue-600">
+                        <svg
+                          className="h-6 w-6"
+                          viewBox="0 0 64 64"
+                          fill="#00cc00"
+                        >
+                          <path d="M32,0C18.7,0,8,10.7,8,24c0,5.2,1.7,10,4.6,13.9l16,24C29.4,63.3,30.7,64,32,64s2.6-0.7,3.3-1.8l16-24C54.3,34,56,29.2,56,24 C56,10.7,45.3,0,32,0z M32,32c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S36.4,32,32,32z" />
+                        </svg>
+                        <span className="font-medium ml-2 text-masala-800">
                           {project.location}
                         </span>
                       </p>
@@ -103,7 +109,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                       <p className="font-semibold text-blue-600">
                         <ReactSVG
                           className="text-center text-blue-500 transition-colors duration-300"
-                          src={`https://github.com/ivanexist/gemilang-cs/blob/master/public/assets/icons/kategori.svg`}
+                          src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/kategori.svg`}
                         />
                         <span className="font-medium ml-4 text-masala-800">
                           {project.Service.name}
@@ -114,7 +120,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                       <p className="font-semibold text-blue-600">
                         <ReactSVG
                           className="text-center text-blue-500 transition-colors duration-300"
-                          src={`https://github.com/ivanexist/gemilang-cs/blob/master/public/assets/icons/date.svg`}
+                          src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date.svg`}
                         />
                         <span className="font-medium ml-4 text-masala-800">
                           {project.yearcompleted.join(", ")}
