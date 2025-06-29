@@ -106,9 +106,9 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                       </p>
                     </div>
                     <div className="flex">
-                      <p className="font-semibold text-blue-600">
+                      <p className="flex font-semibold text-blue-600">
                         <ReactSVG
-                          className="text-center text-blue-500 transition-colors duration-300"
+                          className="text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/kategori.svg`}
                         />
                         <span className="font-medium ml-4 text-masala-800">
@@ -117,7 +117,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                       </p>
                     </div>
                     <div className="flex">
-                      <p className="font-semibold text-blue-600">
+                      <p className="flex font-semibold text-blue-600">
                         <ReactSVG
                           className="text-center text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date.svg`}
