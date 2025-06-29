@@ -40,12 +40,11 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={10}
                 slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
+                navigation={false}
+                pagination={{ clickable: true, type: "bullets" }}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                 onSlideChange={handleSlideChange}
                 initialSlide={currentIndex}
-                className="relative sm:h-80 md:h-[500px] lg:h-[800px] px-1"
               >
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
@@ -61,7 +60,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                           alt={`slide-${index}`}
                           width={5000}
                           height={3000}
-                          className="w-full h-full object-cover object-center shadow-lg"
+                          className="w-full h-full object-cover object-center"
                         />
                       </motion.div>
                     </AnimatePresence>
@@ -93,13 +92,6 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                     </div>
                     <div className="flex">
                       <p className="flex font-semibold text-blue-600">
-                        <svg
-                          className="h-6 w-6"
-                          viewBox="0 0 64 64"
-                          fill="#00cc00"
-                        >
-                          <path d="M32,0C18.7,0,8,10.7,8,24c0,5.2,1.7,10,4.6,13.9l16,24C29.4,63.3,30.7,64,32,64s2.6-0.7,3.3-1.8l16-24C54.3,34,56,29.2,56,24 C56,10.7,45.3,0,32,0z M32,32c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S36.4,32,32,32z" />
-                        </svg>
                         <span className="font-medium ml-2 text-masala-800">
                           {project.location}
                         </span>
