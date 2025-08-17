@@ -1,7 +1,12 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <g fill="#00cc00" stroke-width=".82858px" color="#000000"> <path d="M8.04 10.471 2.938 7.953l2.085-1.03-.932-.46-3.017 1.49L8.04 11.39l6.965-3.437-3.017-1.49-.93.46 2.084 1.03z" style="-inkscape-stroke:none" transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)"/> <path d="M8.04 13.448 2.938 10.93 5.023 9.9l-.932-.46-3.017 1.49 6.966 3.437 6.965-3.437-3.017-1.49-.93.46 2.084 1.03z" style="-inkscape-stroke:none" transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)"/> <path d="M8.04 1.537 1.074 4.974 8.04 8.41l6.965-3.437zm0 .919 5.102 2.518L8.04 7.492 2.938 4.974z" style="-inkscape-stroke:none" transform="matrix(1.1485 0 0 1.2471 -1.233 -1.917)"/> </g> </g>
-</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- License: CC Attribution. Made by salesforce: https://lightningdesignsystem.com -->
+<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" 
+	 width="800px" height="800px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<path d="M57,44.5c-1.5,0-2.7-1.2-2.7-2.7V24.5c0-1.5,1.2-2.7,2.7-2.7h17.6c1.5,0,2.7,1.2,2.7,2.7v17.3
+	c0,1.5-1.2,2.7-2.7,2.7H57z"/>
+<path d="M64.6,54.7L54.3,65.8c-0.6,0.6-0.6,1.7,0,2.3l10.3,11.1c0.7,0.7,1.8,0.7,2.5,0l10.3-11.1
+	c0.6-0.6,0.6-1.7,0-2.3L67.1,54.7C66.4,54,65.2,54,64.6,54.7z"/>
+<circle cx="33.8" cy="66.6" r="11.6"/>
+<path d="M23.6,25.7l8.9-5.1c0.8-0.5,1.8-0.5,2.7,0l8.9,5.1c0.8,0.5,1.3,1.4,1.3,2.3v10.2c0,0.9-0.5,1.8-1.3,2.3
+	l-8.9,5.1c-0.8,0.5-1.8,0.5-2.7,0l-8.9-5.1c-0.8-0.5-1.4-1.4-1.4-2.3V28C22.2,27,22.8,26.1,23.6,25.7z"/>
+</svg>

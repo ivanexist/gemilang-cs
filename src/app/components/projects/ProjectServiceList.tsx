@@ -63,7 +63,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
                 className={`w-8 h-8 group-hover:text-white text-blue-600 transition-colors duration-300 ${
                   !currentServiceUrl ? "text-white" : ""
                 }`}
-                src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/all.svg`}
+                src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}
               />
               <span className="ml-4 mt-1">All Services</span>
             </div>
@@ -87,7 +87,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
                     className={`w-8 h-8 group-hover:text-white text-blue-500 transition-colors duration-300 ${
                       currentServiceUrl === service.url ? "text-white" : ""
                     }`}
-                    src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/${service.icon}`}
+                    src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${service.icon}`}
                   />
                   <span className="ml-4 mt-1">{service.name}</span>
                 </div>
