@@ -60,15 +60,13 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
               onClick={() => handleServiceClick(null)}
             >
               <div className="flex">
-                <div className="w-8 h-8">
-                  <ReactSVG
-                    className={`w-full h-full group-hover:text-white text-blue-600 transition-colors duration-300 ${
-                      !currentServiceUrl ? "text-white" : ""
-                    }`}
-                    src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}
-                  />
-                </div>
-                <span className="ml-4 mt-1">All Services</span>
+                <ReactSVG
+                  className={`w-10 h-10 group-hover:text-white text-blue-600 transition-colors duration-300 ${
+                    !currentServiceUrl ? "text-white" : ""
+                  }`}
+                  src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}
+                />
+                <span className="ml-4 mt-1">Semua Layanan</span>
               </div>
             </li>
           </Link>
