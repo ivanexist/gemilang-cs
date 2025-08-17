@@ -39,7 +39,7 @@ const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
       </div>
 
       <div className="flex flex-col text-left pt-2 ml-6">
-        <div className="text-2xl font-bold mb-4 text-malachite-600">
+        <div className="text-2xl font-bold mb-4 text-blue-600">
           {coreValuesItems.label}
         </div>
         <div className="text-base text-slate-700">

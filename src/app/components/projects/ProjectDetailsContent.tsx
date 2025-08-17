@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperCore from "swiper";
 import { ReactSVG } from "react-svg";
+import RelatedProjects from "./RelatedProjects";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -30,7 +31,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
   };
 
   return (
-    <section className="flex items-center bg-inherit">
+    <section className="flex items-center bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-repeat mb-16">
       <div className="max-w-screen-xl md:mx-auto w-screen">
         <div className="justify-center flex-1 max-w-7xl mx-auto overflow-x-hidden">
           {/* Image Gallery with Swiper and Framer Motion */}
@@ -60,7 +61,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                           alt={`slide-${index}`}
                           width={5000}
                           height={3000}
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-140 object-cover object-center"
                         />
                       </motion.div>
                     </AnimatePresence>
@@ -73,26 +74,32 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                 {/* <h1 className="font-semibold text-2xl border-b-2 border-b-atlantis-500 text-blue-600 pb-4 uppercase text-center font-PlayfairDisplay mb-4 w-fit">
                   {project.name}
                 </h1> */}
-                <div className="text-lg text-masala-800 text-left font-openSans">
-                  <p className="pb-2">{projectDescription[0]?.paragraph_1}</p>
+                <div className="text-lg text-masala-600 text-left font-openSans">
+                  <p className="font-light pb-2">
+                    {projectDescription[0]?.summary}
+                  </p>
                 </div>
               </div>
               <div className="col-span-1 my-4">
                 <div className="container sm:mx-4 lg:mx-auto mt-4">
-                  <div className="flex flex-col gap-4 font-openSans text-lg">
+                  <div className="flex flex-col gap-4 font-openSans text-base">
                     <div className="flex pt-4">
                       <p className="flex font-semibold text-blue-600">
                         <ReactSVG
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client.svg`}
                         />
-                        <span className="font-medium ml-4 text-masala-800">
+                        <span className="font-medium ml-2 text-masala-600 p-1">
                           {project.Client.name}
                         </span>
                       </p>
                     </div>
                     <div className="flex">
                       <p className="flex font-semibold text-blue-600">
-                        <span className="font-medium ml-2 text-masala-800">
+                        <ReactSVG
+                          className="text-blue-500 transition-colors duration-300"
+                          src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location.svg`}
+                        />
+                        <span className="font-medium ml-2 text-masala-600 p-1">
                           {project.location}
                         </span>
                       </p>
@@ -103,7 +110,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                           className="text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/kategori.svg`}
                         />
-                        <span className="font-medium ml-4 text-masala-800">
+                        <span className="font-medium ml-2 text-masala-600 p-1">
                           {project.Service.name}
                         </span>
                       </p>
@@ -114,7 +121,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                           className="text-center text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date.svg`}
                         />
-                        <span className="font-medium ml-4 text-masala-800">
+                        <span className="font-medium ml-2 text-masala-600 p-1">
                           {project.yearcompleted.join(", ")}
                         </span>
                       </p>
@@ -126,6 +133,9 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
           </div>
         </div>
       </div>
+      {/* <div>
+        <RelatedProjects project={project} />
+      </div> */}
     </section>
   );
 };

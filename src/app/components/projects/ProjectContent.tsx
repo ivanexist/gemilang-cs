@@ -8,8 +8,8 @@ export default async function ProjectContent() {
 
   return (
     <div className="flex flex-col overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-no-repeat pt-8 pb-16">
-      <div className="grid sm:grid-cols-1 md:grid-cols-3">
-        <div className="col-span-1 mx-auto">
+      <div className="max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 md:grid-cols-3">
+        <div className="col-span-1">
           <ProjectServiceList projects={projects} />
         </div>
         <div className="col-span-2">

@@ -30,8 +30,8 @@ const GridProjects: React.FC<ProjectsProps> = ({ projects }) => {
     ? projects.filter((project) => project.Service.id === selectedServiceId)
     : projects;
   return (
-    <div className="flex flex-col ml-4 mr-8 pb-24 overflow-hidden bg-transparent">
-      <div className=" max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 sm:place-items-center gap-8">
+    <div className="flex flex-col mr-8 pb-24 overflow-hidden bg-transparent">
+      <div className="max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 sm:place-items-center gap-8">
         {filteredProjects.length === 0 ? (
           <div className="max-w-screen-xl w-full mx-auto text-center py-8">
             <p className="text-gray-600 text-lg">

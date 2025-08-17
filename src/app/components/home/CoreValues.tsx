@@ -61,11 +61,15 @@ const CoreValuesItems: CoreValueItem[] = [
 
 const CoreValues = () => {
   return (
-    <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-[linear-gradient(to_right,rgba(255,255,255,0.5),rgba(255,255,255,0.7)),url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+    <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-[linear-gradient(to_right,rgba(255,255,255,0.2),rgba(255,255,255,0.2)),url('https://shtheme.com/demosd/dropexwp/wp-content/uploads/2023/09/svgviewerpng-output.png')]">
       <div className="max-w-screen-xl mx-auto text-center">
         <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay  uppercase text-center">
           Core Values
         </h1>
+        <h2 className="text-gray-600 text-xl font-openSans font-light max-w-3xl mx-auto mb-8">
+          Prinsip-prinsip dasar ini menjadi pedoman dalam setiap keputusan
+          diambil dan setiap proyek yang kami kerjakan.
+        </h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-screen-xl mx-auto text-center sm:mb-6 lg:mb-20 sm:mt-4 lg:mt-12">
           {CoreValuesItems.map((coreValuesItems) => (
             <CoreValuesCard

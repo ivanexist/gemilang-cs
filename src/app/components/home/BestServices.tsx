@@ -9,9 +9,13 @@ export default async function BestServices() {
     <div className=" flex flex-col pt-12 pb-12 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-repeat">
       <div className="flex justify-center items-center">
         <div>
-          <h1 className="font-bold mt-8 mb-16 pb-2 text-blue-600 text-3xl font-PlayfairDisplay w-fit text-center mx-auto">
-            BEST SERVICES
+          <h1 className="font-bold mt-8 mb-8 pb-2 text-blue-600 text-3xl font-PlayfairDisplay w-fit text-center mx-auto uppercase">
+            Layanan Konstruksi terbaik
           </h1>
+          <h2 className="text-gray-500 text-xl font-openSans font-light max-w-3xl mx-auto mb-16 text-center">
+            Solusi konstruksi menyeluruh yang disesuaikan untuk memenuhi
+            kebutuhan spesifik proyek Anda
+          </h2>
         </div>
       </div>
 
@@ -27,8 +31,8 @@ export default async function BestServices() {
 
       <div className="flex justify-center items-center mt-16 mb-8">
         <Link href="/services">
-          <button className="py-4 px-8 bg-malachite-600 hover:bg-malachite-500 text-white font-semibold text-xl cursor-pointer uppercase">
-            All Services
+          <button className="py-4 px-8 bg-malachite-600 hover:bg-malachite-500 text-white font-semibold text-lg cursor-pointer rounded-lg">
+            Lihat Semua Layanan
           </button>
         </Link>
       </div>

@@ -98,6 +98,59 @@
   --color-malachite-800: #0a710b;
   --color-malachite-900: #0a5d0c;
   --color-malachite-950: #003402;
+
+  /* solitude */
+
+  --color-solitude-50: #f2fafd;
+  --color-solitude-100: #e6f3fa;
+  --color-solitude-200: #c4e5f3;
+  --color-solitude-300: #8fd1ea;
+  --color-solitude-400: #54b9dc;
+  --color-solitude-500: #2ea1c9;
+  --color-solitude-600: #1e82ab;
+  --color-solitude-700: #1a688a;
+  --color-solitude-800: #195873;
+  --color-solitude-900: #1a4960;
+  --color-solitude-950: #112f40;
+
+  /* tory blue */
+  --color-tory-blue-50: #eff7ff;
+  --color-tory-blue-100: #dcedfd;
+  --color-tory-blue-200: #c0e0fd;
+  --color-tory-blue-300: #95cdfb;
+  --color-tory-blue-400: #63b1f7;
+  --color-tory-blue-500: #3f91f2;
+  --color-tory-blue-600: #2973e7;
+  --color-tory-blue-700: #215ed4;
+  --color-tory-blue-800: #214dad;
+  --color-tory-blue-900: #204388;
+  --color-tory-blue-950: #182b53;
+
+  /* Ship Cove */
+  --color-ship-cove-50: #f3f5fb;
+  --color-ship-cove-100: #e3e8f6;
+  --color-ship-cove-200: #ced8ef;
+  --color-ship-cove-300: #acbee4;
+  --color-ship-cove-400: #859ed5;
+  --color-ship-cove-500: #657dc8;
+  --color-ship-cove-600: #5567bb;
+  --color-ship-cove-700: #4a56ab;
+  --color-ship-cove-800: #41498c;
+  --color-ship-cove-900: #383e70;
+  --color-ship-cove-950: #262945;
+
+  /* De York */
+  --color-de-york-50: #f1fcf5;
+  --color-de-york-100: #dff9e8;
+  --color-de-york-200: #c1f1d2;
+  --color-de-york-300: #91e4af;
+  --color-de-york-400: #76d799;
+  --color-de-york-500: #33b461;
+  --color-de-york-600: #25944e;
+  --color-de-york-700: #207540;
+  --color-de-york-800: #1e5d36;
+  --color-de-york-900: #1b4c2e;
+  --color-de-york-950: #092a17;
 }
 
 :root {

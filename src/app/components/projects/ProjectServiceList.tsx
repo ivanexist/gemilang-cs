@@ -48,8 +48,8 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
   }, [currentServiceUrl, uniqueServices, router]);
   return (
     <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4">
-      <div className="ml-8 leading-6 bg-wildsand-50 shadow border-transparent">
-        <ul className="">
+      <div className="leading-6 bg-wildsand-50 shadow border-transparent">
+        <ul>
           <li
             className={`text-blue-500 transition-all duration-300 hover:text-white hover:bg-blue-500 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
               !currentServiceUrl
@@ -63,7 +63,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
                 className={`w-8 h-8 group-hover:text-white text-blue-600 transition-colors duration-300 ${
                   !currentServiceUrl ? "text-white" : ""
                 }`}
-                src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/all-services.svg`}
+                src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/all.svg`}
               />
               <span className="ml-4 mt-1">All Services</span>
             </div>

@@ -51,9 +51,9 @@ const Hero2 = () => (
               }}
             >
               <div className="flex justify-center items-center lg:justify-start lg:items-start lg:text-left">
-                <div className="flex w-1/3 cursor-pointer py-3 px-6 my-8 border-2 text-blumine-950 border-blumine-950 md:text-lg font-semibold  justify-center items-center  hover:text-white hover:bg-blumine-950 transition duration-300">
+                <div className="flex w-1/2 cursor-pointer py-4 px-6 my-8 border-2 text-blumine-950 border-blumine-950 sm:text-base md:text-lg font-semibold  justify-center items-center  hover:text-white hover:bg-blumine-950 transition duration-300">
                   <Link href="/contact">
-                    <p>Contact Us</p>
+                    <p>Contact Our Experts</p>
                   </Link>
                 </div>
               </div>
