@@ -71,14 +71,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                 />
-                <span className="text-sm ml-1 text-masala-600 p-1 pt-2">
+                <span className="text-sm ml-1 text-masala-900 p-1">
                   {project.Client.name}
                 </span>
               </p>
             </div>
 
             {/* Location */}
-            <div className="flex items-center mt-4 text-masala-800">
+            <div className="flex items-center mt-4 text-masala-900">
               <ReactSVG
                 src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
               />
