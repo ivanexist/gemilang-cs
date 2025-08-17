@@ -42,12 +42,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <p>{project.Service?.name ?? "Unknown Service"}</p>
               </div>
               <div className="ml-4">
-                <p className="flex font-semibold text-blue-600">
+                <p className="flex text-blue-600">
                   <ReactSVG
                     className="text-center text-blue-500 transition-colors duration-300"
-                    src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date.svg`}
+                    src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date-gray.svg`}
                   />
-                  <span className="text-sm text-masala-400 p-1 pt-2">
+                  <span className="text-sm font-semibold text-gray-800 p-1 pt-2">
                     {project.yearcompleted.join(", ")}
                   </span>
                 </p>
@@ -63,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </p>
           </div>
 
-          <div className="flex justify-between items-center text-masala-800 gap-4 pb-2">
+          <div className="flex justify-between items-center text-gray-900 gap-4 pb-2">
             {/* Service */}
             <div className="flex items-center mt-4">
               {/* SVG Icon */}
@@ -71,18 +71,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                 />
-                <span className="text-sm ml-1 text-masala-900 p-1">
+                <span className="text-sm ml-1 text-gray-800 p-1">
                   {project.Client.name}
                 </span>
               </p>
             </div>
 
             {/* Location */}
-            <div className="flex items-center mt-4 text-masala-900">
-              <ReactSVG
-                src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
-              />
-              <h1 className="px-2 text-sm text-start">{project.location}</h1>
+            <div className="flex items-center mt-4 text-gray-800">
+              <p className="flex">
+                <ReactSVG
+                  src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
+                />
+                <span className="text-sm ml-1 p-1">{project.location}</span>
+              </p>
             </div>
           </div>
         </div>
