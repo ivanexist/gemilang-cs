@@ -50,24 +50,28 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
     <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4">
       <div className="leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
-          <li
-            className={`text-blue-500 transition-all duration-300 hover:text-white hover:bg-blue-500 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
-              !currentServiceUrl
-                ? "text-white bg-blue-600 font-semibold border-l-8 border-l-malachite-600"
-                : ""
-            } hover:font-semibold py-6 px-8 text-lg group`}
-            onClick={() => handleServiceClick(null)}
-          >
-            <div className="flex">
-              <ReactSVG
-                className={`w-8 h-8 group-hover:text-white text-blue-600 transition-colors duration-300 ${
-                  !currentServiceUrl ? "text-white" : ""
-                }`}
-                src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}
-              />
-              <span className="ml-4 mt-1">All Services</span>
-            </div>
-          </li>
+          <Link href="/projects" scroll={true}>
+            <li
+              className={`text-blue-500 transition-all duration-300 hover:text-white hover:bg-blue-500 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
+                !currentServiceUrl
+                  ? "text-white bg-blue-600 font-semibold border-l-8 border-l-malachite-600"
+                  : ""
+              } hover:font-semibold py-6 px-8 text-lg group`}
+              onClick={() => handleServiceClick(null)}
+            >
+              <div className="flex">
+                <div className="w-8 h-8">
+                  <ReactSVG
+                    className={`w-full h-full group-hover:text-white text-blue-600 transition-colors duration-300 ${
+                      !currentServiceUrl ? "text-white" : ""
+                    }`}
+                    src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}
+                  />
+                </div>
+                <span className="ml-4 mt-1">All Services</span>
+              </div>
+            </li>
+          </Link>
           {uniqueServices.map((service) => (
             <Link
               href={`/projects?service=${encodeURIComponent(service.url)}`}
