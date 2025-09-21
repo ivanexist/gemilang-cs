@@ -25,12 +25,12 @@ const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
           src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/corevalues/${coreValuesItems.icon}`}
         />
       </div> */}
-      <div className="group relative w-40 aspect-square">
+      <div className="group relative w-40 aspect-square  hover:scale-105 transition-all duration-300">
         {/* Hexagon Border */}
         <div className="absolute inset-0 bg-blue-500 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] z-0"></div>
 
         {/* Hexagon Inner Background + Centered Icon */}
-        <div className="absolute inset-[2px] bg-white group-hover:bg-blue-500 [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] flex items-center justify-center z-10 transition-colors duration-300">
+        <div className="absolute inset-[2px] bg-white/5 backdrop-blur-lg [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] flex items-center justify-center z-10 transition-all duration-300">
           <ReactSVG
             className="m-6 transition-colors duration-300"
             src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/corevalues/${coreValuesItems.icon}`}
@@ -39,10 +39,10 @@ const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
       </div>
 
       <div className="flex flex-col text-left pt-2 ml-6">
-        <div className="text-2xl font-bold mb-4 text-blue-600">
+        <div className="text-2xl font-bold mb-4 text-white">
           {coreValuesItems.label}
         </div>
-        <div className="text-base text-slate-700">
+        <div className="text-base text-gray-100">
           {coreValuesItems.description}
         </div>
       </div>

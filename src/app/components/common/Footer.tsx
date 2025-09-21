@@ -12,7 +12,7 @@ export default async function Footer() {
   const services = await getServices();
 
   return (
-    <footer className="text-center  lg:text-left border-t border-t-blue-500 pb-8 bg-gray-900 text-white">
+    <footer className="text-center lg:text-left border-t border-t-blue-500 pb-8 bg-gray-900 text-white">
       {/* Main container div: holds the entire content of the footer, including four sections (TW ELements, Products, Useful, links, and COntact), with responsive styling and appropriate padding/margins */}
       <div className="mx-6 pt-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">

@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         <div className="sm:flex my-2">
           <ReactSVG
             className="w-28 h-28 text-center text-blue-500 transition-colors duration-300"
-            src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/${service.icon}`}
+            src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${service.icon}`}
           />
         </div>
         <h1 className="mt-8 mb-4 text-xl font-bold text-malachite-600  font-PlayfairDisplay uppercase">

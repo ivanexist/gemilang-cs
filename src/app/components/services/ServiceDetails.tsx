@@ -139,7 +139,7 @@ export default function ServiceDetails({
                           className={`w-8 h-8 group-hover:text-white text-blue-500 transition-colors duration-300 ${
                             service.url === currentSlug ? "text-white" : ""
                           }`}
-                          src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/${service.icon}`}
+                          src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${service.icon}`}
                         />
                         <span className="ml-4 mt-1">{service.name}</span>
                       </div>

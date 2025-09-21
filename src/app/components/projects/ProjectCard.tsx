@@ -47,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     className="text-center text-blue-500 transition-colors duration-300"
                     src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date-gray.svg`}
                   />
-                  <span className="text-sm font-semibold text-gray-800 p-1">
+                  <span className="text-sm font-semibold text-gray-500 p-1">
                     {project.yearcompleted.join(", ")}
                   </span>
                 </p>
@@ -63,30 +63,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </p>
           </div>
 
-          <div className="flex justify-between items-center text-gray-900 gap-4 pb-2">
+          <div className="flex justify-between items-center text-gray-500 gap-4 pb-2">
             {/* Service */}
             <div className="flex items-center mt-4">
               {/* SVG Icon */}
-              <p className="flex text-blue-600">
+              <div className="flex text-blue-600">
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                 />
-                <span className="text-sm ml-1 text-gray-800 p-1 font-semibold">
+                <span className="text-sm ml-1 text-gray-500 p-1 font-semibold">
                   {project.Client.name}
                 </span>
-              </p>
+              </div>
             </div>
 
             {/* Location */}
-            <div className="flex items-center mt-4 text-gray-800 ">
-              <p className="flex">
+            <div className="flex items-center mt-4 text-gray-500 ">
+              <div className="flex">
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                 />
                 <span className="text-sm ml-1 p-1 font-semibold">
                   {project.location}
                 </span>
-              </p>
+              </div>
             </div>
           </div>
         </div>

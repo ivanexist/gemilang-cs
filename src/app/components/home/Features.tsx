@@ -21,8 +21,8 @@ export default function Features() {
             </div>
           </div>
           <div>
-            <h2 className="my-4 font-bold uppercase text-blue-600 font-PlayfairDisplay text-center text-lg">
-              Best Quality
+            <h2 className="my-6 font-bold uppercase text-blue-600 font-PlayfairDisplay text-center text-lg">
+              Kualitas Terbaik
             </h2>
           </div>
           <div>
@@ -51,8 +51,8 @@ export default function Features() {
             </div>
           </div>
           <div>
-            <h2 className="my-4 font-bold text-blue-600 font-PlayfairDisplay text-center text-lg">
-              ON TIME
+            <h2 className="my-6 font-semibold text-blue-600 font-PlayfairDisplay text-center uppercase text-lg">
+              Tepat Waktu
             </h2>
           </div>
           <div>
@@ -81,8 +81,8 @@ export default function Features() {
             </div>
           </div>
           <div>
-            <h2 className="my-4 font-bold text-blue-600 font-PlayfairDisplay text-center ">
-              EXPERIENCED
+            <h2 className="my-6 font-bold text-blue-600 font-PlayfairDisplay text-center uppercase text-lg">
+              Berpengalaman
             </h2>
           </div>
           <div>

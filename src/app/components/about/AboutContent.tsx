@@ -32,7 +32,7 @@ const AboutContent = () => (
           </p>
         </div>
         {/* images */}
-        <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
+        <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 relative">
           <Image
             src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/about-gcs.jpg"
             alt="aboutimage"
@@ -40,6 +40,17 @@ const AboutContent = () => (
             height={480}
             className="relative z-10 object-cover object-center w-full h-[480px]"
           />
+          {/* Statistics Overlay */}
+          <div className="absolute -bottom-1 -left-0 bg-white p-6 rounded-xl shadow-lg z-20">
+            <div className="gap-4">
+              <div>
+                <div className="text-2xl font-bold text-primary">10+</div>
+                <div className="text-sm text-secondary mt-1">
+                  Tahun Pengalaman
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:gap-8 mb-8 lg:mt-20 sm:px-2 md:px-0">

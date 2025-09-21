@@ -53,7 +53,7 @@ const Hero2 = () => (
               <div className="flex justify-center items-center lg:justify-start lg:items-start lg:text-left">
                 <div className="flex w-1/2 cursor-pointer py-4 px-6 my-8 border-2 text-blumine-950 border-blumine-950 sm:text-base md:text-lg font-semibold  justify-center items-center  hover:text-white hover:bg-blumine-950 transition duration-300">
                   <Link href="/contact">
-                    <p>Contact Our Experts</p>
+                    <p>Hubungi Kami</p>
                   </Link>
                 </div>
               </div>

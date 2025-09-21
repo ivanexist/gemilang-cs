@@ -1,40 +1,38 @@
+"use client";
+
 import React from "react";
+import { Client, Project, Service } from "@/generated/prisma";
 import ProjectCard from "./ProjectCard"; // Adjust the import path if needed
 
-type Project = {
-  id: string;
-  name: string;
-  services: string[];
-  description?: string;
-};
-
-type RelatedProjectsProps = {
-  projects: Project[];
-  selectedServices: string[];
-};
-
-function getRelatedProjects(projects: Project[], selectedServices: string[]) {
-  if (selectedServices.length === 0) return [];
-  return projects.filter((project) =>
-    project.services.some((service) => selectedServices.includes(service))
-  );
+interface ProjectsProps {
+  projects: (Project & { Client: Client; Service: Service })[];
 }
 
-const RelatedProjects: React.FC<RelatedProjectsProps> = ({
-  projects,
-  selectedServices,
-}) => {
-  const related = getRelatedProjects(projects, selectedServices);
+// const getRelatedProjects = (
+//   { project }: ProjectDetailsProps,
+//   selectedServices: string[]
+// ) => {
+//   if (selectedServices.length === 0) return [];
+//   return projects.filter((project) =>
+//     project.services.some((service) => selectedServices.includes(service))
+//   );
+// };
 
-  if (related.length === 0) {
-    return <div>No related projects found.</div>;
-  }
+const RelatedProjects: React.FC<ProjectsProps> = ({
+  selectedProject,
+  projects,
+}) => {
+  const relatedProjectsbyServices = projects.filter(
+    (project) =>
+      project.Service.id === selectedProject.Service.id &&
+      project.id !== selectedProject.id
+  );
 
   return (
     <div>
       <h3>Related Projects</h3>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        {related.map((project) => (
+        {relatedProjectsbyServices.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>

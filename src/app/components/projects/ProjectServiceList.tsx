@@ -61,7 +61,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
             >
               <div className="flex">
                 <ReactSVG
-                  className={`w-10 h-10 group-hover:text-white text-blue-600 transition-colors duration-300 ${
+                  className={`w-7 h-7 pt-1 group-hover:text-white text-blue-600 transition-colors duration-300 ${
                     !currentServiceUrl ? "text-white" : ""
                   }`}
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}

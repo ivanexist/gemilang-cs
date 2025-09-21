@@ -27,7 +27,7 @@ const BestServiceCard: React.FC<BestServiceCardProps> = ({
           <div className="sm:flex sm:justify-center sm:items-center my-2">
             <ReactSVG
               className="w-28 h-28 text-center text-blue-500 transition-colors duration-300"
-              src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/icon/${service.icon}`}
+              src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${service.icon}`}
             />
           </div>
           <h3 className="mt-12 text-xl font-bold text-malachite-600 text-center font-PlayfairDisplay uppercase">

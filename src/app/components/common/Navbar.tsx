@@ -7,13 +7,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { useScrollStore } from "@/store/useScrollStore";
+import { ReactSVG } from "react-svg";
 
 const NavbarMenu = [
-  { label: "HOME", path: "/" },
-  { label: "ABOUT", path: "/about" },
-  { label: "SERVICES", path: "/services" },
-  { label: "PROJECTS", path: "/projects" },
-  { label: "CONTACT", path: "/contact" },
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Services", path: "/services" },
+  { label: "Projects", path: "/projects" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -49,14 +50,14 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={scrollToTop}
-              className="flex items-center space-x-3 rtl:space-x-reverse mx-2 sm:w-24 sm:h-12 md:w-32 md:h-16"
+              className="flex items-center space-x-3 rtl:space-x-reverse mx-2 sm:w-24 sm:h-12 md:w-32 md:h-14"
             >
               <span className="self-center font-semibold whitespace-nowrap">
                 <Image
                   src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/Logo-GCS.png"
                   alt="Logo Gemilang Cipta Sentosa"
-                  width={600}
-                  height={600}
+                  width={400}
+                  height={400}
                 />
               </span>
             </Link>
@@ -94,8 +95,14 @@ export default function Navbar() {
           </ul>
         </div>
         <div>
-          <button className="px-5 py-3 uppercase font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
-            Get Quote
+          <button className="px-6 py-3 font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
+            <ReactSVG
+              className="text-blue-500 transition-colors duration-300"
+              src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
+            />
+            <span className="font-medium ml-1 text-gray-800 p-1">
+              Get Quote
+            </span>
           </button>
         </div>
         {/* <NavbarMobile /> */}
