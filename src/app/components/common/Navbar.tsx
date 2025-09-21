@@ -95,7 +95,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div>
-          <button className="px-6 py-3 font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
+          <button className="flex items-center px-4 py-2 font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
             <ReactSVG
               className="text-blue-500 transition-colors duration-300"
               src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
