@@ -3,14 +3,14 @@ import Image from "next/image";
 const AboutContent = () => (
   <section className="flex items-center max-w-screen-xl bg-transparent mx-auto">
     <div className="justify-center flex-1 mx-auto md:px-6">
-      <div className="text-center mb-16 mt-8">
-        <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600 md:text-4xl uppercase">
-          WHO WE ARE?
+      <div className="mb-8 mt-8 ml-4">
+        <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600">
+          Siapa Kami?
         </h1>
       </div>
       <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
         <div className="sm:w-full lg:w-1/2 lg:mb-0 px-4 text-masala-800 text-lg">
-          <p className="sm:mb-4 md:mb-0  lg:mr-4 ">
+          <p className="sm:mb-4 md:mb-0 lg:mr-4">
             PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
             bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
             Instalasi Perpipaan (Pipa Air, Pipa Gas, dan Pipa Hydrant). Kami
@@ -41,7 +41,7 @@ const AboutContent = () => (
             className="relative z-10 object-cover object-center w-full h-[480px]"
           />
           {/* Statistics Overlay */}
-          <div className="absolute -bottom-1 -left-0 bg-white p-6 rounded-xl shadow-lg z-20">
+          <div className="absolute -bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 rounded-xl shadow-lg z-20">
             <div className="gap-4">
               <div>
                 <div className="text-2xl font-bold text-primary">10+</div>
@@ -53,8 +53,8 @@ const AboutContent = () => (
           </div>
         </div>
       </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:gap-8 mb-8 lg:mt-20 sm:px-2 md:px-0">
-        <div className="flex flex-col p-2">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:gap-8 mb-8 lg:mt-20 sm:px-2 md:px-0">
+        {/* <div className="flex flex-col p-2">
           <div className="font-PlayfairDisplay font-semibold text-2xl my-4 text-blue-600 uppercase text-center">
             <h1 className="font-medium my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-600 w-fit text-center mx-auto uppercase">
               Commitment
@@ -67,11 +67,11 @@ const AboutContent = () => (
             program pemerataan pembangunan untuk semua masyarakat dapat
             terlayani dan tercukupi dengan baik.
           </div>
-        </div>
-        <div className="flex flex-col p-2 mx-2">
-          <div className="font-semibold text-2xl my-4 font-PlayfairDisplay text-blue-600 uppercase flex justify-center items-center">
-            <h1 className="font-medium my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-600 w-fit text-center mx-auto uppercase">
-              Our Mission
+        </div> */}
+        <div className="flex flex-col p-2 ">
+          <div className="my-4 font-PlayfairDisplay">
+            <h1 className="font-semibold my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
+              Misi Kami
             </h1>
           </div>
           <div className="text-masala-800 text-lg">
@@ -92,9 +92,9 @@ const AboutContent = () => (
           </div>
         </div>
         <div className="flex flex-col p-2">
-          <div className="font-PlayfairDisplay font-semibold text-2xl my-4 text-blue-600 uppercase text-center">
-            <h1 className="font-medium my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-600 w-fit text-center mx-auto uppercase">
-              Our Vision
+          <div className="font-PlayfairDisplay font-semibold text-2xl my-4">
+            <h1 className="font-semibold my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
+              Visi Kami
             </h1>
           </div>
           <div className="text-masala-800 font-openSans leading-7 text-lg">

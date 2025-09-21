@@ -52,25 +52,32 @@ const clients: Client[] = [
 
 export default function AboutClients() {
   return (
-    <section className="flex items-center">
-      <div className="justify-center flex-1 max-w-7xl py-4 mx-auto md:px-6">
-        <div className="flex justify-center items-center sm:text-xl md:text-4xl text-blue-600 font-bold mb-12 mt-12 uppercase">
-          <p className="border-b-2 pb-4 border-b-atlantis-500">Our Clients</p>
+    <section className="flex justify-center">
+      <div className=" flex-1 max-w-7xl py-4 mx-auto md:px-6">
+        <div className="flex justify-center items-center sm:text-xl md:text-4xl text-blue-600 font-bold mt-12">
+          <h2 className="border-b-2 pb-4 border-b-atlantis-500">Klien Kami</h2>
+        </div>
+        <div className="text-center text-masala-400 font-openSans leading-7 text-lg mt-8 px-4 mb-12">
+          Membangun kepercayaan dengan organisasi dan institusi terkemuka di
+          Indonesia.
         </div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-4 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl sm:place-items-center">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl">
           {clients.map((client, index) => (
             <div
               key={index}
-              className="flex justify-center items-center self-center m-4 h-52 w-52 p-4 bg-white rounded-full shadow-lg relative"
+              className="flex m-4 h-28 w-88 relative p-4 bg-white shadow rounded-lg items-center"
             >
               <Image
                 src={client.src}
                 alt={client.alt}
-                fill
-                sizes="(max-width: 768px) 208px, 208px"
-                className="object-contain rounded-full p-4"
+                width={208}
+                height={56}
+                sizes="(max-width: 640px) 120px, (max-width: 768px) 140px, 160px"
+                className="object-contain h-12 w-auto"
+                priority={index < 4} // Prioritize loading for first 4 images
               />
+              <h3 className="font-semibold ml-4">{client.alt}</h3>
             </div>
           ))}
         </div>

@@ -105,7 +105,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                         <ReactSVG
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                         />
-                        <span className="font-medium ml-1 text-gray-800 p-1">
+                        <span className="font-semibold ml-1 text-masala-600 p-1">
                           {project.Client.name}
                         </span>
                       </div>
@@ -116,7 +116,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                           className="text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                         />
-                        <span className="font-medium ml-1 text-gray-800 p-1">
+                        <span className="font-semibold ml-1 text-masala-600 p-1">
                           {project.location}
                         </span>
                       </div>

@@ -61,12 +61,12 @@ const CoreValuesItems: CoreValueItem[] = [
 
 const CoreValues = () => {
   return (
-    <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-gradient-to-br from-[hsl(207,90%,54%)] to-[hsl(220,70%,35%)]">
+    <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-muted/50">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h1 className="font-semibold ml-4 mb-4 pb-2 text-white text-4xl font-PlayfairDisplay  uppercase text-center">
+        <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay  uppercase text-center">
           Core Values
         </h1>
-        <h2 className="text-gray-100 text-xl font-openSans font-light max-w-3xl mx-auto mb-8">
+        <h2 className="text-masala-400 text-xl font-openSans font-light max-w-3xl mx-auto mb-8">
           Prinsip-prinsip dasar ini menjadi pedoman dalam setiap keputusan
           diambil dan setiap proyek yang kami kerjakan.
         </h2>
