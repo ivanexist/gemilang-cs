@@ -3,17 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { ReactSVG } from "react-svg";
-
-type Service = {
-  service_id: string;
-  service_name: string;
-  service_icon: string;
-  description: { description_overview: string }[];
-};
+import { Service } from "@/generated/prisma";
 
 type BestServiceCardProps = {
   service: Service;
-  serviceId: string;
+  serviceId: number;
 };
 
 const BestServiceCard: React.FC<BestServiceCardProps> = ({

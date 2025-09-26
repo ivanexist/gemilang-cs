@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BestServiceCard from "./BestServicesCard";
 import { getServices } from "@/app/lib/data";
+import type { Service } from "@/generated/prisma";
 
 export default async function BestServices() {
   const services = await getServices();
