@@ -3,22 +3,21 @@ import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsCont
 import { fetchProjectsSlugs, getProjectBySlug } from "@/app/lib/data";
 // import Breadcrumb from "../components/common/Breadcrumb";
 
-type ProjectDetailsPageProps = {
+interface ProjectDetailsPageProps {
   params: {
     slug: string;
   };
-};
+}
 
 export default async function ProjectDetailsPage({
   params,
 }: ProjectDetailsPageProps) {
   const project = await getProjectBySlug(params.slug);
 
-  if (isNaN(project))
-    <div className="text-center text-red-500">Invalid project ID</div>;
-
-  if (!project)
-    <div className="text-center text-red-500">Project Not Found</div>;
+  // If slug is not a valid project or not found
+  if (!project) {
+    return <div className="text-center text-red-500">Project Not Found</div>;
+  }
 
   return (
     <div>
