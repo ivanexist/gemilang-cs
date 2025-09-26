@@ -5,6 +5,14 @@ import { getServices } from "@/app/lib/data";
 export default async function BestServices() {
   const services = await getServices();
 
+  if (!services || services.length === 0) {
+    return (
+      <div className="text-center text-red-500 py-12">
+        Tidak ada layanan yang tersedia.
+      </div>
+    );
+  }
+
   return (
     <div className=" flex flex-col pt-12 pb-12 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-repeat">
       <div className="flex justify-center items-center">
