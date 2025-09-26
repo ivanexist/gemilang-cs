@@ -5,21 +5,18 @@ import {
   getServiceBySlug,
   getServices,
 } from "@/app/lib/data";
-
-interface ServiceDetailsPageProps {
-  params: {
-    slug: string;
-  };
-}
+import type { PageProps } from "next";
+// interface ServiceDetailsPageProps {
+//   params: {
+//     slug: string;
+//   };
+// }
 
 export default async function ServiceDetailsPage({
   params,
-}: ServiceDetailsPageProps) {
+}: PageProps<{ slug: string }>) {
   const service = await getServiceBySlug(params.slug);
   const servicesList = await getServices();
-
-  if (isNaN(service))
-    <div className="text-center text-red-500">Invalid service ID</div>;
 
   if (!service)
     <div className="text-center text-red-500">Service Not Found</div>;
