@@ -47,14 +47,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     className="text-center text-blue-500 transition-colors duration-300"
                     src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date-gray.svg`}
                   />
-                  <span className="text-sm font-semibold text-gray-500 p-1">
+                  <span className="text-sm font-semibold text-gray-800 p-1">
                     {project.yearcompleted.join(", ")}
                   </span>
                 </p>
               </div>
             </div>
             <Link href={`/projects/${project.url}`} scroll={true}>
-              <h1 className="text-lg text-start font-bold text-blue-600 hover:text-blue-500 uppercase">
+              <h1 className="text-lg text-start font-bold text-blue-700 hover:text-blue-600 uppercase">
                 {project.name}
               </h1>
             </Link>
@@ -71,7 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                 />
-                <span className="text-sm ml-1 text-gray-500 p-1 font-semibold">
+                <span className="text-sm ml-1 text-gray-800 p-1 font-semibold">
                   {project.Client.name}
                 </span>
               </div>
@@ -83,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                 />
-                <span className="text-sm ml-1 p-1 font-semibold">
+                <span className="text-sm ml-1 p-1 font-semibold text-gray-800">
                   {project.location}
                 </span>
               </div>

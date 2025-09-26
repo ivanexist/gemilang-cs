@@ -3,11 +3,11 @@ import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsCont
 import { fetchProjectsSlugs, getProjectBySlug } from "@/app/lib/data";
 // import Breadcrumb from "../components/common/Breadcrumb";
 
-interface ProjectDetailsPageProps {
+type ProjectDetailsPageProps = {
   params: {
     slug: string;
   };
-}
+};
 
 export default async function ProjectDetailsPage({
   params,

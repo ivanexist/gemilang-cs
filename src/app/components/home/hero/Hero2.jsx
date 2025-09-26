@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { ReactSVG } from "react-svg";
 
 const Hero2 = () => (
   <section className=" bg-[linear-gradient(to_top,rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url(https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/Side-1.jpg)] bg-cover bg-center bg-no-repeat sm:h-[40rem] lg:h-screen">
@@ -52,8 +53,12 @@ const Hero2 = () => (
             >
               <div className="flex justify-center items-center lg:justify-start lg:items-start lg:text-left">
                 <div className="flex w-1/2 cursor-pointer py-4 px-6 my-8 border-2 text-blumine-950 border-blumine-950 sm:text-base md:text-lg font-semibold  justify-center items-center  hover:text-white hover:bg-blumine-950 transition duration-300">
-                  <Link href="/contact">
-                    <p>Hubungi Kami</p>
+                  <Link href="/contact" className="flex">
+                    <ReactSVG
+                      className="text-blue-500 transition-colors duration-300"
+                      src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
+                    />
+                    <span className="ml-4">Hubungi Kami</span>
                   </Link>
                 </div>
               </div>

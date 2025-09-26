@@ -88,7 +88,7 @@ export default async function Footer() {
                     ></path>
                   </svg>
                 </span>
-                <span className=" font-light">
+                <span className="font-light">
                   Jl. Pagesangan Agung Baru No.44, Surabaya
                 </span>
               </div>

@@ -80,7 +80,7 @@ const FeaturedProjects: React.FC = () => {
     <div className="bg-[linear-gradient(to_right,rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1610164989165-0c4701bc4ce2?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
       <div className="container max-w-screen-xl text-center mx-auto px-4 py-20">
         <h1 className="font-semibold my-4 pb-2 text-white text-3xl font-PlayfairDisplay w-fit text-center mx-auto">
-          FEATURED PROJECTS
+          Proyek Unggulan Kami
         </h1>
         <h2 className="text-white text-xl font-openSans font-light max-w-3xl mx-auto mb-16">
           Mewujudkan dedikasi kami terhadap kualitas melalui hasil proyek

@@ -85,13 +85,13 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                         className="text-center text-blue-500 transition-colors duration-300"
                         src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date-gray.svg`}
                       />
-                      <span className="text-sm font-semibold text-gray-500 p-1">
+                      <span className="text-sm font-semibold text-gray-800 p-1">
                         {project.yearcompleted.join(", ")}
                       </span>
                     </div>
                   </div>
                 </div>
-                <div className="text-lg text-masala-400 text-left font-openSans pt-2">
+                <div className="text-medium text-masala-800 text-left font-openSans pt-2">
                   <p className="font-light pb-2">
                     {projectDescription[0]?.summary}
                   </p>
@@ -99,13 +99,13 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
               </div>
               <div className="col-span-1 my-4">
                 <div className="container sm:mx-4 lg:mx-auto mt-4">
-                  <div className="flex justify-between mt-8 font-openSans text-base">
+                  <div className="flex justify-between mt-8 font-openSans text-medium">
                     <div className="flex">
                       <div className="flex font-semibold text-blue-600">
                         <ReactSVG
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                         />
-                        <span className="font-semibold ml-1 text-masala-600 p-1">
+                        <span className="font-semibold ml-1 text-gray-800 p-1">
                           {project.Client.name}
                         </span>
                       </div>
@@ -116,7 +116,7 @@ const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
                           className="text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                         />
-                        <span className="font-semibold ml-1 text-masala-600 p-1">
+                        <span className="font-semibold ml-1 text-gray-800 p-1">
                           {project.location}
                         </span>
                       </div>

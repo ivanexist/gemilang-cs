@@ -9,7 +9,7 @@ const AboutContent = () => (
         </h1>
       </div>
       <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
-        <div className="sm:w-full lg:w-1/2 lg:mb-0 px-4 text-masala-800 text-lg">
+        <div className="sm:w-full lg:w-1/2 lg:mb-0 px-4 text-masala-700 text-medium">
           <p className="sm:mb-4 md:mb-0 lg:mr-4">
             PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
             bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
@@ -38,7 +38,7 @@ const AboutContent = () => (
             alt="aboutimage"
             width={480}
             height={480}
-            className="relative z-10 object-cover object-center w-full h-[480px]"
+            className="relative z-10 object-cover object-center w-full h-[360px]"
           />
           {/* Statistics Overlay */}
           <div className="absolute -bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 rounded-xl shadow-lg z-20">
@@ -68,13 +68,13 @@ const AboutContent = () => (
             terlayani dan tercukupi dengan baik.
           </div>
         </div> */}
-        <div className="flex flex-col p-2 ">
+        <div className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2">
           <div className="my-4 font-PlayfairDisplay">
-            <h1 className="font-semibold my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
+            <h1 className="font-semibold mb-4 mt-2 pb-2 ml-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
               Misi Kami
             </h1>
           </div>
-          <div className="text-masala-800 text-lg">
+          <div className="text-masala-700 ml-6">
             <ul className="list-disc font-openSans leading-7">
               <li className="mb-2">
                 Menyediakan solusi jasa yang inovatif dengan melibatkan sumber
@@ -91,13 +91,13 @@ const AboutContent = () => (
             </ul>
           </div>
         </div>
-        <div className="flex flex-col p-2">
+        <div className="flex flex-col border rounded-lg px-8 pb-6 border-masala-300 p-2">
           <div className="font-PlayfairDisplay font-semibold text-2xl my-4">
             <h1 className="font-semibold my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
               Visi Kami
             </h1>
           </div>
-          <div className="text-masala-800 font-openSans leading-7 text-lg">
+          <div className="text-masala-700 font-openSans leading-7">
             Menjadi Perusahaan Konstruksi Terkemuka dan Professional di Jawa
             Timur 2030
           </div>

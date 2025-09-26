@@ -61,16 +61,16 @@ const CoreValuesItems: CoreValueItem[] = [
 
 const CoreValues = () => {
   return (
-    <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-muted/50">
+    <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-inherit">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay  uppercase text-center">
+        <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay   text-center">
           Core Values
         </h1>
         <h2 className="text-masala-400 text-xl font-openSans font-light max-w-3xl mx-auto mb-8">
           Prinsip-prinsip dasar ini menjadi pedoman dalam setiap keputusan
           diambil dan setiap proyek yang kami kerjakan.
         </h2>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-screen-xl mx-auto text-center sm:mb-6 lg:mb-20 sm:mt-4 lg:mt-12">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-screen-xl mx-auto text-center sm:mb-6 lg:mb-0 sm:mt-4 lg:mt-12">
           {CoreValuesItems.map((coreValuesItems) => (
             <CoreValuesCard
               key={coreValuesItems.key}

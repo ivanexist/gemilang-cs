@@ -4,6 +4,8 @@ import BestServices from "./components/home/BestServices";
 import CoreValues from "./components/home/CoreValues";
 import FeaturedProjects from "./components/home/FeaturedProjects";
 import WhyChooseUs from "./components/home/WhyChooseUs";
+import { Contact } from "lucide-react";
+import ContactSection from "./components/contact/ContactSection";
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
         <FeaturedProjects />
         <WhyChooseUs />
         <CoreValues />
+        <ContactSection />
       </main>
     </>
   );

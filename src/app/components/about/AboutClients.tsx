@@ -54,7 +54,7 @@ export default function AboutClients() {
   return (
     <section className="flex justify-center">
       <div className=" flex-1 max-w-7xl py-4 mx-auto md:px-6">
-        <div className="flex justify-center items-center sm:text-xl md:text-4xl text-blue-600 font-bold mt-12">
+        <div className="flex justify-center items-center sm:text-xl md:text-3xl text-blue-600 font-bold mt-8">
           <h2 className="border-b-2 pb-4 border-b-atlantis-500">Klien Kami</h2>
         </div>
         <div className="text-center text-masala-400 font-openSans leading-7 text-lg mt-8 px-4 mb-12">
@@ -77,7 +77,9 @@ export default function AboutClients() {
                 className="object-contain h-12 w-auto"
                 priority={index < 4} // Prioritize loading for first 4 images
               />
-              <h3 className="font-semibold ml-4">{client.alt}</h3>
+              <h3 className="font-semibold ml-4 text-masala-700">
+                {client.alt}
+              </h3>
             </div>
           ))}
         </div>

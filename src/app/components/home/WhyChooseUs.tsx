@@ -4,39 +4,39 @@ import Image from "next/image";
 const reasons = [
   {
     icon: UserCheck,
-    title: "Experienced Leadership Team",
+    title: "Tim Kepemimpinan Berpengalaman",
     description:
-      "Pimpinan senior kami memiliki pengalaman lebih dari 15 tahun di industri konstruksi, memastikan setiap proyek mendapatkan manfaat dari keahlian yang terbukti dan wawasan strategis.",
+      "Dengan pengalaman lebih dari 15 tahun, tim kepemimpinan kami mampu memberikan arahan strategis dan solusi efektif yang memastikan setiap proyek berjalan dengan sukses.",
   },
   {
     icon: Cog,
-    title: "Advanced Construction Technology",
+    title: "Inovasi Konstruksi Masa Depan",
     description:
-      "We leverage cutting-edge BIM software, drone surveying, and IoT monitoring systems to optimize construction processes and ensure precision in every build.",
+      "Dengan mengadopsi teknologi dan metode terbaru, kami memastikan setiap proyek tidak hanya memenuhi kebutuhan hari ini, tetapi juga siap menghadapi tantangan masa depan.",
   },
   {
     icon: ClipboardList,
-    title: "Comprehensive Project Management",
+    title: "Manajemen Proyek Terintegrasi",
     description:
-      "From initial planning to final handover, our integrated project management approach ensures seamless execution, clear communication, and on-time delivery.",
+      "Dari perencanaan hingga serah terima, setiap tahap proyek dijalankan secara terstruktur, transparan, dan tepat waktu.",
   },
   {
     icon: Award,
-    title: "Quality Assurance Processes",
+    title: "Proses Penjaminan Kualitas",
     description:
-      "Rigorous quality control protocols at every stage, backed by ISO 9001 certification and regular third-party inspections, guarantee superior construction standards.",
+      "Dengan standar ISO 9001 dan inspeksi rutin, kami memastikan hasil konstruksi selalu memenuhi bahkan melampaui harapan klien.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white text-gray-800">
+    <section className="py-20 bg-white ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-700">
             Mengapa Memilih PT Gemilang Cipta Sentosa?
           </h2>
-          <p className="text-xl text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-masala-800 max-w-3xl mx-auto">
             Inovasi dan standar keunggulan kami menjadi pembeda utama dalam
             dunia konstruksi.
           </p>
@@ -48,13 +48,16 @@ export default function WhyChooseUs() {
             {reasons.map((reason, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
-                  <reason.icon className="text-accent text-xl" size={24} />
+                  <reason.icon
+                    className="text-malachite-500 text-2xl"
+                    size={24}
+                  />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-dark-gray mb-2">
+                  <h3 className="text-xl font-semibold text-blue-700 mb-2">
                     {reason.title}
                   </h3>
-                  <p className="text-secondary">{reason.description}</p>
+                  <p className="text-masala-800">{reason.description}</p>
                 </div>
               </div>
             ))}
@@ -71,8 +74,8 @@ export default function WhyChooseUs() {
             />
 
             {/* Statistics Overlay */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-              <div className="grid grid-cols-2 gap-4 text-center">
+            <div className="absolute -bottom-6 -left-6 bg-malachite-500 p-6 rounded-xl shadow-lg">
+              <div className="grid grid-cols-2 gap-4 text-center text-white">
                 <div>
                   <div className="text-2xl font-bold text-primary">99%</div>
                   <div className="text-sm text-secondary">On-Time Delivery</div>

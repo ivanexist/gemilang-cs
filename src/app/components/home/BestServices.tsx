@@ -9,7 +9,7 @@ export default async function BestServices() {
     <div className=" flex flex-col pt-12 pb-12 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-repeat">
       <div className="flex justify-center items-center">
         <div>
-          <h1 className="font-bold mt-8 mb-8 pb-2 text-blue-600 text-3xl font-PlayfairDisplay w-fit text-center mx-auto uppercase">
+          <h1 className="font-bold mt-8 mb-8 pb-2 text-blue-600 text-3xl font-PlayfairDisplay w-fit text-center mx-auto">
             Layanan Konstruksi terbaik
           </h1>
           <h2 className="text-gray-500 text-xl font-openSans font-light max-w-3xl mx-auto mb-16 text-center">

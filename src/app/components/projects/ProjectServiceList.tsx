@@ -52,16 +52,16 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
         <ul>
           <Link href="/projects" scroll={true}>
             <li
-              className={`text-blue-500 transition-all duration-300 hover:text-white hover:bg-blue-500 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
+              className={`text-blue-700 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
                 !currentServiceUrl
-                  ? "text-white bg-blue-600 font-semibold border-l-8 border-l-malachite-600"
+                  ? "text-white bg-blue-700 font-semibold border-l-8 border-l-malachite-600"
                   : ""
-              } hover:font-semibold py-6 px-8 text-lg group`}
+              } hover:font-semibold py-6 px-8 text-base group`}
               onClick={() => handleServiceClick(null)}
             >
               <div className="flex">
                 <ReactSVG
-                  className={`w-7 h-7 pt-1 group-hover:text-white text-blue-600 transition-colors duration-300 ${
+                  className={`w-7 h-7 pt-1 group-hover:text-white text-blue-700 transition-colors duration-300 ${
                     !currentServiceUrl ? "text-white" : ""
                   }`}
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/semua-layanan.svg`}
@@ -77,7 +77,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
               scroll={true}
             >
               <li
-                className={`text-blue-500 transition-all duration-300 hover:text-white hover:bg-blue-500 hover:cursor-pointer hover:border-l-8 hover:border-malachite-500 border-b border-b-blue-300 ${
+                className={`text-blue-600 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-malachite-500 border-b border-b-blue-300 ${
                   currentServiceUrl === service.url
                     ? "text-white bg-blue-500 font-semibold border-l-8 border-malachite-500"
                     : ""
@@ -86,7 +86,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
               >
                 <div className="flex">
                   <ReactSVG
-                    className={`w-8 h-8 group-hover:text-white text-blue-500 transition-colors duration-300 ${
+                    className={`w-8 h-8 group-hover:text-white text-blue-700 transition-colors duration-300 ${
                       currentServiceUrl === service.url ? "text-white" : ""
                     }`}
                     src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${service.icon}`}
