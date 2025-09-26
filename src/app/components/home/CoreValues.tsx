@@ -75,7 +75,7 @@ const CoreValues = () => {
             <CoreValuesCard
               key={coreValuesItems.key}
               coreValuesItems={coreValuesItems}
-              coreValuesItemsId={coreValuesItems.key}
+              coreValuesItemsId={String(coreValuesItems.key)}
             />
           ))}
         </div>
