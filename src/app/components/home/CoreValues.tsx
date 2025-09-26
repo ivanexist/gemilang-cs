@@ -2,7 +2,7 @@
 import CoreValuesCard from "./CoreValuesCard";
 
 interface CoreValueItem {
-  key: string;
+  key: string | number;
   label: string;
   icon: string;
   description: string;
