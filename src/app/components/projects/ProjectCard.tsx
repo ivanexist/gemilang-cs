@@ -12,11 +12,16 @@ interface ProjectCardProps {
   };
 }
 
+type DescriptionItem = {
+  overview: string;
+  // maybe other fields later
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const images = project.images as string[];
 
   const projectDescription = Array.isArray(project.description)
-    ? (project.description as string[])
+    ? (project.description as DescriptionItem[])
     : [];
 
   return (
