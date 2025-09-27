@@ -1,6 +1,6 @@
 "use client";
 
-import { Project } from "@/generated/prisma";
+// import { Project } from "@/generated/prisma";
 import Image from "next/image";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
