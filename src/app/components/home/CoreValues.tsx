@@ -2,7 +2,7 @@
 import CoreValuesCard from "./CoreValuesCard";
 
 interface CoreValueItem {
-  key: string | number;
+  key: number;
   label: string;
   icon: string;
   description: string;
@@ -10,49 +10,49 @@ interface CoreValueItem {
 
 const CoreValuesItems: CoreValueItem[] = [
   {
-    key: "1",
+    key: 1,
     label: "Glory",
     icon: "glory.svg",
     description: "Berusaha meraih hasil terbaik yang membanggakan.",
   },
   {
-    key: "2",
+    key: 2,
     label: "Excellent",
     icon: "excellence.svg",
     description: "Selalu memberikan hasil terbaik dengan standar tinggi.",
   },
   {
-    key: "3",
+    key: 3,
     label: "Modest",
     icon: "modest.svg",
     description: "Tetap rendah hati meski telah meraih kesuksesan.",
   },
   {
-    key: "4",
+    key: 4,
     label: "Innovative",
     icon: "innovative.svg",
     description: "Terbuka pada ide baru dan solusi yang membawa perubahan.",
   },
   {
-    key: "5",
+    key: 5,
     label: "Loyal",
     icon: "loyal.svg",
     description: "Setia pada nilai dan prinsip dalam segala tantangan.",
   },
   {
-    key: "6",
+    key: 6,
     label: "Accurate",
     icon: "accuracy.svg",
     description: "Menjaga ketepatan demi hasil yang maksimal.",
   },
   {
-    key: "7",
+    key: 7,
     label: "Networking",
     icon: "networking.svg",
     description: "Membangun hubungan yang kuat dan saling mendukung.",
   },
   {
-    key: "8",
+    key: 8,
     label: "Growth",
     icon: "growth.svg",
     description: "Fokus pada perkembangan berkelanjutan di segala aspek.",
@@ -75,7 +75,7 @@ const CoreValues = () => {
             <CoreValuesCard
               key={coreValuesItems.key}
               coreValuesItems={coreValuesItems}
-              coreValuesItemsId={String(coreValuesItems.key)}
+              coreValuesItemsId={coreValuesItems.key.toString()}
             />
           ))}
         </div>
