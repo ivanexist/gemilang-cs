@@ -13,12 +13,20 @@ import SwiperCore from "swiper";
 import { ReactSVG } from "react-svg";
 import RelatedProjects from "./RelatedProjects";
 import Link from "next/link";
+import { Project, Client, Service } from "@/generated/prisma";
 
-interface ProjectDetailsProps {
-  project: Project;
+interface Props {
+  project: Project & {
+    Client: Client;
+    Service: Service;
+  };
 }
 
-const ProjectsDetailsContent = ({ project }: ProjectDetailsProps) => {
+// interface ProjectDetailsProps {
+//   project: Project;
+// }
+
+const ProjectsDetailsContent = ({ project }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = Array.isArray(project.images)
     ? (project.images as string[])
