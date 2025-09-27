@@ -25,6 +25,10 @@ interface Props {
 // interface ProjectDetailsProps {
 //   project: Project;
 // }
+type DescriptionItem = {
+  summary: string;
+  // maybe other fields later
+};
 
 const ProjectsDetailsContent = ({ project }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,7 +36,7 @@ const ProjectsDetailsContent = ({ project }: Props) => {
     ? (project.images as string[])
     : [];
   const projectDescription = Array.isArray(project.description)
-    ? (project.description as string[])
+    ? (project.description as DescriptionItem[])
     : [];
 
   const handleSlideChange = (swiper: SwiperCore) => {
