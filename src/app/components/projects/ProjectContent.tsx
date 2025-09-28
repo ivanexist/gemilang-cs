@@ -1,7 +1,7 @@
 import { getProjects, getServices } from "@/app/lib/data";
 import GridProjects from "./GridProjects";
 import ProjectServiceList from "./ProjectServiceList";
-import RelatedProjects from "./RelatedProjects";
+// import RelatedProjects from "./RelatedProjects";
 
 export default async function ProjectContent() {
   const projects = await getProjects();
