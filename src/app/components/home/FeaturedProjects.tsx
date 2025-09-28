@@ -4,14 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Project = {
-  project_id: string;
-  client_id: string;
-  service_id: string;
-  project_name: string;
-  project_images: string[];
-};
-
 interface ImageItem {
   src: string;
   title: string;

@@ -4,7 +4,7 @@ import { Client, Project, Service } from "@/generated/prisma";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 // import {  } from "next/router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import { ReactSVG } from "react-svg";
 
 interface ProjectServiceListProps {

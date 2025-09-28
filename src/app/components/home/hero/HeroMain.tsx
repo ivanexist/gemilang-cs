@@ -45,7 +45,7 @@ SlideWithMotion.displayName = "SlideWithMotion";
 
 const HeroMain = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const swiperRef = useRef<SwiperType | null>(null);
+  // const swiperRef = useRef<SwiperType | null>(null);
 
   const handleSlideChange = (swiper: SwiperType) => {
     setCurrentIndex(swiper.realIndex);

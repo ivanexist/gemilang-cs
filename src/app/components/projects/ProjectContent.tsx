@@ -1,4 +1,4 @@
-import { getProjects, getServices } from "@/app/lib/data";
+import { getProjects } from "@/app/lib/data";
 import GridProjects from "./GridProjects";
 import ProjectServiceList from "./ProjectServiceList";
 // import RelatedProjects from "./RelatedProjects";

@@ -2,40 +2,6 @@
 import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
 
-const faqs = [
-  {
-    questionEn: "What types of construction projects do you handle?",
-    questionId: "Jenis proyek konstruksi apa yang Anda tangani?",
-    answerEn:
-      "We handle various construction projects including building construction, road development, housing projects, pipe installation, steel construction, drainage systems, and renovation works.",
-    answerId:
-      "Kami menangani berbagai proyek konstruksi termasuk pembangunan gedung, pembangunan jalan, proyek perumahan, instalasi pipa, konstruksi baja, sistem drainase, dan pekerjaan renovasi.",
-  },
-  {
-    questionEn: "How long does a typical project take?",
-    questionId: "Berapa lama waktu yang dibutuhkan untuk proyek biasa?",
-    answerEn:
-      "Project duration varies depending on scope and complexity. Small projects may take 2-6 months, while larger infrastructure projects can take 1-2 years. We provide detailed timelines during consultation.",
-    answerId:
-      "Durasi proyek bervariasi tergantung pada ruang lingkup dan kompleksitas. Proyek kecil mungkin memerlukan 2-6 bulan, sementara proyek infrastruktur besar dapat memakan waktu 1-2 tahun. Kami menyediakan jadwal terperinci selama konsultasi.",
-  },
-  {
-    questionEn: "Do you provide free consultations?",
-    questionId: "Apakah Anda menyediakan konsultasi gratis?",
-    answerEn:
-      "Yes, we offer free initial consultations to discuss your project requirements, timeline, and provide preliminary cost estimates.",
-    answerId:
-      "Ya, kami menawarkan konsultasi awal gratis untuk membahas kebutuhan proyek Anda, jadwal, dan memberikan perkiraan biaya awal.",
-  },
-  {
-    questionEn: "What areas do you serve?",
-    questionId: "Area mana saja yang Anda layani?",
-    answerEn:
-      "We primarily serve East Java and surrounding areas, with our main office in Surabaya. We can also handle projects in other parts of Indonesia for larger scale developments.",
-    answerId:
-      "Kami terutama melayani Jawa Timur dan sekitarnya, dengan kantor utama di Surabaya. Kami juga dapat menangani proyek di bagian lain Indonesia untuk pembangunan skala besar.",
-  },
-];
 const ContactSection = () => {
   return (
     <section className="pt-10 pb-20 bg-gray-100">

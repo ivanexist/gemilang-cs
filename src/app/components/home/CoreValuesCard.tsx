@@ -15,7 +15,7 @@ type CoreValuesCardProps = {
 
 const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
   coreValuesItems,
-  coreValuesItemsId,
+  // coreValuesItemsId,
 }) => {
   return (
     <div
