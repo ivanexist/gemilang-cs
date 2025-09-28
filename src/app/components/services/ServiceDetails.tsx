@@ -76,7 +76,7 @@ export default function ServiceDetails({
                       Keunggulan Utama
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                      {service.description[0]?.description_key_benefit.map(
+                      {serviceDescription[0]?.description_key_benefit.map(
                         (benefit, index) => (
                           <motion.div
                             key={index}
@@ -112,7 +112,7 @@ export default function ServiceDetails({
                       Proses Kami
                     </h3>
                     <div className="space-y-5">
-                      {service.description[0]?.description_our_process.map(
+                      {serviceDescription[0]?.description_our_process.map(
                         (step, index) => (
                           <motion.div
                             key={index}
