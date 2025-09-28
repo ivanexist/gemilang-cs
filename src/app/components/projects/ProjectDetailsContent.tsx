@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperCore from "swiper";
 import { ReactSVG } from "react-svg";
-import RelatedProjects from "./RelatedProjects";
+// import RelatedProjects from "./RelatedProjects";
 import Link from "next/link";
 import { Project, Client, Service } from "@/generated/prisma";
 
