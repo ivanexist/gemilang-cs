@@ -1,7 +1,7 @@
 import Breadcrumb from "@/app/components/common/Breadcrumb";
 import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsContent";
 import { fetchProjectsSlugs, getProjectBySlug } from "@/app/lib/data";
-import type { PageProps } from "next";
+// import type { PageProps } from "next";
 // import Breadcrumb from "../components/common/Breadcrumb";
 
 // interface PageProps {
@@ -9,10 +9,15 @@ import type { PageProps } from "next";
 //     slug: string;
 //   };
 // }
+interface ProjectDetailsPageProps {
+  params: {
+    slug: string;
+  };
+}
 
 export default async function ProjectDetailsPage({
   params,
-}: PageProps<{ slug: string }>) {
+}: ProjectDetailsPageProps) {
   const project = await getProjectBySlug(params.slug);
 
   // If slug is not a valid project or not found
