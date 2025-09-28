@@ -5,17 +5,16 @@ import {
   getServiceBySlug,
   getServices,
 } from "@/app/lib/data";
-import type { PageProps } from "next";
-// interface ServiceDetailsPageProps {
-//   params: {
-//     slug: string;
-//   };
-// }
+// import type { PageProps } from "next";
+interface ServiceDetailsPageProps {
+  params: Promise<{ slug: string }>;
+}
 
 export default async function ServiceDetailsPage({
   params,
-}: PageProps<{ slug: string }>) {
-  const service = await getServiceBySlug(params.slug);
+}: ServiceDetailsPageProps) {
+  const { slug } = await params;
+  const service = await getServiceBySlug(slug);
   const servicesList = await getServices();
 
   if (!service)
