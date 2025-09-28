@@ -17,8 +17,9 @@ export default async function ServiceDetailsPage({
   const service = await getServiceBySlug(slug);
   const servicesList = await getServices();
 
-  if (!service)
-    <div className="text-center text-red-500">Service Not Found</div>;
+  if (!service) {
+    return <div className="text-center text-red-500">Service Not Found</div>;
+  }
 
   return (
     <div>
