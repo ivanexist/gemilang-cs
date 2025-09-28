@@ -5,15 +5,14 @@ import { fetchProjectsSlugs, getProjectBySlug } from "@/app/lib/data";
 // import Breadcrumb from "../components/common/Breadcrumb";
 
 interface ProjectDetailsProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ProjectDetailsPage({
   params,
 }: ProjectDetailsProps) {
-  const project = await getProjectBySlug(params.slug);
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
 
   // If slug is not a valid project or not found
   if (!project) {
