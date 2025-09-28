@@ -8,12 +8,18 @@ import { ReactSVG } from "react-svg";
 import { getServices } from "@/app/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import RelatedProjectByService from "./RelatedProjectByService";
+// import RelatedProjectByService from "./RelatedProjectByService";
 
 interface ServicesDetailsContentProps {
   service: Service;
   servicesList: Service[];
 }
+
+type ServiceDescription = {
+  description_new: string[];
+  description_key_benefit: string[];
+  description_our_process: string[];
+};
 
 export default function ServiceDetails({
   service,
@@ -24,7 +30,7 @@ export default function ServiceDetails({
   // const [services, setServices] = useState<Service[]>([]);
 
   const serviceDescription = Array.isArray(service.description)
-    ? (service.description as string[])
+    ? (service.description as ServiceDescription[])
     : [];
 
   return (
