@@ -9,15 +9,17 @@ import { fetchProjectsSlugs, getProjectBySlug } from "@/app/lib/data";
 //     slug: string;
 //   };
 // }
-interface ProjectDetailsPageProps {
-  params: {
-    slug: string;
-  };
-}
+// interface ProjectDetailsPageProps {
+//   params: {
+//     slug: string;
+//   };
+// }
 
 export default async function ProjectDetailsPage({
   params,
-}: ProjectDetailsPageProps) {
+}: {
+  params: { slug: string };
+}) {
   const project = await getProjectBySlug(params.slug);
 
   // If slug is not a valid project or not found
