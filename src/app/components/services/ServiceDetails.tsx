@@ -66,7 +66,7 @@ export default function ServiceDetails({
                         {serviceDescription[0]?.description_new[0]}
                       </p>
                       <p className="my-4 text-medium leading-8 text-masala-600 font-openSans">
-                        {serviceDescription[0].description_new[1]}
+                        {serviceDescription[0]?.description_new[1]}
                       </p>
                     </div>
 
