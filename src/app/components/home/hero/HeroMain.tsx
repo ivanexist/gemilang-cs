@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, ReactNode, useRef, useState } from "react";
+import { memo, ReactNode, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade } from "swiper/modules";

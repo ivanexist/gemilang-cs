@@ -2,10 +2,10 @@
 
 import { Service } from "@/generated/prisma";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { ReactSVG } from "react-svg";
-import { getServices } from "@/app/lib/data";
+// import { getServices } from "@/app/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 // import RelatedProjectByService from "./RelatedProjectByService";
