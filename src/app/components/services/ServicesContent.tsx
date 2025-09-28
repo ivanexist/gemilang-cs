@@ -48,7 +48,7 @@ export default async function ServicesContent() {
           <ServiceCard
             key={service.id}
             service={service}
-            serviceId={service.id}
+            // serviceId={service.id}
           />
         ))}
       </div>
