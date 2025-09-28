@@ -9,9 +9,13 @@ interface ServiceCardProps {
   service: Service;
 }
 
+type DescriptionItem = {
+  description_overview: string;
+};
+
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const serviceDescription = Array.isArray(service.description)
-    ? (service.description as string[])
+    ? (service.description as DescriptionItem[])
     : [];
   return (
     <div className="bg-white border border-white hover:border-blue-500 hover:shadow-xl lg:m-2 py-4 px-2 relative z-10 group sm:mx-4 w-96 h-108 mb-4 transition duration-300 flex flex-col justify-between">
