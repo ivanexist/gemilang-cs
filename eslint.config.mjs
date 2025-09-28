@@ -1,49 +1,35 @@
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import nextPlugin from "@next/eslint-plugin-next";
-import reactPlugin from "eslint-plugin-react";
-import reactHooksPlugin from "eslint-plugin-react-hooks";
 
-const compat = new FlatCompat();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-export default [
-  // Base JavaScript configuration
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  // Extend Next.js recommended configurations
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  // Add global ignores
   {
-    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-    ignores: [
-      "src/generated/**",
-      "node_modules/**",
-      "dist/**",
-      "build/**",
-      ".next/**",
-    ],
-    languageOptions: {
-      parser: tsParser,
-      sourceType: "module",
-      ecmaVersion: "latest",
-    },
-    plugins: {
-      "@typescript-eslint": typescriptEslint,
-      "@next/next": nextPlugin,
-      react: reactPlugin,
-      "react-hooks": reactHooksPlugin,
-    },
+    ignores: ["src/generated/**"], // Replaces .eslintignore for Prisma generated files
+  },
+  // Add custom rules for TypeScript files
+  {
+    files: ["**/*.ts", "**/*.tsx"], // Apply to TypeScript and TSX files
     rules: {
-      ...js.configs.recommended.rules,
-      ...typescriptEslint.configs["recommended"].rules,
-      ...nextPlugin.configs["core-web-vitals"].rules,
-      ...reactPlugin.configs.recommended.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/no-unused-vars": [
         "warn",
-        { argsIgnorePattern: "^_" },
+        { argsIgnorePattern: "^_" }, // Ignore variables/args starting with _
       ],
       "@typescript-eslint/no-require-imports": "off",
     },
   },
 ];
+
+export default eslintConfig;

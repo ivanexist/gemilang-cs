@@ -1,4 +1,0 @@
-# Ignore build, dependencies, and Prisma generated files
-.next/
-node_modules/
-src/generated/
