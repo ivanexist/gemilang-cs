@@ -3,13 +3,13 @@ import ServiceDetails from "@/app/components/services/ServiceDetails";
 import { getServiceBySlug, getServices } from "@/app/lib/data";
 // import type { PageProps } from "next";
 interface ServiceDetailsPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
 export default async function ServiceDetailsPage({
   params,
 }: ServiceDetailsPageProps) {
-  const { slug } = params;
+  const { slug } = await params;
   const service = await getServiceBySlug(slug);
   const servicesList = await getServices();
 
