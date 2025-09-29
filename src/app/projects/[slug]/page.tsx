@@ -1,17 +1,17 @@
 import Breadcrumb from "@/app/components/common/Breadcrumb";
 import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsContent";
-import { fetchProjectsSlugs, getProjectBySlug } from "@/app/lib/data";
+import { getProjectBySlug } from "@/app/lib/data";
 // import type { PageProps } from "next";
 // import Breadcrumb from "../components/common/Breadcrumb";
 
 interface ProjectDetailsProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
-
+export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
 export default async function ProjectDetailsPage({
   params,
 }: ProjectDetailsProps) {
-  const { slug } = await params;
+  const { slug } = params;
   const project = await getProjectBySlug(slug);
 
   // If slug is not a valid project or not found
@@ -27,9 +27,4 @@ export default async function ProjectDetailsPage({
       </div>
     </div>
   );
-}
-export const revalidate = 60;
-export async function generateStaticParams() {
-  const projects = await fetchProjectsSlugs();
-  return projects.map((project) => ({ slug: project.url }));
 }

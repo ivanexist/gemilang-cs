@@ -1,19 +1,15 @@
 import Breadcrumb from "@/app/components/common/Breadcrumb";
 import ServiceDetails from "@/app/components/services/ServiceDetails";
-import {
-  fetchServicesSlugs,
-  getServiceBySlug,
-  getServices,
-} from "@/app/lib/data";
+import { getServiceBySlug, getServices } from "@/app/lib/data";
 // import type { PageProps } from "next";
 interface ServiceDetailsPageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
-
+export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
 export default async function ServiceDetailsPage({
   params,
 }: ServiceDetailsPageProps) {
-  const { slug } = await params;
+  const { slug } = params;
   const service = await getServiceBySlug(slug);
   const servicesList = await getServices();
 
@@ -29,9 +25,4 @@ export default async function ServiceDetailsPage({
       </div>
     </div>
   );
-}
-export const revalidate = 60;
-export async function generateStaticParams() {
-  const services = await fetchServicesSlugs();
-  return services.map((service) => ({ slug: service.url }));
 }
