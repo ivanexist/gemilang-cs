@@ -2266,8 +2266,8 @@ export namespace Prisma {
     description: number
     location: number
     yearcompleted: number
-    images: number
     url: number
+    images: number
     _all: number
   }
 
@@ -2310,8 +2310,8 @@ export namespace Prisma {
     description?: true
     location?: true
     yearcompleted?: true
-    images?: true
     url?: true
+    images?: true
     _all?: true
   }
 
@@ -2409,8 +2409,8 @@ export namespace Prisma {
     description: JsonValue
     location: string
     yearcompleted: string[]
-    images: JsonValue | null
     url: string | null
+    images: JsonValue | null
     _count: ProjectCountAggregateOutputType | null
     _avg: ProjectAvgAggregateOutputType | null
     _sum: ProjectSumAggregateOutputType | null
@@ -2440,8 +2440,8 @@ export namespace Prisma {
     description?: boolean
     location?: boolean
     yearcompleted?: boolean
-    images?: boolean
     url?: boolean
+    images?: boolean
     Client?: boolean | ClientDefaultArgs<ExtArgs>
     Service?: boolean | ServiceDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["project"]>
@@ -2454,8 +2454,8 @@ export namespace Prisma {
     description?: boolean
     location?: boolean
     yearcompleted?: boolean
-    images?: boolean
     url?: boolean
+    images?: boolean
     Client?: boolean | ClientDefaultArgs<ExtArgs>
     Service?: boolean | ServiceDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["project"]>
@@ -2468,8 +2468,8 @@ export namespace Prisma {
     description?: boolean
     location?: boolean
     yearcompleted?: boolean
-    images?: boolean
     url?: boolean
+    images?: boolean
     Client?: boolean | ClientDefaultArgs<ExtArgs>
     Service?: boolean | ServiceDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["project"]>
@@ -2482,11 +2482,11 @@ export namespace Prisma {
     description?: boolean
     location?: boolean
     yearcompleted?: boolean
-    images?: boolean
     url?: boolean
+    images?: boolean
   }
 
-  export type ProjectOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clientid" | "serviceid" | "name" | "description" | "location" | "yearcompleted" | "images" | "url", ExtArgs["result"]["project"]>
+  export type ProjectOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "clientid" | "serviceid" | "name" | "description" | "location" | "yearcompleted" | "url" | "images", ExtArgs["result"]["project"]>
   export type ProjectInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Client?: boolean | ClientDefaultArgs<ExtArgs>
     Service?: boolean | ServiceDefaultArgs<ExtArgs>
@@ -2514,8 +2514,8 @@ export namespace Prisma {
       description: Prisma.JsonValue
       location: string
       yearcompleted: string[]
-      images: Prisma.JsonValue | null
       url: string | null
+      images: Prisma.JsonValue | null
     }, ExtArgs["result"]["project"]>
     composites: {}
   }
@@ -2948,8 +2948,8 @@ export namespace Prisma {
     readonly description: FieldRef<"Project", 'Json'>
     readonly location: FieldRef<"Project", 'String'>
     readonly yearcompleted: FieldRef<"Project", 'String[]'>
-    readonly images: FieldRef<"Project", 'Json'>
     readonly url: FieldRef<"Project", 'String'>
+    readonly images: FieldRef<"Project", 'Json'>
   }
     
 
@@ -4510,8 +4510,8 @@ export namespace Prisma {
     description: 'description',
     location: 'location',
     yearcompleted: 'yearcompleted',
-    images: 'images',
-    url: 'url'
+    url: 'url',
+    images: 'images'
   };
 
   export type ProjectScalarFieldEnum = (typeof ProjectScalarFieldEnum)[keyof typeof ProjectScalarFieldEnum]
@@ -4709,8 +4709,8 @@ export namespace Prisma {
     description?: JsonFilter<"Project">
     location?: StringFilter<"Project"> | string
     yearcompleted?: StringNullableListFilter<"Project">
-    images?: JsonNullableFilter<"Project">
     url?: StringNullableFilter<"Project"> | string | null
+    images?: JsonNullableFilter<"Project">
     Client?: XOR<ClientScalarRelationFilter, ClientWhereInput>
     Service?: XOR<ServiceScalarRelationFilter, ServiceWhereInput>
   }
@@ -4723,8 +4723,8 @@ export namespace Prisma {
     description?: SortOrder
     location?: SortOrder
     yearcompleted?: SortOrder
-    images?: SortOrderInput | SortOrder
     url?: SortOrderInput | SortOrder
+    images?: SortOrderInput | SortOrder
     Client?: ClientOrderByWithRelationInput
     Service?: ServiceOrderByWithRelationInput
   }
@@ -4754,8 +4754,8 @@ export namespace Prisma {
     description?: SortOrder
     location?: SortOrder
     yearcompleted?: SortOrder
-    images?: SortOrderInput | SortOrder
     url?: SortOrderInput | SortOrder
+    images?: SortOrderInput | SortOrder
     _count?: ProjectCountOrderByAggregateInput
     _avg?: ProjectAvgOrderByAggregateInput
     _max?: ProjectMaxOrderByAggregateInput
@@ -4774,8 +4774,8 @@ export namespace Prisma {
     description?: JsonWithAggregatesFilter<"Project">
     location?: StringWithAggregatesFilter<"Project"> | string
     yearcompleted?: StringNullableListFilter<"Project">
-    images?: JsonNullableWithAggregatesFilter<"Project">
     url?: StringNullableWithAggregatesFilter<"Project"> | string | null
+    images?: JsonNullableWithAggregatesFilter<"Project">
   }
 
   export type ServiceWhereInput = {
@@ -4902,8 +4902,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
     Client: ClientCreateNestedOneWithoutProjectInput
     Service: ServiceCreateNestedOneWithoutProjectInput
   }
@@ -4916,8 +4916,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUpdateInput = {
@@ -4925,8 +4925,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
     Client?: ClientUpdateOneRequiredWithoutProjectNestedInput
     Service?: ServiceUpdateOneRequiredWithoutProjectNestedInput
   }
@@ -4939,8 +4939,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectCreateManyInput = {
@@ -4951,8 +4951,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUpdateManyMutationInput = {
@@ -4960,8 +4960,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUncheckedUpdateManyInput = {
@@ -4972,8 +4972,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ServiceCreateInput = {
@@ -5172,6 +5172,21 @@ export namespace Prisma {
     hasSome?: string[] | ListStringFieldRefInput<$PrismaModel>
     isEmpty?: boolean
   }
+
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
   export type JsonNullableFilter<$PrismaModel = never> =
     | PatchUndefined<
         Either<Required<JsonNullableFilterBase<$PrismaModel>>, Exclude<keyof Required<JsonNullableFilterBase<$PrismaModel>>, 'path'>>,
@@ -5194,21 +5209,6 @@ export namespace Prisma {
     gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
     gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
     not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
-  }
-
-  export type StringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
   export type ClientScalarRelationFilter = {
@@ -5234,8 +5234,8 @@ export namespace Prisma {
     description?: SortOrder
     location?: SortOrder
     yearcompleted?: SortOrder
-    images?: SortOrder
     url?: SortOrder
+    images?: SortOrder
   }
 
   export type ProjectAvgOrderByAggregateInput = {
@@ -5293,6 +5293,24 @@ export namespace Prisma {
     _min?: NestedJsonFilter<$PrismaModel>
     _max?: NestedJsonFilter<$PrismaModel>
   }
+
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
   export type JsonNullableWithAggregatesFilter<$PrismaModel = never> =
     | PatchUndefined<
         Either<Required<JsonNullableWithAggregatesFilterBase<$PrismaModel>>, Exclude<keyof Required<JsonNullableWithAggregatesFilterBase<$PrismaModel>>, 'path'>>,
@@ -5318,24 +5336,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedJsonNullableFilter<$PrismaModel>
     _max?: NestedJsonNullableFilter<$PrismaModel>
-  }
-
-  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
   export type ServiceCountOrderByAggregateInput = {
@@ -5614,6 +5614,23 @@ export namespace Prisma {
     not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
   export type NestedIntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -5648,30 +5665,13 @@ export namespace Prisma {
     not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
-  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
-  }
-
   export type ProjectCreateWithoutClientInput = {
     name: string
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
     Service: ServiceCreateNestedOneWithoutProjectInput
   }
 
@@ -5682,8 +5682,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectCreateOrConnectWithoutClientInput = {
@@ -5723,8 +5723,8 @@ export namespace Prisma {
     description?: JsonFilter<"Project">
     location?: StringFilter<"Project"> | string
     yearcompleted?: StringNullableListFilter<"Project">
-    images?: JsonNullableFilter<"Project">
     url?: StringNullableFilter<"Project"> | string | null
+    images?: JsonNullableFilter<"Project">
   }
 
   export type ClientCreateWithoutProjectInput = {
@@ -5828,8 +5828,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
     Client: ClientCreateNestedOneWithoutProjectInput
   }
 
@@ -5840,8 +5840,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectCreateOrConnectWithoutServiceInput = {
@@ -5877,8 +5877,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUpdateWithoutClientInput = {
@@ -5886,8 +5886,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
     Service?: ServiceUpdateOneRequiredWithoutProjectNestedInput
   }
 
@@ -5898,8 +5898,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUncheckedUpdateManyWithoutClientInput = {
@@ -5909,8 +5909,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectCreateManyServiceInput = {
@@ -5920,8 +5920,8 @@ export namespace Prisma {
     description: JsonNullValueInput | InputJsonValue
     location: string
     yearcompleted?: ProjectCreateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUpdateWithoutServiceInput = {
@@ -5929,8 +5929,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
     Client?: ClientUpdateOneRequiredWithoutProjectNestedInput
   }
 
@@ -5941,8 +5941,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
   export type ProjectUncheckedUpdateManyWithoutServiceInput = {
@@ -5952,8 +5952,8 @@ export namespace Prisma {
     description?: JsonNullValueInput | InputJsonValue
     location?: StringFieldUpdateOperationsInput | string
     yearcompleted?: ProjectUpdateyearcompletedInput | string[]
-    images?: NullableJsonNullValueInput | InputJsonValue
     url?: NullableStringFieldUpdateOperationsInput | string | null
+    images?: NullableJsonNullValueInput | InputJsonValue
   }
 
 

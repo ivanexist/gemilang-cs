@@ -136,8 +136,8 @@ exports.Prisma.ProjectScalarFieldEnum = {
   description: 'description',
   location: 'location',
   yearcompleted: 'yearcompleted',
-  images: 'images',
-  url: 'url'
+  url: 'url',
+  images: 'images'
 };
 
 exports.Prisma.ServiceScalarFieldEnum = {

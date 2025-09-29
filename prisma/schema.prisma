@@ -25,15 +25,15 @@ model Project {
   description   Json
   location      String
   yearcompleted String[]
+  url           String?  @unique(map: "unique_project_url")
   images        Json?
-  url           String?  @unique
   Client        Client   @relation(fields: [clientid], references: [id], map: "Project_clientId_fkey")
   Service       Service  @relation(fields: [serviceid], references: [id], map: "Project_serviceId_fkey")
 }
 
 model Service {
   id          Int       @id @default(autoincrement())
-  url         String    @unique
+  url         String    @unique(map: "unique_service_url")
   name        String
   icon        String
   image       String
