@@ -128,7 +128,7 @@ const ProjectsDetailsContent = ({ project }: Props) => {
                           className="text-blue-500 transition-colors duration-300"
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                         />
-                        <span className="font-medium font ml-1 text-gray-800 p-1">
+                        <span className="font-medium ml-1 text-gray-800 p-1">
                           {project.location}
                         </span>
                       </div>
