@@ -26,7 +26,7 @@ const {
   Public,
   getRuntime,
   createParam,
-} = require('./runtime/library.js')
+} = require('./runtime/binary.js')
 
 
 const Prisma = {}
@@ -35,12 +35,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.7.0
- * Query Engine version: 3cff47a7f5d65c3ea74883f1d736e41d68ce91ed
+ * Prisma Client JS version: 6.16.2
+ * Query Engine version: 1c57fdcd7e44b29b9313256c76699e91c3ac3c43
  */
 Prisma.prismaVersion = {
-  client: "6.7.0",
-  engine: "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed"
+  client: "6.16.2",
+  engine: "1c57fdcd7e44b29b9313256c76699e91c3ac3c43"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -173,7 +173,7 @@ const config = {
       "fromEnvVar": null
     },
     "config": {
-      "engineType": "library"
+      "engineType": "binary"
     },
     "binaryTargets": [
       {
@@ -191,8 +191,8 @@ const config = {
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
-  "clientVersion": "6.7.0",
-  "engineVersion": "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed",
+  "clientVersion": "6.16.2",
+  "engineVersion": "1c57fdcd7e44b29b9313256c76699e91c3ac3c43",
   "datasourceNames": [
     "db"
   ],
@@ -206,8 +206,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Client {\n  id          Int       @id @default(autoincrement())\n  name        String\n  description String\n  city        String\n  country     String\n  Project     Project[]\n}\n\nmodel Project {\n  id            Int      @id @default(autoincrement())\n  clientid      Int\n  serviceid     Int\n  name          String\n  description   Json\n  location      String\n  yearcompleted String[]\n  url           String?  @unique(map: \"unique_project_url\")\n  images        Json?\n  Client        Client   @relation(fields: [clientid], references: [id], map: \"Project_clientId_fkey\")\n  Service       Service  @relation(fields: [serviceid], references: [id], map: \"Project_serviceId_fkey\")\n}\n\nmodel Service {\n  id          Int       @id @default(autoincrement())\n  url         String    @unique(map: \"unique_service_url\")\n  name        String\n  icon        String\n  image       String\n  description Json\n  Project     Project[]\n}\n",
-  "inlineSchemaHash": "4400d650702cf3447108113f605ac581f7b76459d67583521201701f5cc5c51f",
+  "inlineSchema": "generator client {\n  provider   = \"prisma-client-js\"\n  output     = \"../src/generated/prisma\"\n  engineType = \"binary\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Client {\n  id          Int       @id @default(autoincrement())\n  name        String\n  description String\n  city        String\n  country     String\n  Project     Project[]\n}\n\nmodel Project {\n  id            Int      @id @default(autoincrement())\n  clientid      Int\n  serviceid     Int\n  name          String\n  description   Json\n  location      String\n  yearcompleted String[]\n  url           String?  @unique(map: \"unique_project_url\")\n  images        Json?\n  Client        Client   @relation(fields: [clientid], references: [id], map: \"Project_clientId_fkey\")\n  Service       Service  @relation(fields: [serviceid], references: [id], map: \"Project_serviceId_fkey\")\n}\n\nmodel Service {\n  id          Int       @id @default(autoincrement())\n  url         String    @unique(map: \"unique_service_url\")\n  name        String\n  icon        String\n  image       String\n  description Json\n  Project     Project[]\n}\n",
+  "inlineSchemaHash": "04e68a4428175c8336846991337eefa95c970cb545dfd10f26c3e23073102c9a",
   "copyEngine": true
 }
 
@@ -234,7 +234,7 @@ config.engineWasm = undefined
 config.compilerWasm = undefined
 
 
-const { warnEnvConflicts } = require('./runtime/library.js')
+const { warnEnvConflicts } = require('./runtime/binary.js')
 
 warnEnvConflicts({
     rootEnvPath: config.relativeEnvPaths.rootEnvPath && path.resolve(config.dirname, config.relativeEnvPaths.rootEnvPath),
@@ -246,8 +246,8 @@ exports.PrismaClient = PrismaClient
 Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
-path.join(__dirname, "query_engine-windows.dll.node");
-path.join(process.cwd(), "src/generated/prisma/query_engine-windows.dll.node")
+path.join(__dirname, "query-engine-windows");
+path.join(process.cwd(), "src/generated/prisma/query-engine-windows")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
 path.join(process.cwd(), "src/generated/prisma/schema.prisma")
