@@ -13,7 +13,7 @@ export default async function ProjectDetailsPage({
 }: ProjectDetailsProps) {
   const { slug } = params;
   const project = await getProjectBySlug(slug);
-
+  // const projectsList = await getProjects();
   // If slug is not a valid project or not found
   if (!project) {
     return <div className="text-center text-red-500">Project Not Found</div>;
