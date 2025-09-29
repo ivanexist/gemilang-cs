@@ -28,7 +28,7 @@ export default async function ProjectDetailsPage({
     </div>
   );
 }
-
+export const revalidate = 60;
 export async function generateStaticParams() {
   const projects = await fetchProjectsSlugs();
   return projects.map((project) => ({ slug: project.url }));
