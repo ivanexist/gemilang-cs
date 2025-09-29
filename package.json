@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^6.16.2",
     "@prisma/client": "^6.16.2",
     "@radix-ui/react-accordion": "^1.2.10",
     "@types/swiper": "^5.4.3",
