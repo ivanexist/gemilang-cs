@@ -30,7 +30,7 @@ export default async function ServiceDetailsPage({
     </div>
   );
 }
-
+export const revalidate = 60;
 export async function generateStaticParams() {
   const services = await fetchServicesSlugs();
   return services.map((service) => ({ slug: service.url }));
