@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Perusahaan yang bergerak dalam bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan Instalasi Perpipaan.",
 };
-
+export const dynamic = "force-dynamic"; // Skip SSG for the layout
 export default function RootLayout({
   children,
 }: Readonly<{
