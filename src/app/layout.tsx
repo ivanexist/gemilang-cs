@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Perusahaan yang bergerak dalam bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan Instalasi Perpipaan.",
 };
+export const revalidate = 60; // Revalidate every 60 seconds
 // export const dynamic = "force-dynamic";
 export default function RootLayout({
   children,
