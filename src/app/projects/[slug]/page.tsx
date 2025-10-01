@@ -3,11 +3,12 @@ import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsCont
 import { getProjectBySlug } from "@/app/lib/data";
 // import type { PageProps } from "next";
 // import Breadcrumb from "../components/common/Breadcrumb";
+export const dynamicParams = true; // enable runtime fallback
 
 interface ProjectDetailsProps {
   params: Promise<{ slug: string }>;
 }
-export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
+// export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
 export default async function ProjectDetailsPage({
   params,
 }: ProjectDetailsProps) {

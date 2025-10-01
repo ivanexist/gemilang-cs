@@ -5,7 +5,9 @@ import { getServiceBySlug, getServices } from "@/app/lib/data";
 interface ServiceDetailsPageProps {
   params: Promise<{ slug: string }>;
 }
-export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
+// export const dynamic = "force-dynamic"; // this page will be server-side rendered on every request
+export const dynamicParams = true; // enable runtime fallback
+
 export default async function ServiceDetailsPage({
   params,
 }: ServiceDetailsPageProps) {
