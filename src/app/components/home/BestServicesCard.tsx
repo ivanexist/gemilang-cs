@@ -6,7 +6,7 @@ import { ReactSVG } from "react-svg";
 // import { service } from "@/store/useStore";
 // Debug: Log service data
 interface Service {
-  id: string;
+  id: number;
   name: string;
   url: string;
   icon: string;
