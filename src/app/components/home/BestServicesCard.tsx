@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ReactSVG } from "react-svg";
-import { Service } from "@/generated/prisma";
+import { Service } from "@/store/useStore";
 
 type BestServiceCardProps = {
   service: Service;
