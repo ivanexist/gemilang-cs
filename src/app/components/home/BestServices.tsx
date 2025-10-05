@@ -4,6 +4,17 @@ import Link from "next/link";
 import BestServiceCard from "./BestServicesCard";
 import { useStore } from "@/store/useStore";
 
+interface DescriptionItem {
+  description_overview: string;
+}
+
+interface Service {
+  id: string;
+  name: string;
+  url: string;
+  icon: string;
+  description: DescriptionItem[] | null;
+}
 export default function BestServices() {
   // const services = await getServices();
   const { services } = useStore();
