@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ReactSVG } from "react-svg";
-import { Service } from "@/generated/prisma";
+// import { Service } from "@/generated/prisma";
 
 interface ServiceCardProps {
   service: Service;
@@ -12,6 +12,14 @@ interface ServiceCardProps {
 type DescriptionItem = {
   description_overview: string;
 };
+
+interface Service {
+  id: string;
+  name: string;
+  url: string;
+  icon: string;
+  description: DescriptionItem[] | null;
+}
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const serviceDescription = Array.isArray(service.description)
