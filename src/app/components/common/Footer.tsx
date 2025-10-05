@@ -1,7 +1,9 @@
+"use client";
 // import { FaBookOpen } from "react-icons/fa";
-import { getServices } from "@/app/lib/data";
+// import { getServices } from "@/app/lib/data";
+import { useStore } from "@/store/useStore";
 
-export default async function Footer() {
+export default function Footer() {
   const FooterMenu = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
@@ -9,7 +11,7 @@ export default async function Footer() {
     { label: "Projects", path: "/projects" },
     { label: "Contact", path: "/contact" },
   ];
-  const services = await getServices();
+  const { services } = useStore();
 
   return (
     <footer className="text-center lg:text-left border-t border-t-blue-500 pb-8 bg-gray-900 text-white">

@@ -3,9 +3,6 @@
 import Link from "next/link";
 import BestServiceCard from "./BestServicesCard";
 import { useStore } from "@/store/useStore";
-// import { getServices } from "@/app/lib/data";
-// import { useStore } from "zustand";
-// import type { Service } from "@/generated/prisma";
 
 export default function BestServices() {
   // const services = await getServices();
