@@ -239,7 +239,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">
-                        Alamat Email
+                        Email
                       </h4>
                       <p className="text-muted-foreground">
                         gemilangciptasentosa@gmail.com

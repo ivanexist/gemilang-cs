@@ -35,7 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       </div>
       <Link
         href={`/services/${service.url}`}
-        className="sm:mx-4 lg:mx-8 mb-4 text-blue-600 font-semibold uppercase border-b-2 border-b-transparent"
+        className="sm:mx-4 lg:mx-8 mb-4 text-blue-600 font-semibold text-lg border-b-2 border-b-transparent"
       >
         <span className="pb-2 hover:border-b-2 hover:border-malachite-400 transition duration-300">
           Details

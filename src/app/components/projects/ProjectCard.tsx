@@ -1,14 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { Client, Project, Service } from "@/generated/prisma";
+// import { Client, Project, Service } from "@/generated/prisma";
 import Image from "next/image";
 import { ReactSVG } from "react-svg";
+import { useStore } from "@/store/useStore";
 
 interface ProjectCardProps {
-  project: Project & {
-    Client: Client;
-    Service: Service;
+  project: {
+    id: number;
+    clientid: number;
+    serviceid: number;
+    name: string;
+    description: {
+      summary: string;
+      overview: string;
+      paragraph_1: string;
+      paragraph_2: string;
+      paragraph_3: string;
+    }[];
+    location: string;
+    yearcompleted: string[];
+    url: string;
+    images: string[];
   };
 }
 
@@ -18,6 +32,10 @@ type DescriptionItem = {
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const { getClientById, getServiceById } = useStore();
+  const client = getClientById(project.clientid);
+  const service = getServiceById(project.serviceid);
+  // Safely handle images array
   const images = project.images as string[];
 
   const projectDescription = Array.isArray(project.description)
@@ -43,8 +61,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="px-6 py-4 flex-1 flex flex-col justify-between">
           <div className="flex flex-col">
             <div className="flex justify-between mb-4">
-              <div className="bg-malachite-600 rounded-full p-2 text-xs text-white font-semibold uppercase">
-                <p>{project.Service?.name ?? "Unknown Service"}</p>
+              <div className="bg-malachite-600 rounded-full py-2 px-4 text-xs text-white font-semibold">
+                <p>{service?.name ?? "Unknown Service"}</p>
               </div>
               <div className="ml-4">
                 <p className="flex text-blue-600">
@@ -59,11 +77,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               </div>
             </div>
             <Link href={`/projects/${project.url}`} scroll={true}>
-              <h1 className="text-lg text-start font-bold text-blue-700 hover:text-blue-600 uppercase">
+              <h1 className="text-xl text-start font-bold text-blue-700 hover:text-blue-600">
                 {project.name}
               </h1>
             </Link>
-            <p className="py-2 text-gray-600">
+            <p className="py-4 text-gray-600">
               {projectDescription[0].overview}
             </p>
           </div>
@@ -77,7 +95,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                 />
                 <span className="text-sm ml-1 text-gray-800 p-1 font-semibold">
-                  {project.Client.name}
+                  {client.name}
                 </span>
               </div>
             </div>

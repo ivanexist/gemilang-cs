@@ -1,16 +1,18 @@
+"use client";
+import { useStore } from "@/store/useStore";
 import ServiceCard from "./ServiceCard";
-import { getServices } from "@/app/lib/data";
+// import { getServices } from "@/app/lib/data";
 
-export default async function ServicesContent() {
-  const services = await getServices();
+export default function ServicesContent() {
+  const { services } = useStore();
 
   return (
-    <div className="flex flex-col pb-24 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-no-repeat">
+    <div className="flex flex-col pb-20 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="max-w-screen-xl w-full mx-auto px-4 pb-8 mb-4 text-center">
         <h1 className="font-bold text-4xl py-4 text-blue-600">
           Layanan Konstruksi Kami
         </h1>
-        <p className="text-lg text-gray-600 py-4">
+        <p className="text-lg text-gray-500 pt-2 pb-4">
           Solusi konstruksi komprehensif yang disesuaikan untuk memenuhi
           kebutuhan infrastruktur dan bangunan Anda
         </p>

@@ -2,7 +2,7 @@
 
 // import { Project } from "@/generated/prisma";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
@@ -13,30 +13,83 @@ import SwiperCore from "swiper";
 import { ReactSVG } from "react-svg";
 // import RelatedProjects from "./RelatedProjects";
 import Link from "next/link";
-import { Project, Client, Service } from "@/generated/prisma";
+import { Project, Client, Service, ProjectDescription } from "@/store/useStore";
+import { useStore } from "@/store/useStore";
+import { useParams } from "next/navigation";
 
-interface Props {
-  project: Project & {
-    Client: Client;
-    Service: Service;
-  };
-}
+// interface Props {
+//   project: Project & {
+//     Client: Client;
+//     Service: Service;
+//   };
+// }
 
 // interface ProjectDetailsProps {
 //   project: Project;
 // }
-type DescriptionItem = {
-  summary: string;
-  // maybe other fields later
-};
+// type DescriptionItem = {
+//   summary: string;
+//   // maybe other fields later
+// };
 
-const ProjectsDetailsContent = ({ project }: Props) => {
+const ProjectsDetailsContent = () => {
+  const params = useParams();
+  const currentSlug = typeof params.slug === "string" ? params.slug : "";
+  const {
+    getProjectByUrl,
+    getClientById,
+    getServiceById,
+    getProjectsByServiceId,
+  } = useStore();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = Array.isArray(project.images)
-    ? (project.images as string[])
-    : [];
-  const projectDescription = Array.isArray(project.description)
-    ? (project.description as DescriptionItem[])
+
+  // Debug: Log project, client, service, and related projects
+  useEffect(() => {
+    const project = getProjectByUrl(currentSlug);
+    console.log("ProjectsDetailsContent Slug:", currentSlug);
+    console.log("ProjectsDetailsContent Project:", project);
+    if (project) {
+      console.log(
+        "ProjectsDetailsContent Client:",
+        getClientById(project.clientid)
+      );
+      console.log(
+        "ProjectsDetailsContent Service:",
+        getServiceById(project.serviceid)
+      );
+      console.log(
+        "ProjectsDetailsContent Related Projects:",
+        getProjectsByServiceId(project.serviceid)
+      );
+    }
+  }, [
+    currentSlug,
+    getProjectByUrl,
+    getClientById,
+    getServiceById,
+    getProjectsByServiceId,
+  ]);
+  const project = getProjectByUrl(currentSlug);
+  if (!project) {
+    return null; // Handled by ProjectDetailsPage
+  }
+  const client = getClientById(project.clientid);
+  const service = getServiceById(project.serviceid);
+  const images = Array.isArray(project.images) ? project.images : [];
+  const projectDescription: ProjectDescription[] = Array.isArray(
+    project.description
+  )
+    ? project.description.every(
+        (desc) =>
+          typeof desc === "object" &&
+          "summary" in desc &&
+          "overview" in desc &&
+          "paragraph_1" in desc &&
+          "paragraph_2" in desc &&
+          "paragraph_3" in desc
+      )
+      ? (project.description as ProjectDescription[])
+      : []
     : [];
 
   const handleSlideChange = (swiper: SwiperCore) => {
@@ -88,8 +141,8 @@ const ProjectsDetailsContent = ({ project }: Props) => {
                   {project.name}
                 </h1> */}
                 <div className="flex mb-4">
-                  <div className="bg-malachite-600 rounded-full p-2 text-xs text-white font-semibold uppercase">
-                    <p>{project.Service?.name ?? "Unknown Service"}</p>
+                  <div className="bg-malachite-600 rounded-full py-2 px-4 text-sm text-white font-semibold">
+                    <p>{service?.name ?? "Unknown Service"}</p>
                   </div>
                   <div className="ml-4 pt-1">
                     <div className="flex text-blue-600">
@@ -103,6 +156,12 @@ const ProjectsDetailsContent = ({ project }: Props) => {
                     </div>
                   </div>
                 </div>
+                <h1 className="font-bold text-2xl text-blue-600 font-PlayfairDisplay mt-6">
+                  {project.name}
+                </h1>
+              </div>
+              <div className="mt-4">
+                {/* Project Description */}
                 <div className="text-medium text-masala-800 text-left font-openSans pt-2">
                   <p className="font-light pb-2">
                     {projectDescription[0]?.summary}
@@ -118,7 +177,7 @@ const ProjectsDetailsContent = ({ project }: Props) => {
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                         />
                         <span className=" ml-1 text-gray-800 p-1">
-                          {project.Client.name}
+                          {client.name}
                         </span>
                       </div>
                     </div>

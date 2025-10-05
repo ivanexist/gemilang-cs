@@ -1,0 +1,602 @@
+{
+  "Client": [
+    {
+      "id": 1,
+      "name": "Dinas Fasilitas Pangkalan Angkatan Laut",
+      "description": "hello",
+      "logo": "",
+      "city": "Makassar, Sulawesi Selatan",
+      "country": "Indonesia"
+    },
+    {
+      "id": 2,
+      "name": "Terminal Teluk Lamong",
+      "description": "hello",
+      "logo": "",
+      "city": "Gresik, Jawa Timur",
+      "country": "Indonesia"
+    },
+    {
+      "id": 3,
+      "name": "Pelindo Energi Logistik",
+      "description": "hello",
+      "logo": "",
+      "city": "Semarang, Jawa Tengah",
+      "country": "Indonesia"
+    },
+    {
+      "id": 4,
+      "name": "Lantamal V Surabaya",
+      "description": "hello",
+      "logo": "",
+      "city": "Surabaya, Jawa Timur",
+      "country": "Indonesia"
+    },
+    {
+      "id": 5,
+      "name": "KODIKLATAL",
+      "description": "hello",
+      "logo": "",
+      "city": "Surabaya, Jawa Timur",
+      "country": "Indonesia"
+    },
+    {
+      "id": 6,
+      "name": "Pangkalan Korps Marinir",
+      "description": "hello",
+      "logo": "",
+      "city": "Surabaya, Jawa Timur",
+      "country": "Indonesia"
+    }
+  ],
+  "Service": [
+    {
+      "id": 1,
+      "url": "pembangunan-jalan",
+      "name": "Pembangunan Jalan",
+      "icon": "pembangunan-jalan.svg",
+      "image": "Pembangunan-Jalan/Proses-2-jalan.jpeg",
+      "description": [
+        {
+          "description_new": [
+            "Layanan konstruksi jalan yang komprehensif mencakup pembangunan jalan raya, jalan perkotaan, dan infrastruktur pedesaan. Kami memanfaatkan peralatan canggih dan mengikuti standar internasional untuk kualitas dan keselamatan.",
+            "Keahlian kami di bidang ini memastikan setiap proyek dilaksanakan dengan presisi, mutu, dan kepatuhan terhadap standar internasional. Kami menggunakan peralatan berteknologi tinggi dan tenaga profesional yang sangat terampil untuk menghadirkan hasil yang luar biasa."
+          ],
+          "description_complete": "Layanan pembangunan rumah meliputi perancangan, konstruksi, dan penyelesaian hunian sesuai dengan kebutuhan dan preferensi pemiliknya. Setiap proyek dimulai dengan perencanaan desain yang mempertimbangkan aspek estetika, fungsionalitas, serta efisiensi ruang dan energi. Material berkualitas tinggi digunakan untuk memastikan struktur rumah kokoh dan tahan lama, mulai dari pondasi hingga atap. Pengerjaan dilakukan oleh tenaga profesional dengan keahlian di berbagai bidang, seperti arsitektur, sipil, dan mekanikal, sehingga hasil akhir tidak hanya memenuhi standar keamanan dan kenyamanan tetapi juga memiliki nilai estetika yang tinggi.",
+          "description_overview": "Pembangunan perumahan mencakup kegiatan yang bertujuan untuk membangun perumahan yang layak huni.",
+          "description_key_benefit": [
+            "Jalan aspal dan beton berkualitas tinggi",
+            "Integrasi sistem drainase yang baik",
+            "Manajemen lalu lintas selama konstruksi",
+            "Kepatuhan terhadap standar keselamatan"
+          ],
+          "description_our_process": [
+            "Survei lokasi dan analisis tanah",
+            "Persetujuan desain dan perencanaan",
+            "Persiapan lahan dan pekerjaan pondasi",
+            "Konstruksi permukaan jalan",
+            "Pengujian kualitas dan serah terima"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "pembangunan-perumahan",
+      "name": "Pembangunan Perumahan",
+      "icon": "pembangunan-perumahan.svg",
+      "image": "Rumneg-T45-Lantamal-V/Side-1.JPG",
+      "description": [
+        {
+          "description_new": [
+            "Layanan pengembangan perumahan yang komprehensif, mencakup proyek perumahan pemerintah, kompleks hunian militer, dan pembangunan perumahan pribadi. Kami berfokus pada penyediaan solusi perumahan yang nyaman, berkelanjutan, dan terjangkau.",
+            "Keahlian kami di bidang ini memastikan setiap proyek dilaksanakan dengan presisi, kualitas, serta mematuhi standar internasional. Kami menggunakan peralatan mutakhir dan tenaga profesional yang terampil untuk memberikan hasil yang luar biasa."
+          ],
+          "description_complete": "Layanan pembangunan rumah meliputi perancangan, konstruksi, dan penyelesaian hunian sesuai dengan kebutuhan dan preferensi pemiliknya. Setiap proyek dimulai dengan perencanaan desain yang mempertimbangkan aspek estetika, fungsionalitas, serta efisiensi ruang dan energi. Material berkualitas tinggi digunakan untuk memastikan struktur rumah kokoh dan tahan lama, mulai dari pondasi hingga atap. Pengerjaan dilakukan oleh tenaga profesional dengan keahlian di berbagai bidang, seperti arsitektur, sipil, dan mekanikal, sehingga hasil akhir tidak hanya memenuhi standar keamanan dan kenyamanan tetapi juga memiliki nilai estetika yang tinggi.",
+          "description_overview": "Pembangunan perumahan mencakup kegiatan yang bertujuan untuk membangun perumahan yang layak huni.",
+          "description_key_benefit": [
+            "Solusi perumahan terjangkau",
+            "Praktik pembangunan berkelanjutan",
+            "Desain yang berfokus pada komunitas",
+            "Standar konstruksi berkualitas"
+          ],
+          "description_our_process": [
+            "Perencanaan induk lokasi",
+            "Pembangunan infrastruktur",
+            "Konstruksi rumah individual",
+            "Penataan lanskap dan utilitas",
+            "Penyelesaian fasilitas komunitas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "instalasi-pipa",
+      "name": "Instalasi Pipa",
+      "icon": "instalasi-pipa.svg",
+      "image": "Pipa-Pelindo-Energi-Logistik/Side-3.jpg",
+      "description": [
+        {
+          "description_new": [
+            "Layanan instalasi pipa profesional untuk berbagai kebutuhan termasuk distribusi gas, pasokan air, sistem bahan bakar, dan perpipaan industri. Kami menangani proyek mulai dari skala kecil untuk hunian hingga instalasi berskala besar di industri.",
+            "Keahlian kami di bidang ini memastikan setiap proyek dijalankan dengan presisi, kualitas tinggi, dan sesuai dengan standar internasional. Kami menggunakan peralatan modern serta tenaga ahli berpengalaman untuk memberikan hasil yang maksimal."
+          ],
+          "description_complete": "Layanan instalasi pipa mencakup pemasangan sistem perpipaan untuk berbagai keperluan, baik untuk kebutuhan rumah tangga, komersial, maupun industri. Proses ini mencakup perancangan jalur pipa yang efisien, pemilihan material pipa yang sesuai dengan kebutuhan—seperti PVC, besi galvanis, atau PPR—serta pemasangan dengan teknik yang tepat untuk memastikan aliran air atau gas berjalan optimal tanpa kebocoran. Selain itu, sistem perpipaan juga dirancang agar tahan terhadap tekanan dan kondisi lingkungan tertentu, seperti suhu tinggi atau zat kimia tertentu. Dengan standar pemasangan yang tinggi, layanan ini menjamin sistem perpipaan yang aman, awet, dan berfungsi secara efisien dalam jangka panjang.",
+          "description_overview": "Pemasangan dan pemeliharaan sistem perpipaan di berbagai jenis bangunan atau infrastruktur.",
+          "description_key_benefit": [
+            "Instalasi yang diuji tekanan",
+            "Material tahan korosi",
+            "Kepatuhan terhadap standar keselamatan dan sertifikasi",
+            "Gangguan seminimal mungkin selama proses instalasi"
+          ],
+          "description_our_process": [
+            "Perencanaan jalur pipa",
+            "Penggalian dan pembuatan parit",
+            "Pemasangan dan penyambungan pipa",
+            "Pengujian tekanan dan inspeksi",
+            "Pemulihan dan pembersihan area"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "pembangunan-gedung",
+      "name": "Pembangunan Gedung",
+      "icon": "pembangunan-gedung.svg",
+      "image": "Gedung-Flat-T45-Marinir/Side-1.jpg",
+      "description": [
+        {
+          "description_new": [
+            "Layanan konstruksi bangunan skala penuh mencakup gedung pemerintahan, fasilitas militer, bangunan komersial, dan kompleks perumahan. Keahlian kami meliputi desain arsitektur modern dan praktik konstruksi berkelanjutan.",
+            "Keahlian kami di bidang ini memastikan setiap proyek dilaksanakan dengan presisi, kualitas, serta mematuhi standar internasional. Kami menggunakan peralatan canggih dan mempekerjakan tenaga profesional berpengalaman untuk menghadirkan hasil yang unggul."
+          ],
+          "description_complete": "Layanan pembangunan gedung mencakup perencanaan, desain, serta konstruksi bangunan untuk berbagai keperluan, seperti perkantoran, pusat perbelanjaan, rumah sakit, dan fasilitas umum lainnya. Proses dimulai dengan analisis kebutuhan dan perencanaan struktur yang mempertimbangkan faktor kekuatan, keamanan, serta efisiensi energi. Dalam setiap tahap pengerjaan, mulai dari pondasi, rangka bangunan, hingga finishing interior dan eksterior, digunakan material berkualitas tinggi yang sesuai dengan standar konstruksi modern. Selain itu, pembangunan juga dilakukan dengan mengedepankan aspek keselamatan kerja serta kepatuhan terhadap regulasi yang berlaku, sehingga gedung yang dihasilkan memiliki kualitas terbaik dan berdaya guna dalam jangka panjang.",
+          "description_overview": "Pembangunan melibatkan banyak pihak seperti arsitek, insinyur, mandor, dan pekerja lapangan.",
+          "description_key_benefit": [
+            "Konstruksi tahan gempa",
+            "Desain bangunan hemat energi",
+            "Kepatuhan terhadap peraturan bangunan",
+            "Material dan pengerjaan berkualitas"
+          ],
+          "description_our_process": [
+            "Perencanaan arsitektur dan perizinan",
+            "Pekerjaan pondasi dan struktur",
+            "Pembangunan selubung bangunan",
+            "Penyelesaian interior dan eksterior",
+            "Inspeksi akhir dan sertifikasi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "konstruksi-baja",
+      "name": "Konstruksi Baja",
+      "icon": "konstruksi-baja.svg",
+      "image": "Shelter-Filling-Station/Proses-1.jpeg",
+      "description": [
+        {
+          "description_new": [
+            "Layanan konstruksi baja khusus untuk fasilitas industri, gudang, bangunan komersial, dan struktur khusus. Kami menggunakan baja berkualitas tinggi dan teknik pengelasan canggih untuk memastikan ketahanan maksimal.",
+            "Keahlian kami di bidang ini menjamin setiap proyek dijalankan dengan presisi, kualitas, serta sesuai dengan standar internasional. Kami menggunakan peralatan modern dan tenaga profesional berpengalaman untuk memberikan hasil yang luar biasa."
+          ],
+          "description_complete": "Layanan konstruksi baja menawarkan solusi pembangunan yang mengandalkan rangka baja sebagai struktur utama untuk berbagai jenis bangunan dan fasilitas. Proses ini mencakup desain dan fabrikasi elemen baja yang disesuaikan dengan kebutuhan proyek, serta pemasangan yang dilakukan dengan metode presisi tinggi guna memastikan kestabilan dan kekuatan struktur. Konstruksi baja sangat cocok untuk bangunan bertingkat, gudang, jembatan, serta fasilitas industri karena memiliki daya tahan tinggi terhadap tekanan dan cuaca ekstrem. Selain itu, keunggulan utama konstruksi baja adalah proses pengerjaannya yang relatif lebih cepat dibandingkan dengan konstruksi berbasis beton, serta fleksibilitas dalam desain yang memungkinkan berbagai inovasi arsitektural.",
+          "description_overview": "Pekerjaan konstruksi baja mencakup pembuatan dan pemasangan struktur baja untuk bangunan dan infrastruktur.",
+          "description_key_benefit": [
+            "Baja struktural berkekuatan tinggi",
+            "Desain tahan gempa",
+            "Waktu konstruksi yang cepat",
+            "Ketahanan jangka panjang"
+          ],
+          "description_our_process": [
+            "Desain rekayasa struktur",
+            "Fabrikasi dan persiapan baja",
+            "Pemasangan pondasi dan angkur",
+            "Pemasangan dan perakitan baja",
+            "Inspeksi kualitas dan pelapisan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "sistem-drainase",
+      "name": "Sistem Drainase",
+      "icon": "sistem-drainase.svg",
+      "image": "Saluran-U-Ditch-Terminal-Teluk-Lamong/Side-3.jpg",
+      "description": [
+        {
+          "description_new": [
+            "Solusi sistem drainase lengkap termasuk manajemen air hujan, sistem pengendalian banjir, instalasi U-Ditch, serta infrastruktur pengelolaan air yang komprehensif untuk kawasan perkotaan dan industri.",
+            "Keahlian kami di bidang ini memastikan setiap proyek dilaksanakan dengan presisi, kualitas tinggi, dan sesuai dengan standar internasional. Kami menggunakan peralatan mutakhir dan tenaga profesional yang sangat terampil untuk memberikan hasil yang luar biasa."
+          ],
+          "description_complete": "Layanan sistem drainase mencakup perencanaan dan pembangunan saluran air yang berfungsi untuk mengelola aliran air hujan dan limbah agar tidak menimbulkan genangan atau banjir. Proses ini melibatkan analisis kondisi tanah dan lingkungan sekitar, pemilihan jenis drainase yang sesuai, serta pemasangan saluran yang efisien untuk mengalirkan air ke tempat pembuangan yang tepat. Material yang digunakan dalam sistem drainase, seperti beton pracetak atau pipa PVC, dipilih berdasarkan kebutuhan proyek guna memastikan daya tahan yang optimal. Dengan sistem drainase yang dirancang dan dipasang dengan baik, area sekitar dapat terhindar dari risiko kerusakan akibat air berlebih serta meningkatkan keberlanjutan lingkungan.",
+          "description_overview": "Sistem drainase mengatur aliran air hujan dan limbah, mencegah banjir, menjaga lingkungan, serta meningkatkan keberlanjutan.",
+          "description_key_benefit": [
+            "Sistem pencegahan banjir",
+            "Pengelolaan air berkelanjutan",
+            "Saluran beton yang tahan lama",
+            "Kepatuhan terhadap standar lingkungan"
+          ],
+          "description_our_process": [
+            "Studi hidrologi dan drainase",
+            "Perancangan sistem dan persetujuan",
+            "Penggalian dan persiapan dasar",
+            "Instalasi saluran dan koneksi",
+            "Pengujian serta pedoman pemeliharaan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "renovasi",
+      "name": "Renovasi",
+      "icon": "renovasi.svg",
+      "image": "Perbaikan-Dapur-Kodiklatal/Side-1.jpg",
+      "description": [
+        {
+          "description_new": [
+            "Layanan renovasi komprehensif untuk gedung pemerintahan, fasilitas militer, properti residensial, dan bangunan komersial. Kami mengkhususkan diri dalam modernisasi dengan tetap menjaga integritas struktural.",
+            "Keahlian kami di bidang ini memastikan setiap proyek dilaksanakan dengan presisi, kualitas, dan kepatuhan terhadap standar internasional. Kami menggunakan peralatan canggih serta tenaga profesional yang sangat terampil untuk menghadirkan hasil yang luar biasa."
+          ],
+          "description_complete": "Layanan renovasi mencakup perbaikan, perubahan, atau penyempurnaan bangunan agar lebih fungsional, estetis, dan sesuai dengan kebutuhan pengguna. Proses renovasi dapat mencakup berbagai aspek, mulai dari perombakan struktur utama, peningkatan kualitas material, hingga modernisasi tata ruang dan sistem instalasi seperti listrik dan pipa air. Pekerjaan ini dilakukan dengan mempertimbangkan kondisi bangunan lama serta keinginan pemilik, sehingga hasil akhir tidak hanya memperbaiki tampilan dan kenyamanan, tetapi juga meningkatkan nilai dan ketahanan bangunan dalam jangka panjang. Dengan perencanaan matang dan pengerjaan yang profesional, renovasi dapat mengubah bangunan lama menjadi lebih optimal dan sesuai dengan perkembangan zaman.",
+          "description_overview": "Pekerjaan renovasi adalah proses memperbaiki atau mengubah bangunan agar lebih fungsional, aman, dan sesuai kebutuhan.",
+          "description_key_benefit": [
+            "Peningkatan hemat biaya",
+            "Pelestarian integritas struktural",
+            "Perbaikan fasilitas modern",
+            "Gangguan operasional minimal"
+          ],
+          "description_our_process": [
+            "Penilaian kondisi dan perencanaan",
+            "Perolehan izin dan persetujuan",
+            "Pekerjaan pembongkaran dan persiapan",
+            "Renovasi dan modernisasi",
+            "Inspeksi akhir dan serah terima"
+          ]
+        }
+      ]
+    }
+  ],
+  "Project": [
+    {
+      "id": 1,
+      "clientid": 1,
+      "serviceid": 4,
+      "name": "Gedung Barak Kowal Lantamal VI",
+      "description": [
+        {
+          "summary": "Proyek pembangunan Gedung Barak Kowal di Lantamal VI Makassar merupakan inisiatif strategis TNI AL untuk menyediakan fasilitas hunian yang nyaman, aman, dan modern bagi personel wanita. Gedung ini dirancang sesuai standar militer dengan berbagai fasilitas seperti kamar tidur, ruang serbaguna, dapur, ruang makan, area olahraga, ruang ibadah, dan ruang rekreasi. Proyek ini melibatkan kerja sama antara pihak militer, konsultan, dan kontraktor profesional guna memastikan pembangunan berjalan tepat waktu, sesuai anggaran, serta memenuhi spesifikasi teknis dan ketahanan struktur yang tinggi.",
+          "overview": "Proyek pembangunan Gedung Barak Kowal di Lantamal VI Makassar merupakan inisiatif strategis TNI AL untuk menyediakan fasilitas modern dan layak bagi personel wanita, dengan standar militer yang efisien dan aman.",
+          "paragraph_1": "Proyek pembangunan Gedung Barak Kowal (Korps Wanita Angkatan Laut) di Lantamal VI adalah salah satu inisiatif strategis untuk mendukung operasional dan kesejahteraan personel wanita di lingkungan TNI Angkatan Laut, khususnya di wilayah Lantamal VI yang berbasis di Makassar. Proyek ini bertujuan untuk menyediakan fasilitas yang nyaman, aman, dan modern, guna mendukung fungsi barak sebagai tempat tinggal dan pusat kegiatan sehari-hari bagi personel Kowal.",
+          "paragraph_2": "Gedung ini dirancang dengan memperhatikan aspek efisiensi ruang, ketahanan struktur, dan kesesuaian dengan standar militer. Bangunan mencakup berbagai fasilitas, seperti kamar tidur berkapasitas optimal, ruang serbaguna, dapur, ruang makan, area olahraga, ruang ibadah, dan ruang rekreasi. Setiap aspek konstruksi didasarkan pada standar konstruksi militer yang kuat dan tahan lama, termasuk pengaplikasian teknologi konstruksi terbaru untuk memastikan keamanan dan kenyamanan penghuninya.",
+          "paragraph_3": "Dalam proses pembangunan, kolaborasi antara pihak militer, konsultan perencanaan, dan kontraktor profesional diutamakan untuk memastikan bahwa proyek ini berjalan sesuai jadwal, anggaran, dan spesifikasi teknis yang telah ditetapkan."
+        }
+      ],
+      "location": "Makassar, Sulawesi Selatan",
+      "yearcompleted": ["2021"],
+      "url": "gedung-barak-kowal-lantamal-vi",
+      "images": [
+        "Gedung-Barak-Kowal-Lantamal-VI/Gedung-1.jpeg",
+        "Gedung-Barak-Kowal-Lantamal-VI/Side-2.jpeg",
+        "Gedung-Barak-Kowal-Lantamal-VI/Side-3.jpeg",
+        "Gedung-Barak-Kowal-Lantamal-VI/Side-4.jpeg"
+      ]
+    },
+    {
+      "id": 2,
+      "clientid": 2,
+      "serviceid": 1,
+      "name": "Pembangunan Jalan Terminal Teluk Lamong",
+      "description": [
+        {
+          "summary": "Pembangunan jalan menuju Terminal Teluk Lamong di Surabaya merupakan proyek strategis untuk meningkatkan infrastruktur transportasi dan logistik nasional. Jalan ini dirancang dengan teknologi modern dan konsep ramah lingkungan, serta bertujuan meningkatkan aksesibilitas dan efisiensi operasional pelabuhan. Selain mendukung kegiatan logistik, proyek ini juga mendorong pertumbuhan ekonomi lokal melalui peningkatan investasi, penciptaan lapangan kerja, dan kemudahan akses transportasi bagi masyarakat sekitar.",
+          "overview": "Pembangunan jalan menuju Terminal Teluk Lamong bertujuan meningkatkan aksesibilitas logistik, mendukung pertumbuhan ekonomi lokal, dan mengintegrasikan aspek ramah lingkungan.",
+          "paragraph_1": "Pembangunan jalan menuju Terminal Teluk Lamong merupakan proyek strategis yang dirancang untuk mendukung pengembangan infrastruktur transportasi dan logistik di Indonesia. Terminal Teluk Lamong, yang terletak di Surabaya, Jawa Timur, adalah salah satu pelabuhan modern berbasis ramah lingkungan yang menjadi bagian penting dari jaringan distribusi nasional. Untuk meningkatkan aksesibilitas dan efisiensi operasional pelabuhan ini, pembangunan jalan penghubung menjadi langkah vital.",
+          "paragraph_2": "Proyek ini dirancang dengan mempertimbangkan aspek teknis modern, termasuk pemanfaatan material berkualitas tinggi yang tahan terhadap beban berat dan cuaca ekstrem. Selain itu, pembangunan jalan ini mengintegrasikan konsep ramah lingkungan, seperti pengelolaan limbah konstruksi, penanaman kembali area hijau di sekitar proyek, dan pengaturan drainase untuk mencegah banjir.",
+          "paragraph_3": "Jalan menuju Terminal Teluk Lamong tidak hanya mendukung kegiatan logistik, tetapi juga membuka peluang bagi pertumbuhan ekonomi lokal. Akses yang lebih baik akan mendorong investasi di kawasan sekitar, menciptakan lapangan kerja baru, dan mempercepat distribusi barang ke berbagai wilayah Indonesia. Dari sisi sosial, masyarakat sekitar juga mendapatkan manfaat berupa kemudahan akses transportasi dan peningkatan infrastruktur di wilayah mereka."
+        }
+      ],
+      "location": "Gresik, Jawa Timur",
+      "yearcompleted": ["2020"],
+      "url": "pembangunan-jalan-terminal-teluk-lamong",
+      "images": [
+        "Pembangunan-Jalan/Proses-1.jpg",
+        "Pembangunan-Jalan/Proses-2-jalan.jpeg",
+        "Pembangunan-Jalan/Proses-3.jpeg",
+        "Pembangunan-Jalan/Proses-4.jpeg"
+      ]
+    },
+    {
+      "id": 3,
+      "clientid": 3,
+      "serviceid": 3,
+      "name": "Perbaikan Pipa Bahan Bakar",
+      "description": [
+        {
+          "summary": "Perbaikan pipa bahan bakar di Pelindo Energi Logistik merupakan kegiatan penting untuk memastikan kelancaran distribusi bahan bakar bagi kapal, mesin pelabuhan, dan fasilitas terkait. Pipa ini memegang peran vital dalam infrastruktur logistik energi, namun seiring waktu dapat mengalami kerusakan akibat usia, korosi, tekanan, atau kontaminasi. Oleh karena itu, pemeliharaan rutin diperlukan guna mencegah kebocoran, kehilangan bahan bakar, dan risiko kecelakaan, serta menjaga keselamatan, efisiensi operasional, dan kelestarian lingkungan di pelabuhan dengan aktivitas tinggi.",
+          "overview": "Perbaikan pipa bahan bakar di Pelindo Energi Logistik merupakan kegiatan penting untuk memastikan distribusi energi tetap lancar, aman, dan mendukung operasional pelabuhan secara berkelanjutan.",
+          "paragraph_1": "Merupakan kegiatan pemeliharaan dan perbaikan yang dilakukan untuk memastikan kelancaran distribusi bahan bakar, baik untuk operasional kapal maupun keperluan lainnya di pelabuhan. Pipa bahan bakar ini memiliki peran penting dalam memastikan ketersediaan energi bagi kapal yang berlayar, mesin-mesin operasional pelabuhan, dan fasilitas lain yang bergantung pada pasokan bahan bakar.",
+          "paragraph_2": "Pipa bahan bakar merupakan elemen krusial dalam infrastruktur logistik energi, terutama bagi Pelindo Energi Logistik yang mengelola distribusi bahan bakar di pelabuhan. Seiring dengan pemakaian, pipa-pipa ini bisa mengalami kerusakan atau penurunan kinerja akibat faktor usia, korosi, tekanan tinggi, atau kontaminasi. Oleh karena itu, perbaikan secara rutin diperlukan untuk menghindari kebocoran, kehilangan bahan bakar, atau potensi terjadinya kecelakaan yang dapat membahayakan keselamatan dan kelancaran operasional.",
+          "paragraph_3": "Perbaikan pipa bahan bakar di Pelindo Energi Logistik adalah kegiatan vital yang tidak hanya memastikan kelancaran distribusi bahan bakar, tetapi juga berperan besar dalam menjaga keselamatan operasional dan lingkungan. Proses perbaikan yang tepat dan efisien akan mendukung keberlanjutan operasional dalam mendukung aktivitas logistik energi, khususnya di pelabuhan yang memiliki tingkat trafik tinggi."
+        }
+      ],
+      "location": "Semarang, Jawa Tengah",
+      "yearcompleted": ["2021"],
+      "url": "perbaikan-pipa-bahan-bakar",
+      "images": [
+        "Pipa-Pelindo-Energi-Logistik/Side-1.jpg",
+        "Pipa-Pelindo-Energi-Logistik/Side-2.jpg",
+        "Pipa-Pelindo-Energi-Logistik/Side-3.jpg",
+        "Pipa-Pelindo-Energi-Logistik/Side-4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "clientid": 1,
+      "serviceid": 4,
+      "name": "Pembangunan Gedung Pos Angkatan Laut",
+      "description": [
+        {
+          "summary": "Pembangunan Gedung Pos Angkatan Laut merupakan proyek strategis untuk mendukung operasional dan keberadaan Angkatan Laut di suatu wilayah. Gedung ini berfungsi sebagai pusat pengawasan, komunikasi, dan koordinasi dalam menjaga kedaulatan laut serta dilengkapi fasilitas seperti ruang kontrol dan ruang rapat. Desainnya mengutamakan ketahanan terhadap cuaca laut ekstrem dengan penggunaan material yang kokoh dan tahan lama, sekaligus menjamin kenyamanan dan keamanan personel yang bertugas.",
+          "overview": "Pembangunan Gedung Pos Angkatan Laut adalah upaya strategis untuk mendukung operasional, pengawasan, dan pertahanan laut dengan menyediakan fasilitas yang tangguh dan fungsional bagi personel Angkatan Laut.",
+          "paragraph_1": "Pembangunan Gedung Pos Angkatan Laut adalah proyek konstruksi yang bertujuan untuk mendirikan fasilitas yang akan mendukung operasional dan keberadaan Angkatan Laut di suatu wilayah. Gedung ini dirancang dengan tujuan untuk menyediakan ruang yang fungsional bagi personel Angkatan Laut dalam menjalankan tugas dan operasionalnya. Pos Angkatan Laut umumnya berfungsi sebagai pusat pengawasan dan komunikasi serta tempat pengumpulan data intelijen, pemantauan pergerakan kapal dan pesawat, serta koordinasi dengan instansi lain yang terkait dalam menjaga kedaulatan laut dan pertahanan negara.",
+          "paragraph_2": "Desain gedung Pos Angkatan Laut biasanya mengutamakan ketahanan terhadap kondisi cuaca laut yang ekstrim, seperti angin kencang dan hujan lebat. Struktur bangunan sering kali menggunakan material tahan lama dan kokoh. Selain itu, gedung ini dilengkapi dengan fasilitas yang menunjang kenyamanan dan keamanan personel, seperti ruang rapat, ruang kontrol, ruang istirahat.",
+          "paragraph_3": "Secara keseluruhan, pembangunan Gedung Pos Angkatan Laut merupakan langkah strategis dalam memperkuat sistem pertahanan negara, memastikan keberlanjutan operasi militer di laut, serta menyediakan fasilitas yang memadai untuk personel yang bertugas."
+        }
+      ],
+      "location": "Lombok, Nusa Tenggara Barat",
+      "yearcompleted": ["2019"],
+      "url": "pembangunan-gedung-pos-angkatan-laut",
+      "images": [
+        "Posal-Gili-Air/Proses.jpeg",
+        "Posal-Gili-Air/Side-1.jpg",
+        "Posal-Gili-Air/Side-2.jpg",
+        "Posal-Gili-Air/Side-3.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "clientid": 4,
+      "serviceid": 2,
+      "name": "Pembangunan Rumah Negara T45 Wonosari",
+      "description": [
+        {
+          "summary": "Pembangunan Rumah Negara T45 Angkatan Laut merupakan proyek strategis yang bertujuan menyediakan perumahan layak dan nyaman bagi prajurit serta pegawai negeri sipil TNI AL, sebagai upaya meningkatkan kesejahteraan dan kualitas hidup mereka. Didanai melalui skema berbasis syariah (SBSN), proyek ini mencerminkan komitmen pemerintah dalam mendukung pembangunan infrastruktur secara berkelanjutan, dengan harapan memberikan dampak positif bagi anggota TNI AL, keluarganya, dan masyarakat sekitar.",
+          "overview": "Pembangunan Rumah Negara T45 Angkatan Laut bertujuan menyediakan hunian layak bagi anggota TNI AL melalui pendanaan syariah demi meningkatkan kesejahteraan dan kinerja mereka.",
+          "paragraph_1": "Pembangunan rumah negara ini bertujuan untuk memberikan fasilitas perumahan yang layak dan sesuai bagi anggota Angkatan Laut yang bertugas, dengan mengutamakan kesejahteraan mereka dan keluarganya. Proyek ini adalah bagian dari upaya pemerintah untuk meningkatkan kualitas hidup prajurit dan pegawai negeri sipil (PNS) di lingkungan Angkatan Laut, serta sebagai salah satu langkah untuk meningkatkan kinerja dalam melaksanakan tugas negara.",
+          "paragraph_2": "Pembangunan Rumah Negara T45 Angkatan Laut adalah sebuah inisiatif strategis untuk meningkatkan kualitas hidup anggota TNI AL dengan menyediakan tempat tinggal yang layak dan nyaman. Dengan pendanaan yang berbasis syariah (SBSN), proyek ini juga mencerminkan komitmen pemerintah dalam memanfaatkan instrumen keuangan yang dapat mendukung pembangunan infrastruktur negara secara berkelanjutan. Proyek ini diharapkan dapat memberikan dampak positif baik bagi prajurit Angkatan Laut, keluarga mereka, maupun masyarakat sekitar.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Surabaya, Jawa Timur",
+      "yearcompleted": ["2020"],
+      "url": "pembangunan-rumah-negara-t45-wonosari",
+      "images": [
+        "Rumneg-T45-Lantamal-V/Proses.jpeg",
+        "Rumneg-T45-Lantamal-V/Side-1.JPG",
+        "Rumneg-T45-Lantamal-V/Side-2.JPG",
+        "Rumneg-T45-Lantamal-V/Side-3.JPG"
+      ]
+    },
+    {
+      "id": 6,
+      "clientid": 4,
+      "serviceid": 2,
+      "name": "Pembangunan Rumah Negara T45 Pesapen",
+      "description": [
+        {
+          "summary": "Pembangunan Rumah Negara T45 ditujukan untuk menyediakan hunian yang layak bagi anggota Angkatan Laut dan keluarganya guna meningkatkan kesejahteraan, motivasi, dan kinerja mereka dalam menjalankan tugas. Proyek ini merupakan bagian dari upaya pemerintah untuk mendukung kualitas hidup prajurit dan PNS di lingkungan Angkatan Laut, sekaligus memanfaatkan instrumen keuangan syariah melalui SBSN sebagai sumber pendanaan yang sesuai dengan prinsip syariah.",
+          "overview": "Proyek pembangunan Rumah Negara T45 bertujuan meningkatkan kesejahteraan dan kinerja prajurit Angkatan Laut melalui penyediaan hunian layak dengan pembiayaan SBSN berbasis syariah.",
+          "paragraph_1": "Pembangunan rumah negara ini bertujuan untuk memberikan fasilitas perumahan yang layak dan sesuai bagi anggota Angkatan Laut yang bertugas, dengan mengutamakan kesejahteraan mereka dan keluarganya. Proyek ini adalah bagian dari upaya pemerintah untuk meningkatkan kualitas hidup prajurit dan pegawai negeri sipil (PNS) di lingkungan Angkatan Laut, serta sebagai salah satu langkah untuk meningkatkan kinerja dalam melaksanakan tugas negara.",
+          "paragraph_2": "Tujuan proyek pembangunan Rumah Negara T45 ini bertujuan untuk menjamin kesejahteraan prajurit angkatan laut memberikan akses kepada anggota Angkatan Laut untuk memiliki tempat tinggal yang layak sebagai bagian dari kesejahteraan mereka. Meningkatkan Motivasi dan Kinerja: Dengan memiliki tempat tinggal yang nyaman, diharapkan anggota Angkatan Laut dapat lebih fokus dalam menjalankan tugas dan tanggung jawab mereka. Pemanfaatan SBSN: Sebagai salah satu bentuk pemanfaatan instrumen keuangan syariah, SBSN digunakan untuk mendanai proyek ini dengan prinsip-prinsip yang sesuai dengan ketentuan syariah.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Surabaya, Jawa Timur",
+      "yearcompleted": ["2021 - 2022"],
+      "url": "pembangunan-rumah-negara-t45-pesapen",
+      "images": [
+        "Rumneg-T45-Lantamal-V-Pesapen/Side-1.jpeg",
+        "Rumneg-T45-Lantamal-V-Pesapen/Side-2.jpeg",
+        "Rumneg-T45-Lantamal-V-Pesapen/Side-3.jpeg",
+        "Rumneg-T45-Lantamal-V-Pesapen/Side-4.jpeg"
+      ]
+    },
+    {
+      "id": 7,
+      "clientid": 2,
+      "serviceid": 5,
+      "name": "Pembangunan Gedung Shelter Filling Station",
+      "description": [
+        {
+          "summary": "Proyek pembangunan Gedung Shelter Filling Station di Teluk Lamong, Surabaya, bertujuan untuk membangun fasilitas pengisian bahan bakar modern guna mendukung distribusi energi yang efisien. Berlokasi di kawasan strategis yang merupakan pusat logistik dan distribusi, proyek ini diharapkan dapat meningkatkan kapasitas distribusi bahan bakar serta mendorong pertumbuhan ekonomi di Surabaya dan sekitarnya.",
+          "overview": "Proyek Gedung Shelter Filling Station Teluk Lamong bertujuan membangun fasilitas pengisian bahan bakar modern untuk mendukung distribusi energi di kawasan strategis Surabaya.",
+          "paragraph_1": "Pembangunan Gedung Shelter Filling Station Teluk Lamong merupakan proyek konstruksi yang bertujuan untuk membangun fasilitas pengisian bahan bakar di kawasan Teluk Lamong, Surabaya. Proyek ini dirancang untuk mendukung distribusi energi dengan menyediakan infrastruktur pengisian bahan bakar yang lebih modern dan efisien.",
+          "paragraph_2": "Proyek ini berlokasi di kawasan Teluk Lamong, yang merupakan salah satu kawasan strategis di Surabaya. Teluk Lamong dikenal sebagai daerah dengan potensi besar dalam bidang logistik dan distribusi, berkat keberadaan pelabuhan yang mendukung kegiatan industri dan perdagangan. Pembangunan shelter ini bertujuan untuk meningkatkan kapasitas distribusi bahan bakar, memberikan kenyamanan bagi pengguna bahan bakar.",
+          "paragraph_3": "Dengan pembangunan Gedung Shelter Filling Station Teluk Lamong, diharapkan kawasan ini dapat menjadi pusat distribusi bahan bakar yang strategis dan efisien, mendukung pertumbuhan ekonomi di Surabaya dan sekitarnya."
+        }
+      ],
+      "location": "Gresik, Jawa Timur",
+      "yearcompleted": ["2020"],
+      "url": "pembangunan-gedung-shelter-filling-station",
+      "images": [
+        "Shelter-Filling-Station/Proses-1.jpeg",
+        "Shelter-Filling-Station/Proses-2.jpeg",
+        "Shelter-Filling-Station/Side-1.jpg",
+        "Shelter-Filling-Station/Side-2.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "clientid": 1,
+      "serviceid": 4,
+      "name": "Pembangunan Gedung Flat T45 Marinir",
+      "description": [
+        {
+          "summary": "Pembangunan Gedung Flat T45 Marinir merupakan proyek konstruksi gedung bertingkat yang ditujukan untuk menyediakan hunian layak dan nyaman bagi personel marinir. Setiap unit dilengkapi dengan fasilitas modern guna menunjang kualitas hidup penghuni. Proyek ini tidak hanya berfungsi sebagai tempat tinggal, tetapi juga sebagai bentuk dukungan terhadap kesiapan operasional dan kesejahteraan prajurit marinir secara jangka panjang.",
+          "overview": "Pembangunan Gedung Flat T45 Marinir adalah proyek hunian bertingkat yang dirancang untuk meningkatkan kesejahteraan dan kesiapsiagaan personel marinir.",
+          "paragraph_1": "Pembangunan Gedung Flat T45 Marinir adalah proyek konstruksi yang dirancang untuk menyediakan fasilitas hunian bagi personel marinir dengan tujuan mendukung kebutuhan tempat tinggal yang layak dan nyaman. Gedung ini direncanakan sebagai gedung bertingkat yang akan menampung sejumlah unit hunian, yang masing-masing dilengkapi dengan fasilitas modern untuk meningkatkan kenyamanan para penghuninya. Pembangunan ini bertujuan tidak hanya untuk menyediakan tempat tinggal, tetapi juga untuk memperkuat kemampuan dan kesiapsiagaan prajurit marinir dalam menjalankan tugas-tugasnya.",
+          "paragraph_2": "Secara keseluruhan, pembangunan Gedung Flat T45 Marinir akan menjadi investasi jangka panjang untuk meningkatkan kualitas hidup personel marinir dan memperkuat kesiapan operasional mereka.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Sorong, Papua Barat Daya",
+      "yearcompleted": ["2023 - 2024"],
+      "url": "pembangunan-gedung-flat-t45-marinir",
+      "images": [
+        "Gedung-Flat-T45-Marinir/Side-1.jpg",
+        "Gedung-Flat-T45-Marinir/Side-2.jpg",
+        "Gedung-Flat-T45-Marinir/Side-3.jpg",
+        "Gedung-Flat-T45-Marinir/Side-4.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "clientid": 2,
+      "serviceid": 6,
+      "name": "Pemasangan Saluran U-Ditch Terminal Teluk Lamong",
+      "description": [
+        {
+          "summary": "Pemasangan saluran U-Ditch di Terminal Teluk Lamong merupakan bagian dari proyek infrastruktur yang bertujuan mendukung kelancaran operasional pelabuhan dengan membangun sistem drainase yang efektif. Saluran beton berbentuk U ini digunakan untuk mengalirkan air dan mencegah genangan atau banjir, melalui tahapan teknis yang penting dalam pengelolaan air di area terminal.",
+          "overview": "Pemasangan saluran U-Ditch di Terminal Teluk Lamong bertujuan membangun sistem drainase efektif untuk mendukung kelancaran operasional dan mencegah genangan di area terminal.",
+          "paragraph_1": "Pemasangan saluran U-Ditch Terminal Teluk Lamong merupakan bagian dari proyek infrastruktur untuk mendukung kelancaran operasional di kawasan pelabuhan dan terminal. Saluran U-Ditch adalah saluran beton berbentuk huruf U yang digunakan untuk saluran drainase dan pengaliran air. Pemasangan saluran ini memiliki beberapa tahapan teknis yang krusial dalam membangun sistem pengelolaan air yang efektif dan efisien, untuk mencegah terjadinya genangan atau banjir di area terminal.",
+          "paragraph_2": "",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Gresik, Jawa Timur",
+      "yearcompleted": ["2020"],
+      "url": "pemasangan-saluran-u-ditch-terminal-teluk-lamong",
+      "images": [
+        "Saluran-U-Ditch-Terminal-Teluk-Lamong/Side-1.jpg",
+        "Saluran-U-Ditch-Terminal-Teluk-Lamong/Side-2.jpg",
+        "Saluran-U-Ditch-Terminal-Teluk-Lamong/Side-3.jpg",
+        "Saluran-U-Ditch-Terminal-Teluk-Lamong/Side-4.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "clientid": 2,
+      "serviceid": 3,
+      "name": "Pemasangan Pipa Distribusi Gas 12 Inch",
+      "description": [
+        {
+          "summary": "Proyek pemasangan pipa distribusi gas di Terminal Teluk Lamong bertujuan untuk mendukung kebutuhan energi pelabuhan modern tersebut yang merupakan bagian dari sistem logistik nasional. Instalasi pipa berdiameter 12 inci ini dirancang untuk menyalurkan gas dalam volume besar secara efisien, guna meningkatkan keandalan suplai energi, menunjang operasional pelabuhan, serta memberikan dampak ekonomi positif bagi kawasan industri di sekitarnya.",
+          "overview": "Proyek ini memasang pipa gas 12 inci di Terminal Teluk Lamong untuk mendukung suplai energi yang andal dan efisien bagi pelabuhan dan kawasan industri sekitarnya.",
+          "paragraph_1": "Proyek pemasangan pipa distribusi gas ini dirancang untuk memenuhi kebutuhan gas di kawasan Terminal Teluk Lamong, sebuah pelabuhan modern yang menjadi bagian dari sistem logistik nasional. Pekerjaan ini melibatkan instalasi pipa dengan diameter 12 inci, yang mampu mengalirkan gas dengan volume besar secara efisien untuk mendukung aktivitas operasional pelabuhan.",
+          "paragraph_2": "Setelah selesai, pipa distribusi ini akan menjadi bagian penting dari jaringan infrastruktur energi di Terminal Teluk Lamong, meningkatkan keandalan suplai energi, mendukung efisiensi operasional pelabuhan, serta memberikan manfaat ekonomi bagi kawasan industri di sekitarnya.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Gresik, Jawa Timur",
+      "yearcompleted": ["2020"],
+      "url": "pemasangan-pipa-distribusi-gas-12-inch",
+      "images": [
+        "Pipa-Distribusi-12-inch-TTL/Proses-1.jpeg",
+        "Pipa-Distribusi-12-inch-TTL/Proses-2.jpeg",
+        "Pipa-Distribusi-12-inch-TTL/Proses-3.jpeg",
+        "Pipa-Distribusi-12-inch-TTL/Proses-4.jpeg"
+      ]
+    },
+    {
+      "id": 11,
+      "clientid": 1,
+      "serviceid": 4,
+      "name": "Gedung Barak Siswa Lantamal VI",
+      "description": [
+        {
+          "summary": "Gedung Barak Siswa Lantamal VI di Makassar, Sulawesi Selatan, merupakan fasilitas militer yang digunakan sebagai tempat tinggal sementara bagi siswa yang menjalani pendidikan atau pelatihan di bawah Pangkalan Utama TNI Angkatan Laut VI. Dirancang untuk mendukung kebutuhan siswa militer, gedung ini berperan penting dalam membentuk prajurit Angkatan Laut yang tangguh, disiplin, dan profesional. Pembangunannya melibatkan kerja sama antara pihak militer, konsultan, dan kontraktor guna memastikan proyek berjalan sesuai jadwal, anggaran, dan spesifikasi teknis.",
+          "overview": "Gedung Barak Siswa Lantamal VI di Makassar adalah fasilitas militer yang mendukung pelatihan siswa TNI AL dengan desain sesuai kebutuhan dan dibangun melalui kolaborasi profesional.",
+          "paragraph_1": "Gedung Barak Siswa Lantamal VI adalah sebuah fasilitas militer yang digunakan untuk mendukung pelatihan dan pembinaan siswa di bawah naungan Pangkalan Utama TNI Angkatan Laut VI (Lantamal VI), yang terletak di wilayah Makassar, Sulawesi Selatan. Gedung ini dirancang untuk memenuhi kebutuhan tempat tinggal sementara bagi siswa yang sedang mengikuti pendidikan atau pelatihan di lingkungan militer.",
+          "paragraph_2": "Dengan desainnya yang sesuai untuk mendukung kebutuhan siswa militer, Gedung Barak Siswa Lantamal VI menjadi salah satu elemen penting dalam membentuk prajurit Angkatan Laut yang tangguh, disiplin, dan profesional. Dalam proses pembangunan, kolaborasi antara pihak militer, konsultan perencanaan, dan kontraktor profesional diutamakan untuk memastikan bahwa proyek ini berjalan sesuai jadwal, anggaran dan spesifikasi teknis yang telah ditetapkan.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Makassar, Sulawesi Selatan",
+      "yearcompleted": ["2022"],
+      "url": "gedung-barak-siswa-lantamal-vi",
+      "images": [
+        "Gedung-Barak-Siswa-Lantamal-VI/Side-1.jpg",
+        "Gedung-Barak-Siswa-Lantamal-VI/Side-2.jpg",
+        "Gedung-Barak-Siswa-Lantamal-VI/Side-3.jpg",
+        "Gedung-Barak-Siswa-Lantamal-VI/Side-4.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "clientid": 5,
+      "serviceid": 7,
+      "name": "Perbaikan Dapur Kodiklatal",
+      "description": [
+        {
+          "summary": "Renovasi dapur di Kodiklatal (Komando Pembinaan Doktrin, Pendidikan dan Latihan TNI AL) bertujuan untuk meningkatkan fasilitas dan efisiensi operasional guna mendukung kebutuhan logistik makanan bagi personel yang menjalani pendidikan dan pelatihan. Proyek ini mencakup perluasan ruang dapur untuk menampung lebih banyak personel, peningkatan higienitas dan keamanan melalui sistem sanitasi yang lebih baik, optimalisasi alur kerja, serta pemenuhan standar kesehatan dan keamanan pangan sesuai regulasi BPOM dan instansi terkait.",
+          "overview": "Renovasi dapur Kodiklatal bertujuan meningkatkan kapasitas, higienitas, efisiensi operasional, dan standar keamanan pangan untuk mendukung kebutuhan logistik makanan bagi personel pendidikan dan pelatihan TNI AL.",
+          "paragraph_1": "Renovasi dapur di Kodiklatal (Komando Pembinaan Doktrin, Pendidikan dan Latihan TNI Angkatan Laut) merupakan sebuah proyek yang dirancang untuk meningkatkan fasilitas, kenyamanan dan efisiensi operasional di area pendidikan dan pelatihan Angkatan Laut. Dapur menjadi bagian penting dari fasilitas ini karena memiliki peran yang vital dalam mendukung kebutuhan logistik makanan bagi personel yang menjalani pendidikan atau latihan di sana. Oleh karena itu, renovasi ini bertujuan untuk menciptakan lingkungan kerja yang lebih modern, fungsional dan higienis, serta mendukung penerapan standar operasional yang lebih baik dalam penyediaan makanan.",
+          "paragraph_2": "Tujuan utama renovasi dapur Kodiklatal ini adalah untuk ; Meningkatkan Kapasitas Dapur: Memperbesar ruang dapur untuk mengakomodasi jumlah personel yang lebih banyak, terutama dalam skala pelatihan dan pendidikan yang melibatkan banyak peserta. Peningkatan Higienitas dan Keamanan: Meningkatkan sistem sanitasi dan kebersihan dapur, termasuk penggunaan alat dan peralatan yang lebih higienis serta pemisahan area pengolahan bahan makanan mentah dan matang. Efisiensi Operasional: Membuat alur kerja yang lebih efisien sehingga waktu dan tenaga yang dikeluarkan untuk menyiapkan makanan dapat lebih teroptimalkan. Pemenuhan Standar Kesehatan dan Keamanan Pangan: Dapur yang direnovasi akan mengikuti standar yang berlaku dalam penyediaan makanan sehat dan aman, sesuai dengan regulasi dari Badan Pengawas Obat dan Makanan (BPOM) dan instansi terkait.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Surabaya, Jawa Timur",
+      "yearcompleted": ["2023"],
+      "url": "perbaikan-dapur-kodiklatal",
+      "images": [
+        "Perbaikan-Dapur-Kodiklatal/Side-1.jpg",
+        "Perbaikan-Dapur-Kodiklatal/Side-2.jpg",
+        "Perbaikan-Dapur-Kodiklatal/Side-3.jpg",
+        "Perbaikan-Dapur-Kodiklatal/Side-4.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "clientid": 6,
+      "serviceid": 7,
+      "name": "Perbaikan Barak Yon Ranratfib 2 Marinir",
+      "description": [
+        {
+          "summary": "Perbaikan Barak Yon Ranratfib 2 Marinir merupakan upaya penting untuk meningkatkan kualitas hidup dan kesiapan operasional prajurit melalui renovasi struktur bangunan, fasilitas pendukung, serta kebersihan dan kenyamanan lingkungan. Selain peningkatan fisik, perbaikan ini juga bertujuan menciptakan lingkungan sosial yang lebih baik guna memperkuat kebersamaan dan kerjasama antar prajurit, sehingga barak menjadi tempat tinggal yang lebih nyaman, aman, dan mendukung produktivitas.",
+          "overview": "Perbaikan Barak Yon Ranratfib 2 Marinir bertujuan meningkatkan kenyamanan, keamanan, dan kesiapan operasional prajurit melalui renovasi fisik dan lingkungan sosial.",
+          "paragraph_1": "Perbaikan Barak Yon Ranratfib 2 Marinir adalah salah satu upaya untuk meningkatkan kualitas fasilitas tempat tinggal prajurit di kesatuan tersebut. Barak adalah bagian penting dari infrastruktur militer yang bertujuan untuk memberikan kenyamanan dan mendukung kesiapan operasional prajurit. Kegiatan perbaikan ini mencakup berbagai aspek, baik dari segi struktur bangunan, fasilitas pendukung, hingga kebersihan dan kenyamanan lingkungan sekitar.",
+          "paragraph_2": "Perbaikan Barak di Yon Ranratfib 2 Marinir merupakan langkah penting dalam menjaga kualitas hidup prajurit sekaligus mendukung kelancaran tugas dan operasi. Kegiatan ini bukan hanya tentang renovasi fisik, tetapi juga mencakup perbaikan lingkungan sosial yang mendukung kebersamaan dan kerjasama antar prajurit. Dengan perbaikan yang dilakukan, diharapkan barak menjadi tempat yang lebih nyaman, aman, dan mendukung produktivitas para prajurit Yon Ranratfib 2 Marinir.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Surabaya, Jawa Timur",
+      "yearcompleted": ["2024"],
+      "url": "perbaikan-barak-yon-ranratfib-2-marinir",
+      "images": [
+        "Perbaikan-Barak-Yon-Ranratfib-2-Marinir/Side-1.jpg",
+        "Perbaikan-Barak-Yon-Ranratfib-2-Marinir/Side-2.jpg",
+        "Perbaikan-Barak-Yon-Ranratfib-2-Marinir/Side-3.jpg",
+        "Perbaikan-Barak-Yon-Ranratfib-2-Marinir/Side-4.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "clientid": 4,
+      "serviceid": 7,
+      "name": "Perbaikan Rumkital DR. Oepomo",
+      "description": [
+        {
+          "summary": "Rumkital Dr. Oepomo di Surabaya adalah rumah sakit militer yang dikelola oleh TNI Angkatan Laut untuk melayani prajurit, keluarganya, dan masyarakat umum. Seiring meningkatnya kebutuhan layanan kesehatan, rumah sakit ini mengalami perbaikan dan pengembangan infrastruktur serta modernisasi peralatan medis guna meningkatkan kualitas pelayanan. Upaya ini bertujuan menjadikan Rumkital Dr. Oepomo sebagai fasilitas kesehatan yang profesional, modern, dan andal.",
+          "overview": "Perbaikan Rumkital Dr. Oepomo bertujuan meningkatkan kualitas layanan kesehatan melalui modernisasi fasilitas dan pelayanan bagi prajurit TNI AL, keluarga, dan masyarakat umum.",
+          "paragraph_1": "Rumkital Dr. Oepomo adalah salah satu rumah sakit militer yang terletak di Surabaya, Jawa Timur. Rumah sakit ini merupakan fasilitas kesehatan yang dioperasikan oleh Tentara Nasional Indonesia Angkatan Laut (TNI AL), dengan tujuan memberikan pelayanan medis yang berkualitas kepada prajurit TNI AL, keluarga prajurit, serta masyarakat umum. Seiring dengan perkembangan kebutuhan layanan kesehatan dan tuntutan terhadap fasilitas medis yang lebih modern, perbaikan dan pengembangan rumah sakit ini menjadi prioritas untuk meningkatkan kualitas pelayanan dan fasilitas.",
+          "paragraph_2": "Perbaikan Rumkital Dr. Oepomo merupakan langkah yang sangat penting untuk meningkatkan kualitas layanan kesehatan bagi prajurit TNI AL, keluarganya, dan masyarakat sekitar. Dengan pembaruan infrastruktur, modernisasi peralatan medis, serta peningkatan kualitas pelayanan, Rumkital Dr. Oepomo diharapkan dapat terus menjadi rumah sakit yang profesional, modern, dan dapat diandalkan dalam memberikan layanan kesehatan yang terbaik.",
+          "paragraph_3": ""
+        }
+      ],
+      "location": "Surabaya, Jawa Timur",
+      "yearcompleted": ["2021"],
+      "url": "perbaikan-rumkital-dr-oepomo",
+      "images": [
+        "Perbaikan-Rumkital-Dr-Oepomo/Side-1.jpg",
+        "Perbaikan-Rumkital-Dr-Oepomo/Side-2.jpg",
+        "Perbaikan-Rumkital-Dr-Oepomo/Side-3.jpg",
+        "Perbaikan-Rumkital-Dr-Oepomo/Side-4.jpg"
+      ]
+    }
+  ]
+}

@@ -16,7 +16,7 @@ export async function getServices() {
   return await prisma.service.findMany();
 }
 
-// Get service by ID
+// Get service by slug
 export async function getServiceBySlug(slug: string) {
   const service = await prisma.service.findUnique({ where: { url: slug } });
   if (!service) return null;

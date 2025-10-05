@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutContent = () => (
   <section className="flex items-center max-w-screen-xl bg-transparent mx-auto">
-    <div className="justify-center flex-1 mx-auto md:px-6">
+    <div className="justify-center flex-1">
       <div className="mb-8 mt-8 ml-4">
         <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600">
           Siapa Kami?

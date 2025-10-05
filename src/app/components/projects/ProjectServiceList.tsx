@@ -1,6 +1,7 @@
 "use client";
 
-import { Client, Project, Service } from "@/generated/prisma";
+// import { Client, Project, Service } from "@/generated/prisma";
+import { useStore } from "@/store/useStore";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 // import {  } from "next/router";
@@ -8,22 +9,79 @@ import { useCallback, useEffect } from "react";
 import { ReactSVG } from "react-svg";
 
 interface ProjectServiceListProps {
-  projects: (Project & {
-    Client: Client;
-    Service: Service;
-  })[];
-  onServiceSelect?: (serviceId: string | null) => void;
+  projects?: {
+    id: number;
+    clientid: number;
+    serviceid: number;
+    name: string;
+    description: {
+      summary: string;
+      overview: string;
+      paragraph_1: string;
+      paragraph_2: string;
+      paragraph_3: string;
+    }[];
+    location: string;
+    yearcompleted: string[];
+    url: string;
+    images: string[];
+    Client?: {
+      id: number;
+      name: string;
+      description: string;
+      city: string;
+      country: string;
+    };
+    Service?: {
+      id: number;
+      url: string;
+      name: string;
+      icon: string;
+      image: string;
+      description: {
+        description_new: string[];
+        description_complete: string;
+        description_overview: string;
+        description_key_benefit: string[];
+        description_our_process: string[];
+      }[];
+    };
+  }[];
 }
 
 const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
   projects,
 }) => {
+  const { getProjects, getServiceById } = useStore();
   const router = useRouter();
   const searchParams = useSearchParams();
   const currentServiceUrl = searchParams.get("service");
+  const allProjects = projects || getProjects();
+  // console.log("projects prop:", projects);
+  // Debug: Log projects and services
+  // useEffect(() => {
+  //   console.log("ProjectServiceList Projects:", allProjects);
+  //   console.log("ProjectServiceList Current Service URL:", currentServiceUrl);
+  // }, [allProjects, currentServiceUrl]);
 
   const uniqueServices = Array.from(
-    new Map(projects.map((p) => [p.Service.id, p.Service])).values()
+    new Map(
+      allProjects
+        .map((p) => {
+          const service = getServiceById(p.serviceid);
+          if (!service) {
+            console.warn(
+              `No service found for serviceid: ${p.serviceid} in project: ${p.name}`
+            );
+            return null;
+          }
+          return [service.id, service];
+        })
+        .filter(
+          (s): s is [number, NonNullable<ReturnType<typeof getServiceById>>] =>
+            s !== null
+        )
+    ).values()
   );
 
   const handleServiceClick = useCallback(
@@ -47,7 +105,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
     }
   }, [currentServiceUrl, uniqueServices, router]);
   return (
-    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4">
+    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 mb-8">
       <div className="leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
           <Link href="/projects" scroll={true}>
@@ -77,9 +135,9 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
               scroll={true}
             >
               <li
-                className={`text-blue-600 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-malachite-500 border-b border-b-blue-300 ${
+                className={`text-blue-700 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-malachite-500 border-b border-b-blue-300 ${
                   currentServiceUrl === service.url
-                    ? "text-white bg-blue-500 font-semibold border-l-8 border-malachite-500"
+                    ? "text-white bg-blue-700 font-semibold border-l-8 border-malachite-500"
                     : ""
                 } hover:font-semibold py-6 px-8 text-lg group`}
                 onClick={() => handleServiceClick(service.url)}

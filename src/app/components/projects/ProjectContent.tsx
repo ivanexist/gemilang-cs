@@ -1,11 +1,14 @@
-import { getProjects } from "@/app/lib/data";
+"use client";
+// import { getProjects } from "@/app/lib/data";
+import { useStore } from "@/store/useStore";
 import GridProjects from "./GridProjects";
 import ProjectServiceList from "./ProjectServiceList";
 // import RelatedProjects from "./RelatedProjects";
 
-export default async function ProjectContent() {
-  const projects = await getProjects();
+export default function ProjectContent() {
+  // const projects = await getProjects();
   //   const services = await getServices();
+  const { projects } = useStore();
 
   return (
     <div className="flex flex-col overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-no-repeat pt-8">

@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
                   <reason.icon
-                    className="text-malachite-500 text-2xl"
+                    className="text-malachite-600 text-2xl"
                     size={24}
                   />
                 </div>
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
             />
 
             {/* Statistics Overlay */}
-            <div className="absolute -bottom-6 -left-6 bg-malachite-500 p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -left-6 bg-malachite-600 p-6 rounded-xl shadow-lg">
               <div className="grid grid-cols-2 gap-4 text-center text-white">
                 <div>
                   <div className="text-2xl font-bold text-primary">99%</div>

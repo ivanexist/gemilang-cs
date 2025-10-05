@@ -1,6 +1,6 @@
 "use client";
 
-import { Service } from "@/generated/prisma";
+// import { Service } from "@/generated/prisma";
 import Link from "next/link";
 // import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -8,29 +8,48 @@ import { ReactSVG } from "react-svg";
 // import { getServices } from "@/app/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useStore } from "@/store/useStore";
 // import RelatedProjectByService from "./RelatedProjectByService";
 
-interface ServicesDetailsContentProps {
-  service: Service;
-  servicesList: Service[];
-}
+// interface ServicesDetailsContentProps {
+//   service: Service;
+//   servicesList: Service[];
+// }
 
-type ServiceDescription = {
+interface ServiceDescription {
   description_new: string[];
+  description_complete: string;
+  description_overview: string;
   description_key_benefit: string[];
   description_our_process: string[];
-};
+}
 
-export default function ServiceDetails({
-  service,
-  servicesList,
-}: ServicesDetailsContentProps) {
+export default function ServiceDetails() {
   const params = useParams();
-  const currentSlug = params?.slug;
+  const currentSlug = typeof params.slug === "string" ? params.slug : "";
+  const { getServiceByUrl, getServices } = useStore();
   // const [services, setServices] = useState<Service[]>([]);
+  const service = getServiceByUrl(currentSlug);
+  const servicesList = getServices();
 
-  const serviceDescription = Array.isArray(service.description)
-    ? (service.description as ServiceDescription[])
+  if (!service) {
+    return null; // Handled by ServiceDetailsPage
+  }
+  // Safely cast description with validation
+  const serviceDescription: ServiceDescription[] = Array.isArray(
+    service.description
+  )
+    ? service.description.every(
+        (desc) =>
+          typeof desc === "object" &&
+          "description_new" in desc &&
+          "description_complete" in desc &&
+          "description_overview" in desc &&
+          "description_key_benefit" in desc &&
+          "description_our_process" in desc
+      )
+      ? (service.description as ServiceDescription[])
+      : []
     : [];
 
   return (
