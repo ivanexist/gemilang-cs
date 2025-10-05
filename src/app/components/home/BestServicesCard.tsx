@@ -1,12 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { ReactSVG } from "react-svg";
-import { useStore } from "@/store/useStore";
-
-const BestServiceCard = () => {
-  const { services } = useStore();
+import { Service } from "@/store/useStore";
+type BestServiceCardProps = {
+  service: Service;
+};
+const BestServiceCard: React.FC<BestServiceCardProps> = ({ service }) => {
+  // Debug: Log service data
+  useEffect(() => {
+    console.log("BestServiceCard Service:", service);
+  }, [service]);
   return (
     <Link href={`/services/${services.url || ""}`}>
       <div className="bg-white border border-white hover:border-blue-500 hover:shadow-xl lg:m-2 py-4 px-2 relative z-10 group sm:mx-4 w-96 h-[18rem] mb-4 transition-colors duration-300">
