@@ -35,11 +35,7 @@ export default function BestServices() {
 
       <div className="grid sm:grid-cols-1 sm:place-items-center md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto text-center">
         {services.slice(0, 3).map((service) => (
-          <BestServiceCard
-            key={service.id}
-            service={service}
-            serviceId={service.id}
-          />
+          <BestServiceCard key={service.id} service={service} />
         ))}
       </div>
 
