@@ -13,7 +13,7 @@ import SwiperCore from "swiper";
 import { ReactSVG } from "react-svg";
 // import RelatedProjects from "./RelatedProjects";
 import Link from "next/link";
-import { Project, Client, Service, ProjectDescription } from "@/store/useStore";
+import { ProjectDescription } from "@/store/useStore";
 import { useStore } from "@/store/useStore";
 import { useParams } from "next/navigation";
 

@@ -1,7 +1,7 @@
 "use client";
 import Breadcrumb from "@/app/components/common/Breadcrumb";
 import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsContent";
-// import { getProjectBySlug } from "@/app/lib/data";
+
 import { useStore } from "@/store/useStore";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -16,7 +16,7 @@ export default function ProjectDetailsPage() {
     return (
       <div className="container mx-auto p-4 text-center text-red-500">
         <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
-        <p>The project with slug "{slug}" does not exist.</p>
+        {/* <p>The project with slug "{slug}" does not exist.</p> */}
         <Link
           href="/projects"
           className="mt-4 inline-block bg-blue-700 text-white px-6 py-2 rounded"
