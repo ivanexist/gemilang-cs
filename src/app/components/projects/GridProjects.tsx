@@ -1,14 +1,16 @@
 "use client";
-import { Client, Project, Service } from "@/generated/prisma";
+// import { Client, Project, Service } from "@/generated/prisma";
 import ProjectCard from "./ProjectCard";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+// import { useStore } from "@/store/useStore";
+import { Project } from "@/store/useStore";
 
-interface ProjectsProps {
-  projects: (Project & { Client: Client; Service: Service })[];
-}
-
-const GridProjects: React.FC<ProjectsProps> = ({ projects }) => {
+const GridProjects = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  {
+    console.log("projects" + projects);
+  }
   const searchParams = useSearchParams();
   const [selectedServiceId, setSelectedServiceId] = useState<number | null>(
     null
@@ -16,6 +18,43 @@ const GridProjects: React.FC<ProjectsProps> = ({ projects }) => {
 
   const currentServiceUrl = searchParams.get("service");
 
+  useEffect(() => {
+    async function loadProjects() {
+      try {
+        const response = await fetch(
+          "https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/src/app/json/gcsdata.json"
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch gcsdata.json");
+        }
+        const rawProjects = await response.json();
+        // Convert IDs to strings
+        const formattedProjects: Project[] = rawProjects.map(
+          (project: any) => ({
+            ...project,
+            id: String(project.id),
+            clientId: String(project.clientId),
+            serviceId: String(project.serviceId),
+            Client: {
+              ...project.Client,
+              id: String(project.Client.id),
+            },
+            Service: {
+              ...project.Service,
+              id: String(project.Service.id),
+            },
+          })
+        );
+        setProjects(formattedProjects);
+      } catch (error) {
+        console.error("Error fetching projects.json:", error);
+      }
+    }
+    loadProjects();
+  }, []);
+  {
+    console.log("projects" + projects);
+  }
   useEffect(() => {
     if (currentServiceUrl) {
       const service = projects.find(

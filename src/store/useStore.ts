@@ -3,7 +3,7 @@ import data from "@/app/json/gcsdata.json";
 // import { getProjects } from "@/app/lib/data";
 
 // Define interfaces for the data structures basedon the JSON
-interface Client {
+export interface Client {
   id: number;
   name: string;
   description: string;
@@ -19,7 +19,7 @@ interface ServiceDescription {
   description_our_process: string[];
 }
 
-interface Service {
+export interface Service {
   id: number;
   url: string;
   name: string;
@@ -36,7 +36,7 @@ interface ProjectDescription {
   paragraph_3: string;
 }
 
-interface Project {
+export interface Project {
   id: number;
   clientid: number;
   serviceid: number;
@@ -46,12 +46,16 @@ interface Project {
   yearcompleted: string;
   url: string;
   images: string[];
+  Client: Client;
+  Service: Service;
 }
 
 interface StoreState {
   clients: Client[];
   services: Service[];
   projects: Project[];
+  setServices: (services: Service[]) => void;
+  setProjects: (projects: Project[]) => void;
   getServices: () => Service[];
   getProjects: () => Project[];
   getClientById: (id: number) => Client | undefined;
@@ -69,6 +73,30 @@ export const useStore = create<StoreState>((set, get) => ({
   clients: data.Client,
   services: data.Service,
   projects: data.Project,
+  setServices: (services) =>
+    set({
+      services: services.map((service) => ({
+        ...service,
+        id: service.id,
+      })),
+    }),
+  setProjects: (projects) =>
+    set({
+      projects: projects.map((project) => ({
+        ...project,
+        id: project.id,
+        clientId: project.clientid,
+        serviceId: project.serviceid,
+        Client: {
+          ...project.Client,
+          id: project.Client.id,
+        },
+        Service: {
+          ...project.Service,
+          id: project.Service.id,
+        },
+      })),
+    }),
   // Retrieve all services
   getServices: () => get().services,
   // Retrieve all projects
