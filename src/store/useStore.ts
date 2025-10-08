@@ -28,7 +28,7 @@ export interface Service {
   description: ServiceDescription[];
 }
 
-interface ProjectDescription {
+export interface ProjectDescription {
   summary: string;
   overview: string;
   paragraph_1: string;
