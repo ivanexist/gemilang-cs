@@ -1,3 +1,4 @@
+"use client";
 import Breadcrumb from "../components/common/Breadcrumb";
 import ServicesContent from "../components/services/ServicesContent";
 
