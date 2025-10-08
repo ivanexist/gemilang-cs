@@ -16,21 +16,7 @@ import Link from "next/link";
 import { ProjectDescription } from "@/store/useStore";
 import { useStore } from "@/store/useStore";
 import { useParams } from "next/navigation";
-
-// interface Props {
-//   project: Project & {
-//     Client: Client;
-//     Service: Service;
-//   };
-// }
-
-// interface ProjectDetailsProps {
-//   project: Project;
-// }
-// type DescriptionItem = {
-//   summary: string;
-//   // maybe other fields later
-// };
+import ProjectCard from "./ProjectCard";
 
 const ProjectsDetailsContent = () => {
   const params = useParams();
@@ -91,6 +77,10 @@ const ProjectsDetailsContent = () => {
       ? (project.description as ProjectDescription[])
       : []
     : [];
+
+  const relatedProjects = getProjectsByServiceId(project.serviceid)
+    .filter((p) => p.id !== project.id)
+    .slice(0, 3);
 
   const handleSlideChange = (swiper: SwiperCore) => {
     setCurrentIndex(swiper.activeIndex);
@@ -212,9 +202,19 @@ const ProjectsDetailsContent = () => {
             </div>
           </div>
         </div>
-        {/* <div>
-          <RelatedProjects selectedProject={project} />
-        </div> */}
+        {/* Related Projects Section */}
+        {relatedProjects.length > 0 && (
+          <div className="max-w-screen-xl mx-auto mt-12 px-4">
+            <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center font-PlayfairDisplay">
+              Proyek Terkait
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedProjects.map((relatedProject) => (
+                <ProjectCard key={relatedProject.id} project={relatedProject} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

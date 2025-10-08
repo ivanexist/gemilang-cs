@@ -15,7 +15,7 @@ interface ServiceDescription {
   description_new: string[];
   description_complete: string;
   description_overview: string;
-  description_key_benefits: string[];
+  description_key_benefit: string[];
   description_our_process: string[];
 }
 
@@ -43,11 +43,9 @@ export interface Project {
   name: string;
   description: ProjectDescription[];
   location: string;
-  yearcompleted: string;
+  yearcompleted: string[];
   url: string;
   images: string[];
-  Client: Client;
-  Service: Service;
 }
 
 interface StoreState {
@@ -85,16 +83,8 @@ export const useStore = create<StoreState>((set, get) => ({
       projects: projects.map((project) => ({
         ...project,
         id: project.id,
-        clientId: project.clientid,
-        serviceId: project.serviceid,
-        Client: {
-          ...project.Client,
-          id: project.Client.id,
-        },
-        Service: {
-          ...project.Service,
-          id: project.Service.id,
-        },
+        clientid: project.clientid,
+        serviceid: project.serviceid,
       })),
     }),
   // Retrieve all services

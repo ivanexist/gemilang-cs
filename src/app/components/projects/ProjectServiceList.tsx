@@ -8,62 +8,13 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
 import { ReactSVG } from "react-svg";
 
-interface ProjectServiceListProps {
-  projects?: {
-    id: number;
-    clientid: number;
-    serviceid: number;
-    name: string;
-    description: {
-      summary: string;
-      overview: string;
-      paragraph_1: string;
-      paragraph_2: string;
-      paragraph_3: string;
-    }[];
-    location: string;
-    yearcompleted: string[];
-    url: string;
-    images: string[];
-    Client?: {
-      id: number;
-      name: string;
-      description: string;
-      city: string;
-      country: string;
-    };
-    Service?: {
-      id: number;
-      url: string;
-      name: string;
-      icon: string;
-      image: string;
-      description: {
-        description_new: string[];
-        description_complete: string;
-        description_overview: string;
-        description_key_benefit: string[];
-        description_our_process: string[];
-      }[];
-    };
-  }[];
-}
-
-const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
-  projects,
-}) => {
+const ProjectServiceList: React.FC = () => {
   const { getProjects, getServiceById } = useStore();
   const router = useRouter();
   const searchParams = useSearchParams();
   const currentServiceUrl = searchParams.get("service");
-  const allProjects = projects || getProjects();
-  // console.log("projects prop:", projects);
-  // Debug: Log projects and services
-  // useEffect(() => {
-  //   console.log("ProjectServiceList Projects:", allProjects);
-  //   console.log("ProjectServiceList Current Service URL:", currentServiceUrl);
-  // }, [allProjects, currentServiceUrl]);
-
+  const allProjects = getProjects();
+  // Extract unique services from projects
   const uniqueServices = Array.from(
     new Map(
       allProjects
@@ -105,7 +56,7 @@ const ProjectServiceList: React.FC<ProjectServiceListProps> = ({
     }
   }, [currentServiceUrl, uniqueServices, router]);
   return (
-    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 mb-8">
+    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 mb-16">
       <div className="leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
           <Link href="/projects" scroll={true}>

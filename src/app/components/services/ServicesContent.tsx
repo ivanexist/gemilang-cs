@@ -17,34 +17,7 @@ export default function ServicesContent() {
           kebutuhan infrastruktur dan bangunan Anda
         </p>
       </div>
-      {/* <div className="max-w-screen-xl w-full mx-auto px-4 pt-4 pb-8 bg-white bg-opacity-90 rounded-lg shadow-lg my-8">
-        <h1 className="font-bold text-3xl pt-4 pb-8">
-          Mengapa memilih layanan kami?
-        </h1>
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3">
-          <div>
-            <h2 className="font-bold text-2xl pb-4">Teknologi Terdepan</h2>
-            <p className="text-gray-600 text-lg">
-              Menggunakan teknologi konstruksi modern dan peralatan canggil
-              untuk hasil optimal
-            </p>
-          </div>
-          <div>
-            <h2 className="font-bold text-2xl pb-4">Standar Internasional</h2>
-            <p className="text-gray-600 text-lg">
-              Semua layanan mengikuti standar kualitas dan keselamatan
-              internasional.
-            </p>
-          </div>
-          <div>
-            <h2 className="font-bold text-2xl pb-4">Tim Berpengalaman</h2>
-            <p className="text-gray-600 text-lg">
-              Didukung oleh tim profesional dengan pengalaman lebih dari 25
-              tahun.
-            </p>
-          </div>
-        </div>
-      </div> */}
+
       <div className="max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 sm:place-items-center md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (
           <ServiceCard

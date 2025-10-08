@@ -1,6 +1,6 @@
 "use client";
 // import { getProjects } from "@/app/lib/data";
-import { useStore } from "@/store/useStore";
+// import { useStore } from "@/store/useStore";
 import GridProjects from "./GridProjects";
 import ProjectServiceList from "./ProjectServiceList";
 // import RelatedProjects from "./RelatedProjects";
@@ -8,16 +8,16 @@ import ProjectServiceList from "./ProjectServiceList";
 export default function ProjectContent() {
   // const projects = await getProjects();
   //   const services = await getServices();
-  const { projects } = useStore();
+  // const { projects } = useStore();
 
   return (
     <div className="flex flex-col overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-no-repeat pt-8">
       <div className="max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 md:grid-cols-3">
         <div className="col-span-1">
-          <ProjectServiceList projects={projects} />
+          <ProjectServiceList />
         </div>
         <div className="col-span-2">
-          <GridProjects projects={projects} />
+          <GridProjects />
         </div>
       </div>
       <div className="w-full mx-auto text-center bg-malachite-400 p-16 text-white">
