@@ -167,7 +167,7 @@ const ProjectsDetailsContent = () => {
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                         />
                         <span className=" ml-1 text-gray-800 p-1">
-                          {client.name}
+                          {client?.name}
                         </span>
                       </div>
                     </div>
