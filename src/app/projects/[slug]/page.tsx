@@ -31,7 +31,7 @@ export default function ProjectDetailsPage() {
     <div>
       <Breadcrumb projectName={project?.name} />
       <div className="">
-        <ProjectsDetailsContent project={project} />
+        <ProjectsDetailsContent />
       </div>
     </div>
   );
