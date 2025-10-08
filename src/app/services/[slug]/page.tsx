@@ -14,9 +14,9 @@ import { useParams } from "next/navigation";
 export default function ServiceDetailsPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const { getServiceByUrl, getServices } = useStore();
+  const { getServiceByUrl } = useStore();
   const service = getServiceByUrl(slug);
-  const servicesList = getServices();
+  // const servicesList = getServices();
 
   if (!service) {
     return <div className="text-center text-red-500">Service Not Found</div>;
@@ -26,7 +26,7 @@ export default function ServiceDetailsPage() {
     <div>
       <Breadcrumb serviceName={service?.name} />
       <div className="">
-        <ServiceDetails service={service} servicesList={servicesList} />
+        <ServiceDetails />
       </div>
     </div>
   );
