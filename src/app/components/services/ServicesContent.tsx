@@ -27,7 +27,7 @@ export default function ServicesContent() {
           />
         ))}
       </div>
-      <div className="max-w-screen-xl w-full mx-auto bg-blue-600 mt-16 rounded-lg text-white">
+      <div className="max-w-screen-xl w-full sm:mx-4 lg:mx-auto bg-blue-600 mt-16 rounded-lg text-white">
         <div className="p-8 flex flex-col">
           <h1 className="font-bold text-3xl py-4 text-center">Layanan Kami</h1>
           <p className="text-lg text-gray-100">

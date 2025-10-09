@@ -41,7 +41,7 @@ const AboutContent = () => (
             className="relative z-10 object-cover object-center w-full h-[360px]"
           />
           {/* Statistics Overlay */}
-          <div className="absolute -bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 rounded-xl shadow-lg z-20">
+          <div className="absolute -bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 rounded-xl shadow-lg sm:ml-2 lg:ml-0 z-20">
             <div className="gap-4">
               <div>
                 <div className="text-2xl font-bold text-primary">10+</div>
@@ -68,7 +68,7 @@ const AboutContent = () => (
             terlayani dan tercukupi dengan baik.
           </div>
         </div> */}
-        <div className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2">
+        <div className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0">
           <div className="my-4 font-PlayfairDisplay">
             <h1 className="font-semibold mb-4 mt-2 pb-2 ml-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
               Misi Kami
@@ -91,7 +91,7 @@ const AboutContent = () => (
             </ul>
           </div>
         </div>
-        <div className="flex flex-col border rounded-lg px-8 pb-6 border-masala-300 p-2">
+        <div className="flex flex-col border rounded-lg px-8 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0">
           <div className="font-PlayfairDisplay font-semibold text-2xl my-4">
             <h1 className="font-semibold my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-500 w-fit">
               Visi Kami

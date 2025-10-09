@@ -16,7 +16,7 @@ export default function ProjectContent() {
         <div className="col-span-1">
           <ProjectServiceList />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 sm:mx-4 lg:mx-0">
           <GridProjects />
         </div>
       </div>

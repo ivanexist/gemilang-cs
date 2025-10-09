@@ -52,7 +52,7 @@ export default function Breadcrumb({
           </h1>
         </nav>
       </div> */}
-      <div className="max-w-screen-xl mx-auto w-full my-6">
+      <div className="max-w-screen-xl mx-auto w-full my-6 sm:ml-4 lg:ml-0">
         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse ">
           <li className="inline-flex items-center font-PlayfairDisplay">
             {/* Place code dynamic breadcrumb here */}

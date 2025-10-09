@@ -66,7 +66,7 @@ const CoreValues = () => {
         <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay text-center">
           Core Values
         </h1>
-        <h2 className="text-masala-400 text-xl font-openSans font-light max-w-3xl mx-auto mb-8">
+        <h2 className="text-masala-600 sm:text-lg lg:text-xl font-openSans font-light max-w-3xl sm:mx-4 lg:mx-auto mb-8">
           Prinsip-prinsip dasar ini menjadi pedoman dalam setiap keputusan
           diambil dan setiap proyek yang kami kerjakan.
         </h2>

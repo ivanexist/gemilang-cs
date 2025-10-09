@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-700">
             Mengapa Memilih PT Gemilang Cipta Sentosa?
           </h2>
-          <p className="text-xl text-masala-800 max-w-3xl mx-auto">
+          <p className="text-xl text-masala-600 max-w-3xl mx-auto">
             Inovasi dan standar keunggulan kami menjadi pembeda utama dalam
             dunia konstruksi.
           </p>
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
             />
 
             {/* Statistics Overlay */}
-            <div className="absolute -bottom-6 -left-6 bg-malachite-600 p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -left-6 bg-malachite-600 p-6 rounded-xl shadow-lg sm:ml-3 lg:ml-0">
               <div className="grid grid-cols-2 gap-4 text-center text-white">
                 <div>
                   <div className="text-2xl font-bold text-primary">99%</div>

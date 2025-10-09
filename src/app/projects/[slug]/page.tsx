@@ -1,7 +1,6 @@
 "use client";
 import Breadcrumb from "@/app/components/common/Breadcrumb";
 import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsContent";
-
 import { useStore } from "@/store/useStore";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -11,6 +10,7 @@ export default function ProjectDetailsPage() {
   const slug = params.slug as string;
   const { getProjectByUrl } = useStore();
   const project = getProjectByUrl(slug);
+
   // If slug is not a valid project or not found
   if (!project) {
     return (

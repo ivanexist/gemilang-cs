@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 import { useScrollStore } from "@/store/useScrollStore";
 import { ReactSVG } from "react-svg";
+import NavbarMobile from "./NavbarMobile";
 
 const NavbarMenu = [
   { label: "Home", path: "/" },
@@ -44,7 +45,7 @@ export default function Navbar() {
         isSticky ? "bg-white shadow-sm py-4" : "bg-transparent"
       }`}
     >
-      <div className="max-w-screen-xl w-full flex items-center justify-between mx-auto py-2">
+      <div className="max-w-screen-xl w-full flex items-center justify-between mx-auto py-2 ">
         <div className="flex">
           <div className="flex">
             <Link
@@ -83,7 +84,7 @@ export default function Navbar() {
                       isActive
                         ? "font-bold text-blue-600 border-b-2 pb-2 border-b-malachite-400"
                         : isSticky
-                        ? "text-gray-400"
+                        ? "text-masala-600"
                         : "text-white"
                     }`}
                   >
@@ -95,7 +96,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div>
-          <button className="flex items-center px-4 py-2 font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
+          <button className="sm:hidden lg:flex items-center px-4 py-2 font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
             <ReactSVG
               className="text-blue-500 transition-colors duration-300"
               src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
@@ -103,7 +104,7 @@ export default function Navbar() {
             <span className="font-medium ml-1 text-white p-1">Get Quote</span>
           </button>
         </div>
-        {/* <NavbarMobile /> */}
+        <NavbarMobile />
       </div>
     </nav>
   );

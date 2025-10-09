@@ -54,7 +54,7 @@ export default function AboutClients() {
   return (
     <section className="flex justify-center">
       <div className=" flex-1 max-w-7xl py-4 mx-auto md:px-6">
-        <div className="flex justify-center items-center sm:text-xl md:text-3xl text-blue-600 font-bold mt-8">
+        <div className="flex justify-center items-center sm:text-2xl md:text-3xl text-blue-600 font-bold mt-8">
           <h2 className="border-b-2 pb-4 border-b-atlantis-500">Klien Kami</h2>
         </div>
         <div className="text-center text-masala-400 font-openSans leading-7 text-lg mt-8 px-4 mb-12">
@@ -62,7 +62,7 @@ export default function AboutClients() {
           Indonesia.
         </div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl sm:grid-items-center">
           {clients.map((client, index) => (
             <div
               key={index}

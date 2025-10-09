@@ -4,7 +4,7 @@ import { ReactSVG } from "react-svg";
 
 const ContactSection = () => {
   return (
-    <section className="pt-10 pb-20 bg-gray-100">
+    <section className="pb-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay   text-center">
