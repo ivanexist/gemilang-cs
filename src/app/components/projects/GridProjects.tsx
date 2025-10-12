@@ -34,7 +34,7 @@ const GridProjects = () => {
     );
   }
   return (
-    <div className="flex flex-col mr-8 pb-24 overflow-hidden bg-transparent">
+    <div className="flex flex-col sm:mr-4 lg:mr-8 pb-24 overflow-hidden bg-transparent">
       <div className="max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 sm:place-items-center gap-8">
         {filteredProjects.length === 0 ? (
           <div className="max-w-screen-xl w-full mx-auto text-center py-8">

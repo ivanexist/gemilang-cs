@@ -113,7 +113,7 @@ const ProjectServiceList: React.FC = () => {
         <select
           value={currentServiceUrl || ""}
           onChange={(e) => handleServiceClick(e.target.value || null)}
-          className="w-[95%] p-3 bg-wildsand-50 border border-blue-300 rounded-lg text-blue-700 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base mr-16"
+          className="w-[95%] p-3 bg-wildsand-50 border border-blue-300 rounded-lg text-blue-700 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base"
         >
           <option value="">Semua Layanan</option>
           {uniqueServices.map((service) => (

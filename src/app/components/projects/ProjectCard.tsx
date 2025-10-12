@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     : [];
 
   return (
-    <div className="bg-white overflow-hidden lg:my-0 lg:h-[324px] sm:h-full sm:w-full sm:mx-4 lg:mx-0 md:mr-8 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
+    <div className="bg-white overflow-hidden lg:my-0 lg:h-[324px] sm:h-full sm:w-full sm:mx-4 lg:mx-0 md:mr-0 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
       <div className="h-full md:flex sm:flex-col md:flex-row ">
         <Link href={`/projects/${project.url}`} scroll={true}>
           <div>
