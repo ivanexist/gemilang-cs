@@ -37,10 +37,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
-  {
-    console.log("isHomePage:", isHomePage);
-    console.log("isSticky:", isSticky);
-  }
   return (
     <nav
       className={`${
