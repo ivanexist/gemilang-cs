@@ -50,7 +50,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-background border border-transparent rounded-lg shadow-sm overflow-hidden group project-card">
+        <div className="bg-background border-0 border-transparent shadow-sm overflow-hidden group project-card">
           <div className="relative h-52 overflow-hidden">
             <Image
               src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${images[0]}`}
@@ -67,7 +67,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
             </div>
           </div>
           <div className="p-6">
-            <h3 className="text-lg font-semibold text-foreground mb-2">
+            <h3 className="text-lg font-semibold mb-2 text-blue-700 font-PlayfairDisplay">
               {project.name}
             </h3>
             {/* <p className="text-muted-foreground text-sm mb-4">
@@ -92,7 +92,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
               </span>
             </div>
             <Link href={`/projects/${project.url}`}>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full">
+              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full mt-6 text-blue-600 hover:border-blue-600">
                 View Project Details
               </button>
             </Link>

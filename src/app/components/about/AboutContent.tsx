@@ -4,12 +4,12 @@ const AboutContent = () => (
   <section className="flex items-center max-w-screen-xl bg-transparent mx-auto w-screen">
     <div className="justify-center flex-1">
       <div className="mb-8 mt-8">
-        <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600">
+        <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600 sm:text-center md:text-left">
           Siapa Kami?
         </h1>
       </div>
       <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
-        <div className="sm:w-full lg:w-1/2 lg:mb-0 pr-4 text-masala-700 text-medium">
+        <div className="sm:w-full lg:w-1/2 lg:mb-0 pr-4 text-masala-700 text-medium sm:mx-4">
           <p className="sm:mb-4 md:mb-0 lg:mr-4">
             PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
             bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
@@ -41,7 +41,7 @@ const AboutContent = () => (
             className="relative z-10 object-cover object-center w-full h-[360px]"
           />
           {/* Statistics Overlay */}
-          <div className="absolute -bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 rounded-xl shadow-lg sm:ml-2 lg:ml-0 z-20">
+          <div className="absolute sm:-bottom-1.5 lg:-bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 shadow-lg sm:ml-4 lg:ml-0 sm:mb-2 lg:mb-0 sm:rounded-none lg:rounded-xl z-20">
             <div className="gap-4">
               <div>
                 <div className="text-2xl font-bold text-primary">10+</div>
