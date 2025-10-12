@@ -132,12 +132,12 @@ const ProjectsDetailsContent = () => {
                 </h1> */}
                 <div className="flex mb-4">
                   <div className="bg-malachite-600 rounded-full py-2 px-4 text-sm text-white font-semibold">
-                    <Link
+                    {/* <Link
                       href={`/services/${service?.url || ""}`}
                       scroll={true}
                     >
-                      <p>{service?.name ?? "Unknown Service"}</p>
-                    </Link>
+                    </Link> */}
+                    <p>{service?.name ?? "Unknown Service"}</p>
                   </div>
                   <div className="ml-4 pt-1">
                     <div className="flex text-blue-600">
