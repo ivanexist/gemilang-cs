@@ -20,7 +20,6 @@ export default function RootLayout({
     <html>
       <body>
         <Navbar />
-
         <main>{children}</main>
         <Footer />
         <ScrollUpButton />

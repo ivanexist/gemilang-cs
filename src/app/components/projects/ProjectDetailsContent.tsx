@@ -16,7 +16,8 @@ import Link from "next/link";
 import { ProjectDescription } from "@/store/useStore";
 import { useStore } from "@/store/useStore";
 import { useParams } from "next/navigation";
-import ProjectCard from "./ProjectCard";
+// import ProjectCard from "./ProjectCard";
+import RelatedProjectCard from "./RelatedProjectCard";
 
 const ProjectsDetailsContent = () => {
   const params = useParams();
@@ -212,7 +213,10 @@ const ProjectsDetailsContent = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedProjects.map((relatedProject) => (
-                <ProjectCard key={relatedProject.id} project={relatedProject} />
+                <RelatedProjectCard
+                  key={relatedProject.id}
+                  project={relatedProject}
+                />
               ))}
             </div>
           </div>

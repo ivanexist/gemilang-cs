@@ -9,6 +9,7 @@ import { ReactSVG } from "react-svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useStore } from "@/store/useStore";
+import RelatedProjectCard from "../projects/RelatedProjectCard";
 // import RelatedProjectByService from "./RelatedProjectByService";
 
 // interface ServicesDetailsContentProps {
@@ -27,10 +28,11 @@ interface ServiceDescription {
 export default function ServiceDetails() {
   const params = useParams();
   const currentSlug = typeof params.slug === "string" ? params.slug : "";
-  const { getServiceByUrl, getServices } = useStore();
+  const { getServiceByUrl, getServices, getProjectsByServiceId } = useStore();
   // const [services, setServices] = useState<Service[]>([]);
   const service = getServiceByUrl(currentSlug);
   const servicesList = getServices();
+  const relatedProjects = getProjectsByServiceId(service?.id || 0);
 
   if (!service) {
     return null; // Handled by ServiceDetailsPage
@@ -294,8 +296,26 @@ export default function ServiceDetails() {
             </motion.div>
           </div>
         </div>
+        <div className="max-w-screen-xl w-full mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center mt-16 font-PlayfairDisplay">
+            Proyek Terkait
+          </h2>
+          {relatedProjects.length === 0 ? (
+            <div className="text-center py-8">
+              <p className="text-gray-600 text-lg">
+                No projects found for this service.
+              </p>
+            </div>
+          ) : (
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+              {relatedProjects.map((project) => (
+                <RelatedProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-      {/* <RelatedProjectByService service={service} /> */}
+      {/* <RelatedProjectByService service={service} /> */}{" "}
     </section>
   );
 }
