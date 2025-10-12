@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="flex flex-col">
             <div className="flex justify-between mb-4">
               <div className="bg-malachite-600 rounded-full py-2 px-4 text-xs text-white font-semibold">
-                <Link href={`/services/${service?.url || ""}`} scroll={true}>
+                <Link href={`/services/${service?.url || ""}`}>
                   <p>{service?.name ?? "Unknown Service"}</p>
                 </Link>
               </div>
