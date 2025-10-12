@@ -44,7 +44,7 @@ const NavbarMobile: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed z-50 left-0 right-0 top-24 p-6 pt-0 bg-white border-b border-b-white/20 shadow-4xl"
+          className="fixed z-50 left-0 right-0 top-24 p-6 pt-0 bg-white border-b border-b-white/20 shadow-4xl mr-2"
         >
           <ul className="grid gap-2 my-2">
             {routesMobile.map((route, idx) => (

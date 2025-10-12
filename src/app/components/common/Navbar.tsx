@@ -11,11 +11,11 @@ import { ReactSVG } from "react-svg";
 import NavbarMobile from "./NavbarMobile";
 
 const NavbarMenu = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Services", path: "/services" },
-  { label: "Projects", path: "/projects" },
-  { label: "Contact", path: "/contact" },
+  { label: "Beranda", path: "/" },
+  { label: "Tentang Kami", path: "/about" },
+  { label: "Layanan", path: "/services" },
+  { label: "Proyek", path: "/projects" },
+  { label: "Kontak", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -37,12 +37,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
+  {
+    console.log("isHomePage:", isHomePage);
+    console.log("isSticky:", isSticky);
+  }
   return (
     <nav
       className={`${
-        isHomePage ? "fixed" : "sticky"
-      } transition-all top-0 w-full duration-300 ease-in-out z-20 py-4 ${
-        isSticky ? "bg-white shadow-sm py-4" : "bg-transparent"
+        isHomePage && !isSticky ? "fixed" : "sticky"
+      } top-0 w-full z-100 transition-all duration-300 ease-in-out py-4 ${
+        isSticky || !isHomePage ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-screen-xl w-full flex items-center justify-between mx-auto py-2 ">
@@ -51,7 +55,7 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={scrollToTop}
-              className="flex items-center space-x-3 rtl:space-x-reverse mx-2 sm:w-24 sm:h-12 md:w-32 md:h-14"
+              className="flex items-center space-x-3 rtl:space-x-reverse mx-2 sm:w-24 sm:h-12 md:w-32 md:h-14 sm:ml-2"
             >
               <span className="self-center font-semibold whitespace-nowrap">
                 <Image

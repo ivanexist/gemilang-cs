@@ -57,7 +57,7 @@ const ProjectServiceList: React.FC = () => {
   }, [currentServiceUrl, uniqueServices, router]);
   return (
     <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 mb-16">
-      <div className="leading-6 bg-wildsand-50 shadow border-transparent">
+      <div className="sm:hidden lg:block leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
           <Link href="/projects" scroll={true}>
             <li
@@ -106,6 +106,22 @@ const ProjectServiceList: React.FC = () => {
             </Link>
           ))}
         </ul>
+      </div>
+
+      {/* Mobile View: Dropdown Menu */}
+      <div className="sm:block lg:hidden w-full">
+        <select
+          value={currentServiceUrl || ""}
+          onChange={(e) => handleServiceClick(e.target.value || null)}
+          className="w-full p-3 bg-wildsand-50 border border-blue-300 rounded-lg text-blue-700 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base"
+        >
+          <option value="">Semua Layanan</option>
+          {uniqueServices.map((service) => (
+            <option key={service.id} value={service.url}>
+              {service.name}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );

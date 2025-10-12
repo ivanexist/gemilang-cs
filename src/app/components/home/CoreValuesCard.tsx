@@ -20,7 +20,7 @@ const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
   return (
     <div
       key={coreValuesItems.key}
-      className="flex flex-col justify-center items-center text-center sm:my-8 sm:mx-4 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white"
+      className="flex flex-col justify-center items-center text-center sm:my-6 lg:my-8 sm:mx-4 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white"
     >
       {/* <div className="mr-4 w-32 h-32 bg-blue-500 [clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)] border-4 border-white ">
         <ReactSVG

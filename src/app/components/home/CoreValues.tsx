@@ -63,7 +63,7 @@ const CoreValues = () => {
   return (
     <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-inherit">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay text-center">
+        <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay text-center sm:mt-12 lg:mt-0">
           Core Values
         </h1>
         <h2 className="text-masala-600 sm:text-lg lg:text-xl font-openSans font-light max-w-3xl sm:mx-4 lg:mx-auto mb-8">

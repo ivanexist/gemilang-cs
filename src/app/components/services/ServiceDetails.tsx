@@ -159,7 +159,7 @@ export default function ServiceDetails() {
           </div>
           {/* Sidebar */}
           <div className="flex flex-col items-start col-span-2 sm:mx-2 lg:mx-0 pb-4">
-            <div className="ml-8 leading-6 bg-transparent border-2 shadow border-transparent">
+            <div className="ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent">
               <ul className="divide-y divide-blue-300">
                 {servicesList.map((service) => (
                   <Link href={`/services/${service.url}`} key={service.id}>
@@ -189,6 +189,7 @@ export default function ServiceDetails() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="sm:order-1 lg:order-2"
             >
               <div className="bg-transparent border border-masala-200 rounded-lg shadow-sm mt-10 ml-8 w-full pr-12">
                 <div className="p-6">
@@ -265,6 +266,7 @@ export default function ServiceDetails() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              className="sm:order-2 lg:order-2"
             >
               <div className="bg-transparent border border-masala-200 rounded-lg shadow-sm mt-10 ml-8 w-[85%]">
                 <div className="p-6 text-center">

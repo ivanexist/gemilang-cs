@@ -19,9 +19,8 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <div className="relative top-0 z-100">
-          <Navbar />
-        </div>
+        <Navbar />
+
         <main>{children}</main>
         <Footer />
         <ScrollUpButton />

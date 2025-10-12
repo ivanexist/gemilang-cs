@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 const AboutContent = () => (
-  <section className="flex items-center max-w-screen-xl bg-transparent mx-auto">
+  <section className="flex items-center max-w-screen-xl bg-transparent mx-auto w-screen">
     <div className="justify-center flex-1">
-      <div className="mb-8 mt-8 ml-4">
+      <div className="mb-8 mt-8">
         <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600">
           Siapa Kami?
         </h1>
       </div>
       <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
-        <div className="sm:w-full lg:w-1/2 lg:mb-0 px-4 text-masala-700 text-medium">
+        <div className="sm:w-full lg:w-1/2 lg:mb-0 pr-4 text-masala-700 text-medium">
           <p className="sm:mb-4 md:mb-0 lg:mr-4">
             PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
             bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
