@@ -265,28 +265,6 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-
-            {/* Google Maps Placeholder */}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-masala-800 mb-6">
-                  Lokasi Kami
-                </h3>
-                <div className="h-64 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                  <div className="text-center text-masala-600">
-                    {/* <MapPin className="mx-auto text-4xl mb-4" size={48} /> */}
-                    <ReactSVG
-                      src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
-                      className="mx-auto h-12 w-12 text-masala-600"
-                    />
-                    <p>Google Maps Integration</p>
-                    <p className="text-sm">
-                      Interactive map will be displayed here
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

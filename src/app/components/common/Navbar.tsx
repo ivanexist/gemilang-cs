@@ -101,7 +101,9 @@ export default function Navbar() {
               className="text-blue-500 transition-colors duration-300"
               src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
             />
-            <span className="font-medium ml-1 text-white p-1">Get Quote</span>
+            <Link href="/contact" className="font-medium ml-1 text-white p-1">
+              Get Quote
+            </Link>
           </button>
         </div>
         <NavbarMobile />
