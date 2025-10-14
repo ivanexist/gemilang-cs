@@ -5,11 +5,11 @@ import { useStore } from "@/store/useStore";
 
 export default function Footer() {
   const FooterMenu = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Services", path: "/services" },
-    { label: "Projects", path: "/projects" },
-    { label: "Contact", path: "/contact" },
+    { label: "Beranda", path: "/" },
+    { label: "Tentang Kami", path: "/tentang" },
+    { label: "Layanan", path: "/layanan" },
+    { label: "Proyek", path: "/proyek" },
+    { label: "Kontak", path: "/kontak" },
   ];
   const { services } = useStore();
 
@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="md:inline-block">
             <div>
               <h3 className="text-white text-lg uppercase font-semibold mb-4">
-                Useful Links
+                Jelajahi Lebih Lanjut
               </h3>
               <ul>
                 {FooterMenu.map((item) => (
@@ -49,14 +49,14 @@ export default function Footer() {
           </div>
           <div className="">
             <h3 className="mb-4 flex justify-start font-semibold uppercase text-white text-lg">
-              Our Services
+              Layanan Kami
             </h3>
             <div className="flex flex-col justify-start  font-openSans font-light">
               <ul>
                 {services.map((service) => (
                   <li key={service.id} className="mb-2">
                     <a
-                      href={`/services/${service.url}`}
+                      href={`/layanan/${service.url}`}
                       className="text-gray-300 hover:text-white transition duration-300"
                     >
                       {service.name}
@@ -69,7 +69,7 @@ export default function Footer() {
           {/* Contact Section */}
           <div className="">
             <h6 className="flex justify-start font-semibold mb-2 uppercase text-white text-lg">
-              Contact Us
+              Hubungi Kami
             </h6>
             <div className="flex flex-col justify-start text-left font-openSans">
               <div className="flex my-2">

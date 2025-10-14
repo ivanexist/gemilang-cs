@@ -41,7 +41,7 @@ const ProjectServiceList: React.FC = () => {
       if (serviceUrl) {
         params.set("service", serviceUrl);
       }
-      router.push(`/projects?${params.toString()}`);
+      router.push(`/proyek?${params.toString()}`);
     },
     [router]
   );
@@ -51,7 +51,7 @@ const ProjectServiceList: React.FC = () => {
     if (currentServiceUrl) {
       const service = uniqueServices.find((s) => s.url === currentServiceUrl);
       if (!service && currentServiceUrl !== "all-services") {
-        router.push("/projects"); // Reset to all services if invalid
+        router.push("/proyek"); // Reset to all services if invalid
       }
     }
   }, [currentServiceUrl, uniqueServices, router]);
@@ -59,7 +59,7 @@ const ProjectServiceList: React.FC = () => {
     <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 mb-16">
       <div className="sm:hidden lg:block leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
-          <Link href="/projects" scroll={true}>
+          <Link href="/proyek" scroll={true}>
             <li
               className={`text-blue-700 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
                 !currentServiceUrl
@@ -81,7 +81,7 @@ const ProjectServiceList: React.FC = () => {
           </Link>
           {uniqueServices.map((service) => (
             <Link
-              href={`/projects?service=${encodeURIComponent(service.url)}`}
+              href={`/proyek?service=${encodeURIComponent(service.url)}`}
               key={service.id}
               scroll={true}
             >

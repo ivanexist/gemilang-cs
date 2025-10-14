@@ -17,7 +17,7 @@ type BestServiceCardProps = {
 };
 const BestServiceCard: React.FC<BestServiceCardProps> = ({ service }) => {
   return (
-    <Link href={`/services/${service.url || ""}`}>
+    <Link href={`/layanan/${service.url || ""}`}>
       <div className="bg-white border border-white hover:border-blue-500 hover:shadow-xl lg:m-2 py-4 px-2 relative z-10 group sm:mx-4 w-96 h-[18rem] mb-4 transition-colors duration-300">
         <div className="py-2 sm:px-4 lg:px-8 relative group my-4">
           <div className="sm:flex sm:justify-center sm:items-center my-2">

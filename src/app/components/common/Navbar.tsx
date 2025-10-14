@@ -69,8 +69,8 @@ export default function Navbar() {
             {NavbarMenu.map(({ label, path }) => {
               const isActive =
                 pathname === path ||
-                (path === "/services" && pathname.startsWith("/services/")) ||
-                (path === "/projects" && pathname.startsWith("/projects/"));
+                (path === "/layanan" && pathname.startsWith("/layanan/")) ||
+                (path === "/proyek" && pathname.startsWith("/proyek/"));
 
               return (
                 <Link
@@ -101,8 +101,8 @@ export default function Navbar() {
               className="text-blue-500 transition-colors duration-300"
               src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
             />
-            <Link href="/contact" className="font-medium ml-1 text-white p-1">
-              Get Quote
+            <Link href="/kontak" className="font-medium ml-1 text-white p-1">
+              Dapatkan Penawaran
             </Link>
           </button>
         </div>

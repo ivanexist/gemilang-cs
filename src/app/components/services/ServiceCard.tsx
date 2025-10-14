@@ -42,12 +42,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </p>
       </div>
       <Link
-        href={`/services/${service.url}`}
-        className="sm:mx-4 lg:mx-8 mb-4 text-blue-600 font-semibold text-lg border-b-2 border-b-transparent sm:text-center md:text-left sm:uppercase md:lowercase"
+        href={`/layanan/${service.url}`}
+        className="sm:mx-4 lg:mx-8 mb-4 text-blue-600 font-semibold text-lg border-b-2 border-b-transparent sm:text-center md:text-left "
       >
-        <span className="pb-2 hover:border-b-2 hover:border-malachite-400 transition duration-300 ">
-          Details
-        </span>
+        <p className="pb-2 hover:border-b-2 hover:border-malachite-400 w-fit transition-all duration-300 ">
+          D<span className=" sm:uppercase md:lowercase">etails</span>
+        </p>
       </Link>
     </div>
   );

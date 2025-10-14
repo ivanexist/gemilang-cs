@@ -133,7 +133,7 @@ const ProjectsDetailsContent = () => {
                 </h1> */}
                 <div className="flex sm:mt-4 md:mt-0 mb-4">
                   <div className="bg-malachite-600 rounded-full py-2 px-4 text-sm text-white font-semibold">
-                    <Link href={`/services/${service?.url || ""}`}>
+                    <Link href={`/layanan/${service?.url || ""}`}>
                       <p>{service?.name ?? "Unknown Service"}</p>
                     </Link>
                   </div>
@@ -190,13 +190,13 @@ const ProjectsDetailsContent = () => {
               </div>
               <div className="flex mt-8">
                 <Link
-                  href={"/"}
+                  href={"/layanan"}
                   className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
                 >
                   Liat Pelayanan Terkait
                 </Link>
                 <Link
-                  href={"/"}
+                  href={"/proyek"}
                   className="ml-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition-colors duration-300"
                 >
                   Diskusikan Proyek Serupa

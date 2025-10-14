@@ -61,7 +61,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
               className="project-image w-full h-full object-cover"
             />
             <div className="bg-malachite-600 rounded-full py-2 px-4 text-xs text-white font-semibold z-30   absolute top-2 left-2">
-              <Link href={`/services/${service?.url || ""}`}>
+              <Link href={`/layanan/${service?.url || ""}`}>
                 <p>{service?.name ?? "Unknown Service"}</p>
               </Link>
             </div>
@@ -91,7 +91,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
                 {project.yearcompleted.join(", ")}
               </span>
             </div>
-            <Link href={`/projects/${project.url}`}>
+            <Link href={`/proyek/${project.url}`}>
               <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-white h-9 rounded-md px-3 w-full mt-6 text-blue-700 hover:border-blue-700 hover:cursor-pointer hover:shadow-lg hover:bg-blue-700 duration-300">
                 View Project Details
               </button>

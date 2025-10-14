@@ -84,7 +84,7 @@ const FeaturedProjects: React.FC = () => {
           ))}
         </div>
         <div className="flex justify-center items-center mt-16">
-          <Link href="/projects">
+          <Link href="/proyek">
             <button className="py-4 px-8 bg-malachite-600 hover:bg-malachite-500 text-white font-semibold text-lg cursor-pointer rounded-lg">
               Lihat Semua Proyek
             </button>

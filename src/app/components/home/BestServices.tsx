@@ -37,7 +37,7 @@ export default function BestServices() {
       </div>
 
       <div className="flex justify-center items-center mt-16 mb-8">
-        <Link href="/services">
+        <Link href="/layanan">
           <button className="py-4 px-8 bg-malachite-600 hover:bg-malachite-500 text-white font-semibold text-lg cursor-pointer rounded-lg">
             Lihat Semua Layanan
           </button>

@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="bg-white overflow-hidden lg:my-0 lg:h-[324px] sm:h-full sm:w-full sm:mx-4 lg:mx-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
       <div className="h-full md:flex sm:flex-col md:flex-row ">
-        <Link href={`/projects/${project.url}`} scroll={true}>
+        <Link href={`/proyek/${project.url}`} scroll={true}>
           <div>
             <Image
               className="sm:w-full md:w-72 h-82 object-cover object-center hover:opacity-90 hover:zoom-out-40 ease-in duration-150"
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="flex flex-col">
             <div className="flex justify-between mb-4">
               <div className="bg-malachite-600 rounded-full py-2 px-4 text-xs text-white font-semibold">
-                <Link href={`/services/${service?.url || ""}`}>
+                <Link href={`/layanan/${service?.url || ""}`}>
                   <p>{service?.name ?? "Unknown Service"}</p>
                 </Link>
               </div>
@@ -78,7 +78,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 </p>
               </div>
             </div>
-            <Link href={`/projects/${project.url}`} scroll={true}>
+            <Link href={`/proyek/${project.url}`} scroll={true}>
               <h1 className="text-xl text-start font-bold text-blue-700 hover:text-blue-600">
                 {project.name}
               </h1>

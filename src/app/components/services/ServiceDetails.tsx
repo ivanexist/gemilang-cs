@@ -58,7 +58,7 @@ export default function ServiceDetails() {
   const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedSlug = e.target.value;
     if (selectedSlug) {
-      router.push(`/services/${selectedSlug}`);
+      router.push(`/layanan/${selectedSlug}`);
     }
   };
   return (
@@ -187,7 +187,7 @@ export default function ServiceDetails() {
             <div className="sm:hidden md:block ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent">
               <ul className="divide-y divide-blue-300">
                 {servicesList.map((service) => (
-                  <Link href={`/services/${service.url}`} key={service.id}>
+                  <Link href={`/layanan/${service.url}`} key={service.id}>
                     <li
                       className={`text-blue-600 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
                         service.url === currentSlug
