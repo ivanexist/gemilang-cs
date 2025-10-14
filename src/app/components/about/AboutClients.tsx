@@ -62,7 +62,7 @@ export default function AboutClients() {
           Indonesia.
         </div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl sm:grid-items-center">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl sm:place-items-center">
           {clients.map((client, index) => (
             <div
               key={index}

@@ -10,6 +10,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useStore } from "@/store/useStore";
 import RelatedProjectCard from "../projects/RelatedProjectCard";
+import { useRouter } from "next/navigation";
 // import RelatedProjectByService from "./RelatedProjectByService";
 
 // interface ServicesDetailsContentProps {
@@ -27,6 +28,7 @@ interface ServiceDescription {
 
 export default function ServiceDetails() {
   const params = useParams();
+  const router = useRouter();
   const currentSlug = typeof params.slug === "string" ? params.slug : "";
   const { getServiceByUrl, getServices, getProjectsByServiceId } = useStore();
   // const [services, setServices] = useState<Service[]>([]);
@@ -53,7 +55,12 @@ export default function ServiceDetails() {
       ? (service.description as ServiceDescription[])
       : []
     : [];
-
+  const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedSlug = e.target.value;
+    if (selectedSlug) {
+      router.push(`/services/${selectedSlug}`);
+    }
+  };
   return (
     <section className="flex items-center bg-gray-100">
       <div className="justify-center flex-1 max-w-7xl sm:py-4 lg:py-0 lg:mb-12 mx-auto">
@@ -161,7 +168,23 @@ export default function ServiceDetails() {
           </div>
           {/* Sidebar */}
           <div className="flex flex-col items-start col-span-2 sm:mx-2 lg:mx-0 pb-4">
-            <div className="ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent">
+            {/* Mobile View: Dropdown Menu */}
+            <div className="sm:block md:hidden ml-8 w-[85%] sm:order-3 lg:order-1 mt-8">
+              <select
+                value={currentSlug}
+                onChange={handleServiceChange}
+                className="w-full p-3 bg-transparent border border-blue-300 rounded-lg text-blue-600 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base"
+              >
+                {servicesList.map((service) => (
+                  <option key={service.id} value={service.url}>
+                    {service.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Desktop View: Service List */}
+            <div className="sm:hidden md:block ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent">
               <ul className="divide-y divide-blue-300">
                 {servicesList.map((service) => (
                   <Link href={`/services/${service.url}`} key={service.id}>
