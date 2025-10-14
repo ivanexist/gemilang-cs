@@ -55,9 +55,9 @@ export default function AboutClients() {
     <section className="flex justify-center">
       <div className=" flex-1 max-w-7xl py-4 mx-auto md:px-6">
         <div className="flex justify-center items-center sm:text-2xl md:text-3xl text-blue-600 font-bold mt-8">
-          <h2 className="border-b-2 pb-4 border-b-atlantis-500">Klien Kami</h2>
+          <h2 className="">Klien Kami</h2>
         </div>
-        <div className="text-center text-masala-400 font-openSans leading-7 text-lg mt-8 px-4 mb-12">
+        <div className="text-center text-masala-400 font-openSans leading-7 text-lg mt-4 px-4 mb-12">
           Membangun kepercayaan dengan organisasi dan institusi terkemuka di
           Indonesia.
         </div>
