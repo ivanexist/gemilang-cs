@@ -10,10 +10,10 @@ import HamburgerMenu from "hamburger-react";
 // Define the routes for the mobile navigation
 const routesMobile = [
   { title: "Home", link: "/" },
-  { title: "About", link: "/about" },
-  { title: "Services", link: "/services" },
-  { title: "Projects", link: "/projects" },
-  { title: "Contact", link: "/contact" },
+  { title: "Tentang Kami", link: "/tentang" },
+  { title: "Layanan", link: "/layanan" },
+  { title: "Proyek", link: "/proyek" },
+  { title: "Kontak", link: "/kontak" },
 ];
 
 const NavbarMobile: React.FC = () => {

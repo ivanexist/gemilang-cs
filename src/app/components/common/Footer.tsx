@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* TW Elements Section */}
           <div className="">
-            <div className="mb-4 flex items-center font-semibold uppercase justify-start text-white text-lg">
+            <div className="mb-4 flex items-center font-semibold uppercase justify-start text-white text-lg sm:text-center lg:text-start">
               <p>PT GEMILANG CIPTA SENTOSA</p>
             </div>
             <p className="text-left  font-openSans font-light text-gray-300">
@@ -30,10 +30,10 @@ export default function Footer() {
           </div>
           <div className="md:inline-block">
             <div>
-              <h3 className="text-white text-lg uppercase font-semibold mb-4">
+              <h3 className="text-white text-lg uppercase font-semibold mb-4 text-left">
                 Jelajahi Lebih Lanjut
               </h3>
-              <ul>
+              <ul className="text-left">
                 {FooterMenu.map((item) => (
                   <li key={item.path} className="mb-2">
                     <a
@@ -48,10 +48,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="">
-            <h3 className="mb-4 flex justify-start font-semibold uppercase text-white text-lg">
+            <h3 className="mb-4 text-left font-semibold uppercase text-white text-lg ">
               Layanan Kami
             </h3>
-            <div className="flex flex-col justify-start  font-openSans font-light">
+            <div className="flex flex-col justify-start items-start text-left font-openSans font-light">
               <ul>
                 {services.map((service) => (
                   <li key={service.id} className="mb-2">
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
           {/* Contact Section */}
           <div className="">
-            <h6 className="flex justify-start font-semibold mb-2 uppercase text-white text-lg">
+            <h6 className="text-left font-semibold mb-2 uppercase text-white text-lg">
               Hubungi Kami
             </h6>
             <div className="flex flex-col justify-start text-left font-openSans">
