@@ -66,7 +66,7 @@ export default function AboutClients() {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="flex m-4 h-28 w-88 relative p-4 bg-white shadow rounded-lg items-center"
+              className="flex m-4 h-28 sm:w-76 lg:w-88 relative p-4 bg-white shadow rounded-lg items-center"
             >
               <Image
                 src={client.src}

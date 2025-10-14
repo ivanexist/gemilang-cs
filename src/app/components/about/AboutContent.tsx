@@ -41,7 +41,7 @@ const AboutContent = () => (
             className="relative z-10 object-cover object-center w-full h-[360px]"
           />
           {/* Statistics Overlay */}
-          <div className="absolute sm:-bottom-1.5 lg:-bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 shadow-lg sm:ml-4 lg:ml-0 sm:mb-2 lg:mb-0 sm:rounded-none lg:rounded-xl z-20">
+          <div className="absolute sm:-bottom-1.5 md:-bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 shadow-lg sm:ml-4 lg:ml-0 sm:mb-2 lg:mb-0 sm:rounded-none lg:rounded-xl z-20">
             <div className="gap-4">
               <div>
                 <div className="text-2xl font-bold text-primary">10+</div>

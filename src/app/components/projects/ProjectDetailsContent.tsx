@@ -89,7 +89,7 @@ const ProjectsDetailsContent = () => {
 
   return (
     <section className=" bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-repeat mb-16">
-      <div className=" max-w-screen-xl md:mx-auto w-screen">
+      <div className=" max-w-screen-xl sm:mx-auto w-screen">
         <div className="flex items-center justify-center flex-1 max-w-7xl mx-auto overflow-x-hidden">
           {/* Image Gallery with Swiper and Framer Motion */}
           <div className="grid sm:grid-cols-1 md:grid-cols-6">
@@ -126,12 +126,12 @@ const ProjectsDetailsContent = () => {
                 ))}
               </Swiper>
             </div>
-            <div className="col-span-3 sm:px-4 lg:ml-4">
+            <div className="col-span-3 sm:px-2 lg:ml-4">
               <div>
                 {/* <h1 className="font-semibold text-2xl border-b-2 border-b-atlantis-500 text-blue-600 pb-4 uppercase text-center font-PlayfairDisplay mb-4 w-fit">
                   {project.name}
                 </h1> */}
-                <div className="flex mb-4">
+                <div className="flex sm:mt-4 md:mt-0 mb-4">
                   <div className="bg-malachite-600 rounded-full py-2 px-4 text-sm text-white font-semibold">
                     <Link href={`/services/${service?.url || ""}`}>
                       <p>{service?.name ?? "Unknown Service"}</p>

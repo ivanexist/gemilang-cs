@@ -44,7 +44,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
   //     : [];
 
   return (
-    <div className="bg-white overflow-hidden lg:my-0 lg:h-[420px] sm:h-full sm:w-full sm:mx-4 lg:mx-0 md:mr-0 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
+    <div className="bg-white overflow-hidden lg:my-0 lg:h-[420px] sm:h-full sm:w-full md:mr-0 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +92,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
               </span>
             </div>
             <Link href={`/projects/${project.url}`}>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full mt-6 text-blue-600 hover:border-blue-600">
+              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full mt-6 text-blue-600 hover:border-blue-600 hover:cursor-pointer">
                 View Project Details
               </button>
             </Link>

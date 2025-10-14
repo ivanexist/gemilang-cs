@@ -256,9 +256,7 @@ const ContactSection = () => {
                         Jam Operasional
                       </h4>
                       <p className="text-muted-foreground">
-                        Monday - Friday: 08:00 - 17:00
-                        <br />
-                        Saturday: 08:00 - 14:00
+                        Senin - Jumat: 08:00 - 17:00
                       </p>
                     </div>
                   </div>

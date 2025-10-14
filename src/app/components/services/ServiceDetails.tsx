@@ -307,7 +307,7 @@ export default function ServiceDetails() {
               </p>
             </div>
           ) : (
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {relatedProjects.map((project) => (
                 <RelatedProjectCard key={project.id} project={project} />
               ))}
