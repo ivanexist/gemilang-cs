@@ -23,12 +23,12 @@ export default function Breadcrumb({
   const getLabel = (segment: string, index: number): string => {
     const prev = segments[index - 1];
 
-    if (segment === "services") return "Services";
-    if (segment === "projects") return "Projects";
-    if (segment === "about") return "About";
-    if (segment === "contact") return "Contact";
-    if (prev === "services") return serviceName ?? "Service Not Found";
-    if (prev === "projects") return projectName ?? "Project Not Found";
+    if (segment === "layanan") return "Layanan";
+    if (segment === "proyek") return "Proyek";
+    if (segment === "tentang") return "Tentang Kami";
+    if (segment === "kontak") return "Kontak";
+    if (prev === "layanan") return serviceName ?? "Layanan Tidak Ditemukan";
+    if (prev === "proyek") return projectName ?? "Proyek Tidak Ditemukan";
 
     return capitalize(segment);
   };
@@ -49,7 +49,7 @@ export default function Breadcrumb({
               className="text-gray-500 hover:text-blue-600 inline-flex items-center sm:text-sm md:text-base font-medium"
             >
               <FaHome className="mr-2" />
-              <span className="mt-0.5">Home</span>
+              <span className="mt-0.5">Beranda</span>
             </Link>
           </li>
           {breadcrumbs.map(({ href, label }) => (

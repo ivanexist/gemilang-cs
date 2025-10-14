@@ -12,10 +12,10 @@ import NavbarMobile from "./NavbarMobile";
 
 const NavbarMenu = [
   { label: "Beranda", path: "/" },
-  { label: "Tentang Kami", path: "/about" },
-  { label: "Layanan", path: "/services" },
-  { label: "Proyek", path: "/projects" },
-  { label: "Kontak", path: "/contact" },
+  { label: "Tentang Kami", path: "/tentang" },
+  { label: "Layanan", path: "/layanan" },
+  { label: "Proyek", path: "/proyek" },
+  { label: "Kontak", path: "/kontak" },
 ];
 
 export default function Navbar() {

@@ -9,7 +9,7 @@ const AboutContent = () => (
         </h1>
       </div>
       <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
-        <div className="sm:w-full lg:w-1/2 lg:mb-0 pr-4 text-masala-700 text-medium sm:mx-4">
+        <div className="sm:w-full lg:w-1/2 lg:mb-0 pr-4 text-masala-700 text-medium sm:mr-4">
           <p className="sm:mb-4 md:mb-0 lg:mr-4">
             PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
             bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
