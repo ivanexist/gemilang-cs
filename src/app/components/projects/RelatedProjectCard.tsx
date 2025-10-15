@@ -75,8 +75,8 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
                 ? relatedProject.description
                 : relatedProject.descriptionId}
             </p> */}
-            <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-              <span className="flex items-center mr-4">
+            <div className="flex sm:flex-col md:flex-row justify-between text-sm text-muted-foreground mb-4">
+              <span className="flex items-center mr-4 sm:my-2 lg:my-0">
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                   className="mr-2"
@@ -92,7 +92,7 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
               </span>
             </div>
             <Link href={`/proyek/${project.url}`}>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-white h-9 rounded-md px-3 w-full mt-6 text-blue-700 hover:border-blue-700 hover:cursor-pointer hover:shadow-lg hover:bg-blue-700 duration-300">
+              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-white h-9 rounded-md px-3 w-full sm:mt-4 md:mt-6 text-blue-700 hover:border-blue-700 hover:cursor-pointer hover:shadow-lg hover:bg-blue-700 duration-300">
                 View Project Details
               </button>
             </Link>

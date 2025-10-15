@@ -88,7 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </p>
           </div>
 
-          <div className="flex sm:flex-col md:flex-row sm:justify-between sm:items-center md:items-start  text-gray-500 gap-4 pb-2">
+          <div className="flex sm:flex-col md:flex-row sm:justify-between sm:items-start  text-gray-500 gap-4 pb-2">
             {/* Service */}
             <div className="flex items-center mt-4">
               {/* SVG Icon */}
@@ -103,7 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
 
             {/* Location */}
-            <div className="flex items-center mt-4 text-gray-500 ">
+            <div className="flex items-center sm:mt-0 lg:mt-4 text-gray-500 ">
               <div className="flex">
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}

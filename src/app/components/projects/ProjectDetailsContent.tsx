@@ -162,10 +162,10 @@ const ProjectsDetailsContent = () => {
                 </div>
               </div>
               <div className="col-span-1 my-4">
-                <div className="container sm:mx-4 lg:mx-auto mt-4">
-                  <div className="flex justify-between mt-8 font-openSans text-medium">
+                <div className="container sm:mx-2 lg:mx-auto mt-4">
+                  <div className="flex sm:flex-col md:flex-row  justify-between mt-8 font-openSans text-medium">
                     <div className="flex">
-                      <div className="flex text-blue-600">
+                      <div className="flex text-blue-600 sm:mb-2 md:mb-0">
                         <ReactSVG
                           src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                         />
@@ -188,16 +188,16 @@ const ProjectsDetailsContent = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex mt-8">
+              <div className="flex sm:flex-col md:flex-row mt-8">
                 <Link
                   href={"/layanan"}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
+                  className="sm:px-6 sm:py-3 sm:text-center md:text-left lg:px-4 lg:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 sm:mb-4 md:mb-0"
                 >
                   Liat Pelayanan Terkait
                 </Link>
                 <Link
                   href={"/proyek"}
-                  className="ml-4 px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                  className="sm:ml-0 md:ml-4 sm:px-6 sm:py-3 sm:text-center md:text-left lg:px-4 lg:py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-600 hover:text-white transition-colors duration-300"
                 >
                   Diskusikan Proyek Serupa
                 </Link>
