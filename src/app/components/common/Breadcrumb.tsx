@@ -40,7 +40,7 @@ export default function Breadcrumb({
 
   return (
     <section className="flex flex-col overflow-hidden relative">
-      <div className="max-w-screen-xl mx-auto w-screen my-6">
+      <div className="max-w-screen-xl mx-auto w-screen my-6 sm:mx-2 lg:mx-0">
         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse ">
           <li className="inline-flex items-center font-PlayfairDisplay">
             {/* Place code dynamic breadcrumb here */}

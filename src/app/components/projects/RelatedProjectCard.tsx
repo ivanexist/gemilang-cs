@@ -75,17 +75,17 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
                 ? relatedProject.description
                 : relatedProject.descriptionId}
             </p> */}
-            <div className="flex sm:flex-col md:flex-row justify-between text-sm text-muted-foreground mb-4">
-              <span className="flex items-center mr-4 sm:my-2 lg:my-0">
+            <div className="flex sm:flex-col md:flex-row justify-between text-sm text-gray-700">
+              <span className="flex items-center mr-4 sm:my-2 lg:my-0 sm:mt-0 lg:mt-4">
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                   className="mr-2"
                 />
                 {client?.name}
               </span>
-              <span className="flex items-center">
+              <span className="flex items-center sm:mt-0 lg:mt-2">
                 <ReactSVG
-                  className="text-center text-blue-500 transition-colors duration-300 mr-2"
+                  className="text-center text-blue-500 transition-colors duration-300 mr-2 "
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date-gray.svg`}
                 />
                 {project.yearcompleted.join(", ")}

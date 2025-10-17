@@ -48,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <Link href={`/proyek/${project.url}`} scroll={true}>
           <div>
             <Image
-              className="sm:w-full md:w-72 h-82 object-cover object-center hover:opacity-90 hover:zoom-out-40 ease-in duration-150"
+              className="sm:w-full md:w-72 sm:h-54 md:h-82  object-cover object-center hover:opacity-90 hover:zoom-out-40 ease-in duration-150"
               width={1400}
               height={2400}
               src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${images[0]}`}
@@ -96,7 +96,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
                 />
-                <span className="text-sm ml-1 text-gray-800 p-1 font-semibold">
+                <span className="text-sm ml-1 text-gray-700 p-1">
                   {client?.name}
                 </span>
               </div>
@@ -108,7 +108,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                 />
-                <span className="text-sm ml-1 p-1 font-semibold text-gray-800">
+                <span className="text-sm ml-1 p-1  text-gray-700">
                   {project.location}
                 </span>
               </div>

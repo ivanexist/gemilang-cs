@@ -320,9 +320,13 @@ export default function ServiceDetails() {
           </div>
         </div>
         <div className="max-w-screen-xl w-full mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center mt-16 font-PlayfairDisplay">
+          <h2 className="text-3xl font-bold text-blue-700 mb-2 text-center mt-16 font-PlayfairDisplay">
             Proyek Terkait
           </h2>
+          <p className="text-lg text-gray-500 pt-2 text-center mb-12">
+            Jelajahi lebih banyak proyek sukses yang telah kami selesaikan
+            dengan hasil terbaik
+          </p>
           {relatedProjects.length === 0 ? (
             <div className="text-center py-8">
               <p className="text-gray-600 text-lg">
