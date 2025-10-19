@@ -21,7 +21,7 @@ const ContactSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 sm:mx-2 lg:mx-0">
               <div className="p-8">
                 <h3 className="text-2xl font-semibold text-masala-800 mb-6">
                   Kirim Pesan
@@ -154,7 +154,7 @@ const ContactSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-[hsl(207,90%,54%)] to-[hsl(220,70%,35%)] text-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
+            <div className="bg-gradient-to-br from-[hsl(207,90%,54%)] to-[hsl(220,70%,35%)] text-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 sm:mx-2 lg:mx-0">
               <div className="p-8">
                 <h3 className="text-2xl font-semibold text-foreground mb-6">
                   Contact Information

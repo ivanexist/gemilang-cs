@@ -5,7 +5,7 @@ import Breadcrumb from "../components/common/Breadcrumb";
 
 export default function AboutPage() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Breadcrumb />
       <AboutContent />
       <AboutClients />

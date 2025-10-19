@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const AboutContent = () => (
-  <section className="flex items-center max-w-screen-xl bg-transparent mx-auto w-screen">
+  <section className="flex items-center max-w-screen-xl bg-transparent mx-auto w-screen ">
     <div className="justify-center flex-1">
       <div className="mb-8 mt-8">
         <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600 sm:text-center md:text-left">
@@ -54,20 +54,6 @@ const AboutContent = () => (
         </div>
       </div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:gap-8 mb-8 lg:mt-20 sm:px-2 md:px-0">
-        {/* <div className="flex flex-col p-2">
-          <div className="font-PlayfairDisplay font-semibold text-2xl my-4 text-blue-600 uppercase text-center">
-            <h1 className="font-medium my-4 pb-2 text-blue-600 text-2xl font-PlayfairDisplay border-b border-b-malachite-600 w-fit text-center mx-auto uppercase">
-              Commitment
-            </h1>
-          </div>
-          <div className="text-masala-800 font-openSans leading-7 text-lg">
-            Seiring dengan program pemerintah tentang pembangunan
-            berkesinambungan serta penggunaan energi alternatif, maka merupakan
-            komitmen bagi kami untuk mampu berkarya sebaik mungkin, sehingga
-            program pemerataan pembangunan untuk semua masyarakat dapat
-            terlayani dan tercukupi dengan baik.
-          </div>
-        </div> */}
         <div className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0">
           <div className="font-PlayfairDisplay">
             <h1 className="font-semibold my-4 ml-2 text-blue-600 text-2xl font-PlayfairDisplay ">
