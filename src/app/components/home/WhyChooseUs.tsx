@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
             />
 
             {/* Statistics Overlay */}
-            <div className="absolute -bottom-6 -left-6 bg-malachite-600 p-6 sm:rounded-tr-xl sm:rounded-es-xl  lg:rounded-xl shadow-lg sm:ml-6 lg:ml-0 sm:mb-6">
+            <div className="absolute -bottom-6 -left-6 bg-malachite-600 p-6 sm:rounded-tr-xl sm:rounded-es-xl  lg:rounded-xl shadow-lg sm:ml-6 lg:ml-0 sm:mb-6 lg:mb-0">
               <div className="grid grid-cols-2 gap-4 text-center text-white">
                 <div>
                   <div className="text-2xl font-bold text-primary">99%</div>

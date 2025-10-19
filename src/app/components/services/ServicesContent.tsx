@@ -1,6 +1,7 @@
 "use client";
 import { useStore } from "@/store/useStore";
 import ServiceCard from "./ServiceCard";
+import Link from "next/link";
 // import { getServices } from "@/app/lib/data";
 
 export default function ServicesContent() {
@@ -36,12 +37,18 @@ export default function ServicesContent() {
             internasional.
           </p>
           <div className="flex justify-center mt-4">
-            <button className="px-4 py-2 border rounded-lg bg-white text-blue-600 font-semibold mt-4 mr-4 hover:bg-blue-600 hover:text-white hover:cursor-pointer transition duration-300">
+            <Link
+              className="px-4 py-2 border rounded-lg bg-white text-blue-600 font-semibold mt-4 mr-4 hover:bg-blue-600 hover:text-white hover:cursor-pointer transition duration-300"
+              href={`/layanan`}
+            >
               Konsultasi Gratis
-            </button>
-            <button className="px-4 py-2 border-2 rounded-lg bg-blue-600 text-white font-semibold mt-4 mr-4 hover:bg-white hover:text-blue-600 hover:cursor-pointer transition duration-300">
+            </Link>
+            <Link
+              className="px-4 py-2 border-2 rounded-lg bg-blue-600 text-white font-semibold mt-4 mr-4 hover:bg-white hover:text-blue-600 hover:cursor-pointer transition duration-300"
+              href={`/proyek`}
+            >
               Lihat Portfolio
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,16 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import { ReactSVG } from "react-svg";
 
 const ContactSection = () => {
   return (
     <section className="pb-20 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-autosm:px-6 lg:px-8">
+        <div className="text-center mb-16 mt-5">
           <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay   text-center">
             Hubungi Kami
           </h1>
-          <h2 className="text-masala-400 text-xl font-openSans font-light max-w-3xl mx-auto mb-8">
+          <h2 className="text-masala-400 text-xl font-openSans font-light max-w-3xl mx-auto mb-4">
             Siap memulai proyek konstruksi Anda? Hubungi kami untuk konsultasi
             dan penawaran gratis.
           </h2>

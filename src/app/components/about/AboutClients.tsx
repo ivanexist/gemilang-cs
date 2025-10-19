@@ -34,15 +34,15 @@ const clients: Client[] = [
   },
   {
     src: "https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/clients/Disfaslanal.png",
-    alt: "Disfaslanal",
+    alt: "Dinas Fasilitas Pangkalan TNI Angkatan Laut",
   },
   {
     src: "https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/clients/Kodiklatal.jpg",
-    alt: "Kodiklatal",
+    alt: "KODIKLATAL",
   },
   {
     src: "https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/clients/Kodikmar.png",
-    alt: "Kodikmar",
+    alt: "KODIKMAR",
   },
   {
     src: "https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/clients/Lantamal V.png",

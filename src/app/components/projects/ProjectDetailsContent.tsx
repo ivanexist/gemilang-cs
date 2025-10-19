@@ -207,10 +207,14 @@ const ProjectsDetailsContent = () => {
         </div>
         {/* Related Projects Section */}
         {relatedProjects.length > 0 && (
-          <div className="max-w-screen-xl mx-auto mt-12 px-4">
-            <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center font-PlayfairDisplay">
+          <div className="max-w-screen-xl mx-auto mt-16 px-4">
+            <h2 className="text-3xl font-bold text-blue-700 text-center font-PlayfairDisplay">
               Proyek Terkait
             </h2>
+            <p className="text-lg text-gray-500 pt-2 text-center mb-12">
+              Jelajahi lebih banyak proyek sukses yang telah kami selesaikan
+              dengan hasil terbaik
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedProjects.map((relatedProject) => (
                 <RelatedProjectCard
