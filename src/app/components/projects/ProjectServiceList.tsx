@@ -56,7 +56,7 @@ const ProjectServiceList: React.FC = () => {
     }
   }, [currentServiceUrl, uniqueServices, router]);
   return (
-    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 mb-16">
+    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 sm:mb-8 lg:mb-16">
       <div className="sm:hidden lg:block leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
           <Link href="/proyek" scroll={true}>
@@ -113,7 +113,7 @@ const ProjectServiceList: React.FC = () => {
         <select
           value={currentServiceUrl || ""}
           onChange={(e) => handleServiceClick(e.target.value || null)}
-          className="w-[95%] p-3 bg-wildsand-50 border border-blue-300 rounded-lg text-blue-700 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base"
+          className="w-[95%] p-3 bg-wildsand-50 border border-blue-300 rounded-lg text-blue-700 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base ml-2"
         >
           <option value="">Semua Layanan</option>
           {uniqueServices.map((service) => (
