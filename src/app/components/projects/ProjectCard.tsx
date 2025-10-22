@@ -115,6 +115,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
           </div>
         </div>
+        <Link href={`/proyek/${project.url}`}>
+          <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-white h-9 rounded-md px-3 w-full mx-2 sm:mt-4 md:mt-6 text-blue-700 hover:border-blue-700 hover:cursor-pointer hover:shadow-lg hover:bg-blue-700 duration-300 lg:hidden sm:mb-2 md:mb-0">
+            Lihat Detail
+          </button>
+        </Link>
       </div>
     </div>
   );

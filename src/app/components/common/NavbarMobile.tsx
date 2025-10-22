@@ -63,9 +63,9 @@ const NavbarMobile: React.FC = () => {
                 <Link
                   href={route.link}
                   onClick={handleNavigation}
-                  className="flex items-center justify-between w-full p-5 bg-blue-100"
+                  className="flex items-center justify-between w-full p-5 bg-blue-700"
                 >
-                  <span className="flex gap-1 text-lg text-blue-600 font-semibold">
+                  <span className="flex gap-1 text-lg text-white font-semibold">
                     {route.title}
                   </span>
                 </Link>
