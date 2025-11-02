@@ -5,7 +5,13 @@ const ContactSection = () => {
   return (
     <section className="pb-20 bg-gray-100">
       <div className="max-w-7xl mx-autosm:px-6 lg:px-8">
-        <div className="text-center mb-16 mt-5">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 mt-5"
+        >
           <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay   text-center">
             Hubungi Kami
           </h1>
@@ -13,7 +19,7 @@ const ContactSection = () => {
             Siap memulai proyek konstruksi Anda? Hubungi kami untuk konsultasi
             dan penawaran gratis.
           </h2>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <motion.div

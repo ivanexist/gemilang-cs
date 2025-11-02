@@ -1,5 +1,7 @@
 // import Image from "next/image";
+"use client";
 import CoreValuesCard from "./CoreValuesCard";
+import { motion } from "framer-motion";
 
 interface CoreValueItem {
   key: number;
@@ -63,19 +65,27 @@ const CoreValues = () => {
   return (
     <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-inherit">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay text-center sm:mt-12 lg:mt-0">
-          Core Values
-        </h1>
-        <h2 className="text-masala-600 sm:text-lg lg:text-xl font-openSans font-light max-w-3xl sm:mx-4 lg:mx-auto mb-8">
-          Prinsip-prinsip dasar ini menjadi pedoman dalam setiap keputusan
-          diambil dan setiap proyek yang kami kerjakan.
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="font-semibold ml-4 mb-4 pb-2 text-blue-600 text-4xl font-PlayfairDisplay text-center sm:mt-12 lg:mt-0">
+            Core Values
+          </h1>
+          <h2 className="text-masala-600 sm:text-lg lg:text-xl font-openSans font-light max-w-3xl sm:mx-4 lg:mx-auto mb-8">
+            Prinsip-prinsip dasar ini menjadi pedoman dalam setiap keputusan
+            diambil dan setiap proyek yang kami kerjakan.
+          </h2>
+        </motion.div>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-screen-xl mx-auto text-center sm:mb-6 lg:mb-0 sm:mt-4 lg:mt-12">
-          {CoreValuesItems.map((coreValuesItems) => (
+          {CoreValuesItems.map((coreValuesItems, index) => (
             <CoreValuesCard
               key={coreValuesItems.key}
               coreValuesItems={coreValuesItems}
               coreValuesItemsId={coreValuesItems.key.toString()}
+              index={index}
             />
           ))}
         </div>

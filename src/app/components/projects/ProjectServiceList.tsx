@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 // import {  } from "next/router";
 import { useCallback, useEffect } from "react";
 import { ReactSVG } from "react-svg";
+import { motion } from "framer-motion";
 
 const ProjectServiceList: React.FC = () => {
   const { getProjects, getServiceById } = useStore();
@@ -56,7 +57,13 @@ const ProjectServiceList: React.FC = () => {
     }
   }, [currentServiceUrl, uniqueServices, router]);
   return (
-    <div className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 sm:mb-8 lg:mb-16">
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="flex justify-between items-start col-span-2 sm:mx-2 lg:mx-0 pb-4 sm:mb-8 lg:mb-16"
+    >
       <div className="sm:hidden lg:block leading-6 bg-wildsand-50 shadow border-transparent">
         <ul>
           <Link href="/proyek" scroll={true}>
@@ -123,7 +130,7 @@ const ProjectServiceList: React.FC = () => {
           ))}
         </select>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

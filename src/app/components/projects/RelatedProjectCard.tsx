@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-// import { Client, Project, Service } from "@/generated/prisma";
 import Image from "next/image";
 import { ReactSVG } from "react-svg";
 import { useStore } from "@/store/useStore";
@@ -25,31 +24,28 @@ interface RelatedProjectCardProps {
     url: string;
     images: string[];
   };
+  index: number;
 }
 
-// type DescriptionItem = {
-//   overview: string;
-//   // maybe other fields later
-// };
-
-const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
+const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({
+  project,
+  index,
+}) => {
   const { getClientById, getServiceById } = useStore();
   const client = getClientById(project.clientid);
   const service = getServiceById(project.serviceid);
   // Safely handle images array
   const images = project.images as string[];
 
-  //   const projectDescription = Array.isArray(project.description)
-  //     ? (project.description as DescriptionItem[])
-  //     : [];
-
   return (
-    <div className="bg-white overflow-hidden lg:my-0 lg:h-[420px] sm:h-full sm:w-full md:mr-0 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
+      className="bg-white overflow-hidden lg:my-0 lg:h-[420px] sm:h-full sm:w-full md:mr-0 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300"
+    >
+      <div>
         <div className="bg-background border-0 border-transparent shadow-sm overflow-hidden group project-card">
           <div className="relative h-52 overflow-hidden">
             <Image
@@ -98,8 +94,8 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({ project }) => {
             </Link>
           </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

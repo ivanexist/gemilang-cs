@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface Client {
   src: string;
@@ -54,17 +55,33 @@ export default function AboutClients() {
   return (
     <section className="flex justify-center">
       <div className=" flex-1 max-w-7xl py-4 mx-auto md:px-6">
-        <div className="flex justify-center items-center sm:text-2xl md:text-3xl text-blue-600 font-bold mt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center items-center sm:text-2xl md:text-3xl text-blue-600 font-bold mt-8"
+        >
           <h2 className="">Klien Kami</h2>
-        </div>
-        <div className="text-center text-masala-400 font-openSans leading-7 text-lg mt-4 px-4 mb-12">
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center text-masala-400 font-openSans leading-7 text-lg mt-4 px-4 mb-12"
+        >
           Membangun kepercayaan dengan organisasi dan institusi terkemuka di
           Indonesia.
-        </div>
+        </motion.p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl sm:place-items-center">
           {clients.map((client, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
               key={index}
               className="flex m-4 h-28 sm:w-76 lg:w-88 relative p-4 bg-white shadow rounded-lg items-center"
             >
@@ -80,7 +97,7 @@ export default function AboutClients() {
               <h3 className="font-semibold ml-4 text-masala-700">
                 {client.alt}
               </h3>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

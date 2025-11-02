@@ -1,15 +1,29 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const AboutContent = () => (
   <section className="flex items-center max-w-screen-xl bg-transparent mx-auto w-screen ">
     <div className="justify-center flex-1">
-      <div className="mb-8 mt-8">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="mb-8 mt-8"
+      >
         <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600 sm:text-center md:text-left">
           Siapa Kami?
         </h1>
-      </div>
+      </motion.div>
       <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
-        <div className="sm:w-full lg:w-1/2 lg:mb-0 pr-8 text-masala-700 text-medium sm:ml-4 lg:ml-0 sm:mr-4 ">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="sm:w-full lg:w-1/2 lg:mb-0 pr-8 text-masala-700 text-medium sm:ml-4 lg:ml-0 sm:mr-4 "
+        >
           <p className="sm:mb-4 md:mb-0 lg:mr-4">
             PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
             bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
@@ -30,9 +44,15 @@ const AboutContent = () => (
             dan pabrik, Kontruksi pemasangan gas dalam bangunan, Kontruksi
             perpipaan, gas, energi (pekerjaan rekayasa).
           </p>
-        </div>
+        </motion.div>
         {/* images */}
-        <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 relative">
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 relative"
+        >
           <Image
             src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/about-gcs.jpg"
             alt="aboutimage"
@@ -51,10 +71,16 @@ const AboutContent = () => (
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:gap-8 mb-8 lg:mt-20 sm:px-2 md:px-0">
-        <div className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0"
+        >
           <div className="font-PlayfairDisplay">
             <h1 className="font-semibold my-4 ml-2 text-blue-600 text-2xl font-PlayfairDisplay ">
               Misi Kami
@@ -76,8 +102,14 @@ const AboutContent = () => (
               </li>
             </ul>
           </div>
-        </div>
-        <div className="flex flex-col border rounded-lg px-8 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-col border rounded-lg px-8 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0"
+        >
           <div className="font-PlayfairDisplay font-semibold text-2xl">
             <h1 className="font-semibold my-4 text-blue-600 text-2xl font-PlayfairDisplay">
               Visi Kami
@@ -87,7 +119,7 @@ const AboutContent = () => (
             Menjadi Perusahaan Konstruksi Terkemuka dan Professional di Jawa
             Timur 2030
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
     <hr />

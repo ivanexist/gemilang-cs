@@ -3,6 +3,7 @@
 import Link from "next/link";
 import BestServiceCard from "./BestServicesCard";
 import { useStore } from "@/store/useStore";
+import { motion } from "framer-motion";
 
 export default function BestServices() {
   // const services = await getServices();
@@ -18,7 +19,13 @@ export default function BestServices() {
 
   return (
     <div className=" flex flex-col pt-12 pb-12 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-repeat">
-      <div className="flex justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="flex justify-center items-center"
+      >
         <div>
           <h1 className="font-bold mt-8 mb-4 pb-2 text-blue-600 text-3xl font-PlayfairDisplay w-fit text-center mx-auto">
             Layanan Konstruksi terbaik
@@ -28,11 +35,11 @@ export default function BestServices() {
             kebutuhan spesifik proyek Anda
           </h2>
         </div>
-      </div>
+      </motion.div>
 
       <div className="grid sm:grid-cols-1 sm:place-items-center md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto text-center">
-        {services.slice(0, 3).map((service) => (
-          <BestServiceCard key={service.id} service={service} />
+        {services.slice(0, 3).map((service, index) => (
+          <BestServiceCard key={service.id} service={service} index={index} />
         ))}
       </div>
 

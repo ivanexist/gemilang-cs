@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ReactSVG } from "react-svg";
 import { useStore } from "@/store/useStore";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
   project: {
@@ -24,6 +25,7 @@ interface ProjectCardProps {
     url: string;
     images: string[];
   };
+  index: number;
 }
 
 type DescriptionItem = {
@@ -31,7 +33,7 @@ type DescriptionItem = {
   // maybe other fields later
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const { getClientById, getServiceById } = useStore();
   const client = getClientById(project.clientid);
   const service = getServiceById(project.serviceid);
@@ -43,12 +45,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     : [];
 
   return (
-    <div className="bg-white overflow-hidden lg:my-0 lg:h-[324px] sm:h-full sm:w-full sm:mx-4 lg:mx-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300">
-      <div className="h-full md:flex sm:flex-col md:flex-row ">
+    <motion.div
+      key={project.id}
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="bg-white overflow-hidden lg:my-0 lg:h-[324px] sm:h-full sm:w-full sm:mx-4 lg:mx-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300"
+    >
+      <div className="h-full md:flex sm:flex-col md:flex-row">
         <Link href={`/proyek/${project.url}`} scroll={true}>
-          <div>
+          <div className="group overflow-hidden">
             <Image
-              className="sm:w-full md:w-72 sm:h-54 md:h-82  object-cover object-center hover:opacity-90 hover:zoom-out-40 ease-in duration-150"
+              className="sm:w-full md:w-72 sm:h-54 md:h-82 object-cover object-center hover:opacity-90 group-hover:scale-105 ease-in duration-200"
               width={1400}
               height={2400}
               src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${images[0]}`}
@@ -103,12 +112,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
 
             {/* Location */}
-            <div className="flex items-center sm:mt-0 lg:mt-4 text-gray-500 ">
+            <div className="flex items-center sm:mt-0 lg:mt-4 text-gray-500">
               <div className="flex">
                 <ReactSVG
                   src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/location-gray.svg`}
                 />
-                <span className="text-sm ml-1 p-1  text-gray-700">
+                <span className="text-sm ml-1 p-1 text-gray-700">
                   {project.location}
                 </span>
               </div>
@@ -121,7 +130,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

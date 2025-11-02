@@ -2,6 +2,7 @@
 import { useStore } from "@/store/useStore";
 import ServiceCard from "./ServiceCard";
 import Link from "next/link";
+import { motion } from "framer-motion";
 // import { getServices } from "@/app/lib/data";
 
 export default function ServicesContent() {
@@ -9,7 +10,13 @@ export default function ServicesContent() {
 
   return (
     <div className="flex flex-col pb-20 overflow-hidden bg-[url('https://euildint.vercel.app/assets/images/testimonial/testi-bg.jpg')] bg-cover bg-center bg-no-repeat">
-      <div className="max-w-screen-xl w-full mx-auto px-4 pb-8 mb-4 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-screen-xl w-full mx-auto px-4 pb-8 mb-4 text-center"
+      >
         <h1 className="font-bold text-4xl py-4 text-blue-600">
           Layanan Konstruksi Kami
         </h1>
@@ -17,13 +24,14 @@ export default function ServicesContent() {
           Solusi konstruksi komprehensif yang disesuaikan untuk memenuhi
           kebutuhan infrastruktur dan bangunan Anda
         </p>
-      </div>
+      </motion.div>
 
       <div className="max-w-screen-xl w-full mx-auto grid sm:grid-cols-1 sm:place-items-center md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service) => (
+        {services.map((service, index) => (
           <ServiceCard
             key={service.id}
             service={service}
+            index={index}
             // serviceId={service.id}
           />
         ))}

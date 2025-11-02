@@ -1,9 +1,17 @@
+"use client";
+import { motion } from "framer-motion";
 export default function Features() {
   return (
     <div className="flex flex-col sm:mb-16 md:mb-0 sm:py-0 md:py-16 bg-white">
       <div className="grid sm:grid-cols-1 md:grid-cols-3 max-w-screen-xl mx-auto text-center">
         {/* Best Quality */}
-        <div className="flex flex-col sm:my-4 lg:my-0">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col sm:my-4 lg:my-0"
+        >
           <div className="flex justify-center items-center">
             <div className="sm:p-6 lg:p-8 bg-gray-100 transition ease-in-out duration-500 rounded-full hover:bg-malachite-600 group ">
               <svg
@@ -31,9 +39,15 @@ export default function Features() {
               memperhatikan keselamatan kerja.
             </p>
           </div>
-        </div>
+        </motion.div>
         {/* ON TIME */}
-        <div className="flex flex-col sm:my-4 lg:my-0">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-col sm:my-4 lg:my-0"
+        >
           <div className="flex justify-center items-center">
             <div className="sm:p-6 lg:p-8 bg-gray-100 transition duration-300 rounded-full hover:bg-malachite-600 group">
               <svg
@@ -61,9 +75,15 @@ export default function Features() {
               pada waktunya.
             </p>
           </div>
-        </div>
+        </motion.div>
         {/* EXPERIENCED */}
-        <div className="flex flex-col sm:my-4 lg:my-0">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-col sm:my-4 lg:my-0"
+        >
           <div className="flex justify-center items-center">
             <div className="sm:p-6 lg:p-8 bg-gray-100 transition duration-300 rounded-full hover:bg-malachite-600 group">
               <svg
@@ -91,7 +111,7 @@ export default function Features() {
               konstruksi yang beragam dengan sumber daya yang berpengalaman.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

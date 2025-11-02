@@ -1,5 +1,6 @@
 "use client";
 import { ReactSVG } from "react-svg";
+import { motion } from "framer-motion";
 
 type CoreValueItems = {
   key: number;
@@ -11,15 +12,21 @@ type CoreValueItems = {
 type CoreValuesCardProps = {
   coreValuesItems: CoreValueItems;
   coreValuesItemsId: string;
+  index: number;
 };
 
 const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
   coreValuesItems,
+  index,
   // coreValuesItemsId,
 }) => {
   return (
-    <div
+    <motion.div
       key={coreValuesItems.key}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
       className="flex flex-col justify-center items-center text-center sm:my-6 lg:my-8 sm:mx-4 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 bg-white"
     >
       {/* <div className="mr-4 w-32 h-32 bg-blue-500 [clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)] border-4 border-white ">
@@ -51,7 +58,7 @@ const CoreValuesCard: React.FC<CoreValuesCardProps> = ({
         {coreValuesItems.label}
       </p>
       <p className="text-base text-masala-500">{coreValuesItems.description}</p>
-    </div>
+    </motion.div>
   );
 };
 export default CoreValuesCard;

@@ -1,5 +1,7 @@
+"use client";
 import { UserCheck, Cog, ClipboardList, Award } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const reasons = [
   {
@@ -32,7 +34,13 @@ export default function WhyChooseUs() {
   return (
     <section className="py-20 bg-white ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center sm:mb-10 lg:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center sm:mb-10 lg:mb-16"
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-700">
             Mengapa Memilih PT Gemilang Cipta Sentosa?
           </h2>
@@ -40,11 +48,17 @@ export default function WhyChooseUs() {
             Inovasi dan standar keunggulan kami menjadi pembeda utama dalam
             dunia konstruksi.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
-          <div className="space-y-8 sm:order-2 lg:order-1 col-span-1">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8 sm:order-2 lg:order-1 col-span-1"
+          >
             {reasons.map((reason, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
@@ -61,10 +75,16 @@ export default function WhyChooseUs() {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Image Side */}
-          <div className="relative sm:order-1 lg:order-2 col-span-1">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative sm:order-1 lg:order-2 col-span-1"
+          >
             <Image
               src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
               alt="Professional construction team planning"
@@ -86,7 +106,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

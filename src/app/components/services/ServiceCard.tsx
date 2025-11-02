@@ -3,10 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { ReactSVG } from "react-svg";
+import { motion } from "framer-motion";
 // import { Service } from "@/generated/prisma";
 
 interface ServiceCardProps {
   service: Service;
+  index: number;
 }
 
 type DescriptionItem = {
@@ -21,12 +23,19 @@ interface Service {
   description: DescriptionItem[] | null;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   const serviceDescription = Array.isArray(service.description)
     ? (service.description as DescriptionItem[])
     : [];
   return (
-    <div className="bg-white border border-white hover:border-blue-500 hover:shadow-xl lg:m-2 py-4 px-2 relative z-10 group sm:mx-4 w-96 h-108 mb-4 transition duration-300 flex flex-col justify-between">
+    <motion.div
+      key={service.id}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
+      className="bg-white border border-white hover:border-blue-500 hover:shadow-xl lg:m-2 py-4 px-2 relative z-10 group sm:mx-4 w-96 h-108 mb-4 transition duration-300 flex flex-col justify-between"
+    >
       <div className="py-2 sm:px-4 lg:px-8 relative group my-4">
         <div className="sm:flex my-2 sm:justify-center sm:items-center md:justify-start md:items-start">
           <ReactSVG
@@ -49,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           D<span className=" sm:uppercase md:lowercase">etails</span>
         </p>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

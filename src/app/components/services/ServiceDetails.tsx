@@ -1,22 +1,13 @@
 "use client";
 
-// import { Service } from "@/generated/prisma";
 import Link from "next/link";
-// import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { ReactSVG } from "react-svg";
-// import { getServices } from "@/app/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useStore } from "@/store/useStore";
 import RelatedProjectCard from "../projects/RelatedProjectCard";
 import { useRouter } from "next/navigation";
-// import RelatedProjectByService from "./RelatedProjectByService";
-
-// interface ServicesDetailsContentProps {
-//   service: Service;
-//   servicesList: Service[];
-// }
 
 interface ServiceDescription {
   description_new: string[];
@@ -66,7 +57,13 @@ export default function ServiceDetails() {
       <div className="justify-center flex-1 max-w-7xl sm:py-4 lg:py-0 lg:mb-12 mx-auto">
         <div className="grid sm:grid-cols-1 lg:grid-cols-7 sm:my-0 lg:my-2">
           <div className="col-span-5 ps-1">
-            <div className="lg:flex sm:flex-col bg-gray-100">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:flex sm:flex-col bg-gray-100"
+            >
               <div className="relative sm:h-80 md:h-[300px] lg:h-[570px] px-1 overflow-hidden">
                 <Image
                   src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${service.image}`}
@@ -76,7 +73,7 @@ export default function ServiceDetails() {
                   className="w-full h-full object-cover object-center shadow-lg overflow-hidden"
                 />
               </div>
-            </div>
+            </motion.div>
 
             <div className="lg:col-span-2">
               <motion.div
@@ -184,7 +181,13 @@ export default function ServiceDetails() {
             </div>
 
             {/* Desktop View: Service List */}
-            <div className="sm:hidden md:block ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="sm:hidden md:block ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent"
+            >
               <ul className="divide-y divide-blue-300">
                 {servicesList.map((service) => (
                   <Link href={`/layanan/${service.url}`} key={service.id}>
@@ -208,7 +211,7 @@ export default function ServiceDetails() {
                   </Link>
                 ))}
               </ul>
-            </div>
+            </motion.div>
             {/* Service Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -335,8 +338,12 @@ export default function ServiceDetails() {
             </div>
           ) : (
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {relatedProjects.map((project) => (
-                <RelatedProjectCard key={project.id} project={project} />
+              {relatedProjects.map((project, index) => (
+                <RelatedProjectCard
+                  key={project.id}
+                  project={project}
+                  index={index}
+                />
               ))}
             </div>
           )}
