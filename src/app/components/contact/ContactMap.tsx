@@ -32,7 +32,7 @@ const ContactMap = () => {
           className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-gray-200 group"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.8988636737526!2d112.72314981149488!3d-7.358249679124407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e4d8fb85cdab%3A0xc5cfd3df9bfaf17f!2sPT.%20Gemilang%20Cipta%20Sentosa!5e0!3m2!1sen!2sid!4v1709623126245!5m2!1sen!2sid"
+            src="https://maps.google.com/maps?q=Jl.%20Pagesangan%20Agung%20Baru%20No.44,%20Surabaya&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0, filter: "grayscale(20%) contrast(1.1)" }}
@@ -45,7 +45,7 @@ const ContactMap = () => {
           {/* Floating Location Card Overlay */}
           <div className="absolute bottom-6 left-6 right-6 md:left-10 md:right-auto md:w-96 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 border border-blue-100">
+               <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 border border-blue-100">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
@@ -54,10 +54,10 @@ const ContactMap = () => {
               <div>
                 <h4 className="text-lg font-bold text-masala-900 font-PlayfairDisplay mb-1">PT Gemilang Cipta Sentosa</h4>
                 <p className="text-sm text-masala-600 font-openSans leading-relaxed mb-4">
-                  Jl. Semeru 382, Pepelegi, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256
+                  Jl. Pagesangan Agung Baru No.44, Surabaya
                 </p>
                 <a 
-                  href="https://maps.app.goo.gl/YourGoogleMapsLinkHere" 
+                  href="https://maps.google.com/maps?q=Jl.+Pagesangan+Agung+Baru+No.44,+Surabaya" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors"

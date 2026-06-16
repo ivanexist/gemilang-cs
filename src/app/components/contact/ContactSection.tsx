@@ -44,9 +44,8 @@ const ContactSection = () => {
                     <div>
                       <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-2">Kantor Pusat</h4>
                       <p className="text-blue-100/90 font-openSans leading-relaxed text-sm">
-                        Jl. Semeru 382, Pepelegi<br />
-                        Kecamatan Waru<br />
-                        Sidoarjo, Jawa Timur 61256
+                        Jl. Pagesangan Agung Baru No.44<br />
+                        Surabaya
                       </p>
                     </div>
                   </div>
