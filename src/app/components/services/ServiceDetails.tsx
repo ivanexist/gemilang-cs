@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useStore } from "@/store/useStore";
 import RelatedProjectCard from "../projects/RelatedProjectCard";
 import { useRouter } from "next/navigation";
+import Breadcrumb from "../common/Breadcrumb";
 
 interface ServiceDescription {
   description_new: string[];
@@ -22,15 +23,14 @@ export default function ServiceDetails() {
   const router = useRouter();
   const currentSlug = typeof params.slug === "string" ? params.slug : "";
   const { getServiceByUrl, getServices, getProjectsByServiceId } = useStore();
-  // const [services, setServices] = useState<Service[]>([]);
   const service = getServiceByUrl(currentSlug);
   const servicesList = getServices();
   const relatedProjects = getProjectsByServiceId(service?.id || 0);
 
   if (!service) {
-    return null; // Handled by ServiceDetailsPage
+    return null; 
   }
-  // Safely cast description with validation
+  
   const serviceDescription: ServiceDescription[] = Array.isArray(
     service.description
   )
@@ -46,298 +46,301 @@ export default function ServiceDetails() {
       ? (service.description as ServiceDescription[])
       : []
     : [];
+
   const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedSlug = e.target.value;
     if (selectedSlug) {
       router.push(`/layanan/${selectedSlug}`);
     }
   };
+
   return (
-    <section className="flex items-center bg-gray-100">
-      <div className="justify-center flex-1 max-w-7xl sm:py-4 lg:py-0 lg:mb-12 mx-auto">
-        <div className="grid sm:grid-cols-1 lg:grid-cols-7 sm:my-0 lg:my-2">
-          <div className="col-span-5 ps-1">
+    <section className="bg-slate-50 relative pb-24 min-h-screen">
+      {/* Massive Cinematic Hero */}
+      <div className="relative h-[400px] lg:h-[600px] w-full bg-masala-950 overflow-hidden">
+        <Image
+          src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${service.image}`}
+          alt={service.name}
+          fill
+          className="object-cover opacity-50"
+          priority
+        />
+        {/* Dark cinematic gradient to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-masala-950 via-masala-950/60 to-blue-950/80" />
+        
+        {/* Content over hero */}
+        <div className="absolute inset-0 flex items-center pt-20">
+          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="lg:flex sm:flex-col bg-gray-100"
+              className="max-w-3xl"
             >
-              <div className="relative sm:h-80 md:h-[300px] lg:h-[570px] px-1 overflow-hidden">
-                <Image
-                  src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${service.image}`}
-                  alt={service.name}
-                  width={1200}
-                  height={1200}
-                  className="w-full h-full object-cover object-center shadow-lg overflow-hidden"
-                />
+              {/* Breadcrumb */}
+              <div className="mb-6">
+                <Breadcrumb theme="dark" serviceName={service.name} />
               </div>
+
+              <div className="inline-flex items-center gap-2 bg-blue-600/20 backdrop-blur-md border border-blue-500/30 text-blue-100 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+                <span className="w-2 h-2 rounded-full bg-malachite-400 animate-pulse" />
+                Layanan Profesional
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white font-PlayfairDisplay leading-tight drop-shadow-xl mb-6">
+                {service.name}
+              </h1>
+              <p className="text-lg md:text-xl text-blue-50/90 font-openSans font-light max-w-2xl leading-relaxed drop-shadow-md">
+                {serviceDescription[0]?.description_overview}
+              </p>
             </motion.div>
-
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="bg-background border border-masala-200 rounded-lg mt-10 sm:mx-2 lg:mx-0">
-                  <div className="p-8">
-                    <div className=" sm:px-2 lg:px-0 lg:pr-4">
-                      <h1 className="sm:mt-4 lg:mt-0 text-2xl mb-6 font-semibold text-blue-700 sm:text-center lg:text-left font-PlayfairDisplay w-fit">
-                        {service.name}
-                      </h1>
-                      <p className="my-4 text-medium leading-8 text-masala-600 font-openSans">
-                        {serviceDescription[0]?.description_new[0]}
-                      </p>
-                      <p className="my-4 text-medium leading-8 text-masala-600 font-openSans">
-                        {serviceDescription[0]?.description_new[1]}
-                      </p>
-                    </div>
-
-                    <div className="border-t border-masala-200 my-10"></div>
-
-                    <h3 className="text-2xl font-bold text-blue-700 mb-8 ">
-                      Keunggulan Utama
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                      {serviceDescription[0]?.description_key_benefit.map(
-                        (benefit, index) => (
-                          <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="flex items-start space-x-4 p-4 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-lg hover:from-emerald-100 hover:to-emerald-200 transition-all duration-300 border-l-4 border-l-emerald-500 border border-emerald-300 hover:border-emerald-400 shadow-md hover:shadow-lg dark:from-emerald-950 dark:to-emerald-900 dark:hover:from-emerald-900 dark:hover:to-emerald-800 dark:border-emerald-700 dark:hover:border-emerald-600"
-                          >
-                            <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md border border-white/30 dark:bg-emerald-600">
-                              <svg
-                                className="text-white w-3.5 h-3.5"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                            </div>
-                            <span className="text-[hsl(220,8.9%,46.1%)] font-medium leading-relaxed">
-                              {benefit}
-                            </span>
-                          </motion.div>
-                        )
-                      )}
-                    </div>
-
-                    <div className="border-t border-masala-200 my-10"></div>
-
-                    <h3 className="text-2xl font-bold text-blue-700 mb-8">
-                      Proses Kami
-                    </h3>
-                    <div className="space-y-5">
-                      {serviceDescription[0]?.description_our_process.map(
-                        (step, index) => (
-                          <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="flex items-start space-x-5 p-5 bg-gradient-to-r from-blue-50 to-sky-100 rounded-xl border-2 border-blue-300 hover:border-blue-400 hover:shadow-xl transition-all duration-300 shadow-md hover:bg-gradient-to-r hover:from-blue-100 hover:to-sky-200 dark:from-blue-950 dark:to-sky-900 dark:border-blue-700 dark:hover:border-blue-600 dark:hover:from-blue-900 dark:hover:to-sky-800"
-                          >
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 shadow-xl border-2 border-white/50 ring-2 ring-blue-300 dark:from-blue-600 dark:to-sky-700 dark:ring-blue-700">
-                              {index + 1}
-                            </div>
-                            <div className="flex-1 pt-1">
-                              <span className="text-[hsl(220,8.9%,46.1%)] font-medium leading-relaxed text-base">
-                                {step}
-                              </span>
-                            </div>
-                          </motion.div>
-                        )
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </div>
-          {/* Sidebar */}
-          <div className="flex flex-col items-start col-span-2 sm:mx-2 lg:mx-0 pb-4">
-            {/* Mobile View: Dropdown Menu */}
-            <div className="sm:block md:hidden ml-8 w-[85%] sm:order-3 lg:order-1 mt-8">
-              <select
-                value={currentSlug}
-                onChange={handleServiceChange}
-                className="w-full p-3 bg-transparent border border-blue-300 rounded-lg text-blue-600 focus:outline-none focus:ring-2 focus:ring-malachite-500 text-base"
-              >
-                {servicesList.map((service) => (
-                  <option key={service.id} value={service.url}>
-                    {service.name}
-                  </option>
-                ))}
-              </select>
-            </div>
+        </div>
+      </div>
 
-            {/* Desktop View: Service List */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="sm:hidden md:block ml-8 sm:order-3 lg:order-1 leading-6 bg-transparent border-2 shadow border-transparent"
-            >
-              <ul className="divide-y divide-blue-300">
-                {servicesList.map((service) => (
-                  <Link href={`/layanan/${service.url}`} key={service.id}>
-                    <li
-                      className={`text-blue-600 transition-all duration-300 hover:text-white hover:bg-blue-700 hover:cursor-pointer hover:border-l-8 hover:border-l-malachite-600 border-b border-b-blue-300 ${
-                        service.url === currentSlug
-                          ? "text-white bg-blue-700 font-semibold border-l-8 border-l-malachite-600"
-                          : ""
-                      } hover:font-semibold py-6 px-8 text-base group`}
-                    >
-                      <div className="flex">
-                        <ReactSVG
-                          className={`w-8 h-8 group-hover:text-white text-blue-600 transition-colors duration-300 ${
-                            service.url === currentSlug ? "text-white" : ""
-                          }`}
-                          src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${service.icon}`}
-                        />
-                        <span className="ml-4 mt-1">{service.name}</span>
-                      </div>
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            </motion.div>
-            {/* Service Info */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 lg:-mt-32 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+          
+          {/* Main Content Area (Left 2 columns) */}
+          <div className="lg:col-span-2">
+            
+            {/* About Box */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="sm:order-1 lg:order-2"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-3xl shadow-xl shadow-blue-900/5 p-8 md:p-12 mb-12 border border-gray-100"
             >
-              <div className="bg-transparent border border-masala-200 rounded-lg shadow-sm mt-10 ml-8 w-full pr-12">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-blue-700 mb-4">
-                    Informasi Layanan
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <svg
-                        className="text-purple-500 dark:text-purple-400 w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12,6 12,12 16,14" />
+              <h2 className="text-3xl font-bold text-masala-900 font-PlayfairDisplay mb-8">
+                Tentang Layanan Ini
+              </h2>
+              <div className="prose prose-lg prose-blue max-w-none text-masala-600 font-openSans font-light leading-loose">
+                <p className="mb-6">{serviceDescription[0]?.description_new[0]}</p>
+                <p>{serviceDescription[0]?.description_new[1]}</p>
+              </div>
+            </motion.div>
+
+            {/* Key Benefits Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-16"
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-masala-900 font-PlayfairDisplay">
+                  Keunggulan Utama
+                </h3>
+              </div>
+              
+              <div className="grid sm:grid-cols-2 gap-6">
+                {serviceDescription[0]?.description_key_benefit.map((benefit, index) => (
+                  <div key={index} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-start gap-4 group hover:shadow-md hover:border-emerald-200 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                       </svg>
-                      <div>
-                        <p className="text-sm text-[hsl(220,8.9%,46.1%)]">
-                          Timeline
-                        </p>
-                        <p className="font-medium text-gray-800">
-                          Berbasis Proyek
+                    </div>
+                    <p className="text-masala-700 font-openSans font-medium leading-relaxed">
+                      {benefit}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Our Process Timeline */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-4 mb-10">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-masala-900 font-PlayfairDisplay">
+                  Tahapan Proses
+                </h3>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-lg shadow-blue-900/5 p-8 md:p-12 border border-gray-100">
+                <div className="relative border-l-2 border-blue-100 ml-4 md:ml-6 space-y-12">
+                  {serviceDescription[0]?.description_our_process.map((step, index) => (
+                    <div key={index} className="relative pl-10 md:pl-12 group">
+                      {/* Timeline Dot */}
+                      <div className="absolute left-[-17px] top-0.5 w-8 h-8 rounded-full bg-white border-4 border-blue-100 flex items-center justify-center group-hover:border-blue-600 transition-colors duration-300">
+                        <span className="text-xs font-bold text-blue-600">{index + 1}</span>
+                      </div>
+                      
+                      <div className="bg-gray-50/50 rounded-2xl p-6 border border-gray-100 group-hover:bg-blue-50/30 group-hover:border-blue-100 transition-colors duration-300">
+                        <p className="text-masala-700 font-openSans font-light leading-relaxed text-lg">
+                          {step}
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <svg
-                        className="text-purple-500 dark:text-purple-400 w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle cx="12" cy="8" r="7" />
-                        <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88" />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Sticky Executive Sidebar (Right Column) */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-32 space-y-8">
+              
+              {/* Category Nav Card */}
+              <div className="bg-white rounded-3xl border border-gray-100 shadow-xl shadow-blue-900/5 overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-800 to-blue-900 p-6 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10" />
+                  <h3 className="text-xl font-bold text-white font-PlayfairDisplay relative z-10">Kategori Layanan</h3>
+                </div>
+                
+                {/* Mobile Dropdown */}
+                <div className="block lg:hidden p-4 border-b border-gray-100">
+                  <select
+                    value={currentSlug}
+                    onChange={handleServiceChange}
+                    className="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium"
+                  >
+                    {servicesList.map((svc) => (
+                      <option key={svc.id} value={svc.url}>{svc.name}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Desktop List */}
+                <ul className="hidden lg:block p-3">
+                  {servicesList.map((svc) => (
+                    <li key={svc.id}>
+                      <Link href={`/layanan/${svc.url}`}>
+                        <div className={`flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 cursor-pointer group ${
+                          svc.url === currentSlug ? "bg-blue-50" : "hover:bg-gray-50"
+                        }`}>
+                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300 ${
+                            svc.url === currentSlug ? "bg-blue-600 shadow-md" : "bg-gray-100 group-hover:bg-blue-100"
+                          }`}>
+                            <ReactSVG
+                              className={`w-5 h-5 transition-colors duration-300 ${
+                                svc.url === currentSlug ? "text-white [&_svg]:fill-white" : "text-gray-500 group-hover:text-blue-600 [&_svg]:fill-currentColor"
+                              }`}
+                              src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/services/${svc.icon}`}
+                            />
+                          </div>
+                          <span className={`text-[15px] font-openSans transition-colors duration-300 flex-1 ${
+                            svc.url === currentSlug ? "text-blue-800 font-bold" : "text-gray-600 group-hover:text-blue-700 font-medium"
+                          }`}>
+                            {svc.name}
+                          </span>
+                          {svc.url === currentSlug && (
+                            <div className="w-2 h-2 rounded-full bg-blue-600 mr-2" />
+                          )}
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Quick Info Card */}
+              <div className="bg-white rounded-3xl border border-gray-100 shadow-xl shadow-blue-900/5 p-8 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-malachite-500 to-blue-600" />
+                <h3 className="text-xl font-bold text-masala-900 font-PlayfairDisplay mb-6">Info Singkat</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>
-                      <div>
-                        <p className="text-sm text-[hsl(220,8.9%,46.1%)]">
-                          Kualitas
-                        </p>
-                        <p className="font-medium text-gray-800">
-                          Bersertifikat ISO
-                        </p>
-                      </div>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <svg
-                        className="text-purple-500 dark:text-purple-400 w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M23 21v-2a4 4 0 00-3-3.87" />
-                        <path d="M16 3.13a4 4 0 010 7.75" />
+                    <div>
+                      <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Durasi</p>
+                      <p className="text-masala-900 font-semibold text-sm">Sesuai Skala Proyek</p>
+                    </div>
+                  </div>
+                  
+                  <div className="w-full h-px bg-gray-100" />
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                       </svg>
-                      <div>
-                        <p className="text-sm text-[hsl(220,8.9%,46.1%)]">
-                          Tim
-                        </p>
-                        <p className="font-medium text-gray-800">
-                          Profesional Ahli
-                        </p>
-                      </div>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Kualitas</p>
+                      <p className="text-masala-900 font-semibold text-sm">Standar ISO & SNI</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
 
-            {/* Contact CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="sm:order-2 lg:order-2"
-            >
-              <div className="bg-transparent border border-masala-200 rounded-lg shadow-sm mt-10 ml-8 w-[85%]">
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-blue-700 mb-4">
-                    Siap Memulai?
-                  </h3>
-                  <p className="mb-6 text-masala-600">
-                    Hubungi kami untuk konsultasi gratis dan proposal proyek.
+              {/* Massive CTA Card */}
+              <div className="bg-gradient-to-br from-blue-800 to-blue-950 rounded-3xl shadow-2xl overflow-hidden relative p-8 text-center">
+                <div className="absolute -top-12 -right-12 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+                <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-malachite-500/20 rounded-full blur-2xl" />
+                
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto mb-6 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 font-PlayfairDisplay">Butuh Konsultasi?</h3>
+                  <p className="text-blue-100 font-openSans font-light mb-8 text-sm leading-relaxed">
+                    Diskusikan kebutuhan proyek Anda dengan tim ahli kami dan dapatkan penawaran terbaik.
                   </p>
-                  <Link href="/contact">
-                    <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-secondary/80 h-10 px-4 py-2 w-full bg-blue-700 text-white">
-                      <svg
-                        className="mr-2 h-4 w-4 text-white font-semibold"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                      </svg>
-                      Get Free Quote
+                  <Link href="/kontak">
+                    <button className="w-full py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-gray-50 shadow-xl shadow-black/20 transition-all duration-300">
+                      Hubungi Kami
                     </button>
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-        <div className="max-w-screen-xl w-full mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-700 mb-2 text-center mt-16 font-PlayfairDisplay">
-            Proyek Terkait
-          </h2>
-          <p className="text-lg text-gray-500 pt-2 text-center mb-12">
-            Jelajahi lebih banyak proyek sukses yang telah kami selesaikan
-            dengan hasil terbaik
-          </p>
-          {relatedProjects.length === 0 ? (
-            <div className="text-center py-8">
-              <p className="text-gray-600 text-lg">
-                No projects found for this service.
-              </p>
-            </div>
-          ) : (
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+        {/* Related Projects Section */}
+        {relatedProjects.length > 0 && (
+          <div className="mt-32 pt-20 border-t border-gray-200">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
+            >
+              <div>
+                <div className="inline-flex items-center gap-2 bg-blue-100/50 border border-blue-200 rounded-full px-4 py-1.5 mb-4">
+                  <span className="text-blue-800 font-semibold text-xs tracking-wider uppercase">
+                    Portofolio
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-masala-900 font-PlayfairDisplay">
+                  Proyek <span className="text-blue-600">Terkait</span>
+                </h2>
+              </div>
+              <Link href={"/proyek"} className="hidden md:inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group">
+                Lihat Semua Proyek
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedProjects.map((project, index) => (
                 <RelatedProjectCard
                   key={project.id}
@@ -346,10 +349,19 @@ export default function ServiceDetails() {
                 />
               ))}
             </div>
-          )}
-        </div>
+
+            {/* Mobile View All */}
+            <div className="mt-8 text-center md:hidden">
+              <Link href={"/proyek"} className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group">
+                Lihat Semua Proyek
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
-      {/* <RelatedProjectByService service={service} /> */}{" "}
     </section>
   );
 }

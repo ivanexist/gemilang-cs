@@ -1,128 +1,107 @@
 "use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const AboutContent = () => (
-  <section className="flex items-center max-w-screen-xl bg-transparent mx-auto w-screen ">
-    <div className="justify-center flex-1">
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mb-8 mt-8"
-      >
-        <h1 className="text-3xl font-PlayfairDisplay font-bold text-blue-600 sm:text-center md:text-left">
-          Siapa Kami?
-        </h1>
-      </motion.div>
-      <div className="flex sm:flex-col-reverse md:flex-row md:justify-between font-openSans">
+  <section className="py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row items-center gap-16">
+        {/* Left: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="sm:w-full lg:w-1/2 lg:mb-0 pr-8 text-masala-700 text-medium sm:ml-4 lg:ml-0 sm:mr-4 "
+          className="lg:w-1/2"
         >
-          <p className="sm:mb-4 md:mb-0 lg:mr-4">
-            PT.Gemilang Cipta Sentosa adalah Perusahaan yang bergerak dalam
-            bidang konstruksi Sipil Bangunan, Jetty/Dermaga, dan Pemasangan
-            Instalasi Perpipaan (Pipa Air, Pipa Gas, dan Pipa Hydrant). Kami
-            berdiri sejak tahun 2014 dan telah mengerjakan berbagai pekerjaan
-            dari skala kecil hingga besar.
-          </p>
-          <p className="sm:mb-4 md:mb-0 sm:my-0 md:my-4">
-            Kami telah mengerjakan konstruksi diberbagai Instansi pemerintah
-            maupun swasta, baik pada calon pelanggaan industri maupun komersil
-            dan rumah tangga. Tenaga kerja kami merupakan tenaga yang terampil
-            dan sudah berpengalaman di bidang bangunan gedung, sipil, mekanikal
-            dan elektrikal antara lain Kontruksi bangunan hunian tunggal dan
-            Koppel, Kontruksi bangunan gedung industri, Kontruksi bangunan
-            komersial, Kontruksi bangunan hotel, restoran, dan bangunan serupa
-            lainnya, Kontruksi jalan raya (kecuali jalan layang), jalan, rel
-            kereta api, dan landas pacu bandara, Instalasi tenaga listrik gedung
-            dan pabrik, Kontruksi pemasangan gas dalam bangunan, Kontruksi
-            perpipaan, gas, energi (pekerjaan rekayasa).
-          </p>
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-blue-600 mr-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+            </svg>
+            <span className="text-blue-600 text-sm font-medium font-openSans">Siapa Kami?</span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-masala-900 mb-6 font-PlayfairDisplay leading-tight">
+            Dedikasi Terhadap Kualitas <br className="hidden sm:block" />
+            <span className="text-blue-600">Sejak 2014</span>
+          </h2>
+
+          <div className="space-y-6 text-masala-600 text-lg font-openSans font-light leading-relaxed">
+            <p>
+              <strong className="font-semibold text-masala-800">PT. Gemilang Cipta Sentosa</strong> adalah perusahaan
+              yang bergerak dalam bidang konstruksi Sipil Bangunan, Jetty/Dermaga,
+              dan Pemasangan Instalasi Perpipaan (Pipa Air, Pipa Gas, dan Pipa
+              Hydrant).
+            </p>
+            <p>
+              Kami telah sukses mengerjakan konstruksi di berbagai instansi pemerintah
+              maupun swasta, baik pada pelanggan industri, komersil, dan rumah tangga.
+              Tenaga kerja kami merupakan tenaga yang terampil dan sangat berpengalaman
+              di bidang bangunan gedung, sipil, mekanikal, dan elektrikal.
+            </p>
+            <p>
+              Layanan kami mencakup konstruksi bangunan hunian tunggal dan Koppel,
+              bangunan industri, komersial, hotel, konstruksi jalan, rel kereta api,
+              instalasi tenaga listrik, pemasangan gas, dan pekerjaan rekayasa lainnya.
+            </p>
+          </div>
         </motion.div>
-        {/* images */}
+
+        {/* Right: Images & Badges */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 relative"
+          className="lg:w-1/2 relative"
         >
-          <Image
-            src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/about-gcs.jpg"
-            alt="aboutimage"
-            width={480}
-            height={480}
-            className="relative z-10 object-cover object-center w-full h-[360px]"
-          />
-          {/* Statistics Overlay */}
-          <div className="absolute sm:-bottom-1.5 md:-bottom-1 -left-0 bg-malachite-500 text-white px-6 py-4 shadow-lg sm:ml-4 lg:ml-0 sm:mb-2 lg:mb-0 sm:rounded-none lg:rounded-xl z-20">
-            <div className="gap-4">
-              <div>
-                <div className="text-2xl font-bold text-primary">10+</div>
-                <div className="text-sm text-secondary mt-1">
-                  Tahun Pengalaman
-                </div>
-              </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-gray-100">
+            <Image
+              src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/about-gcs.jpg"
+              alt="Konstruksi PT Gemilang Cipta Sentosa"
+              width={800}
+              height={600}
+              className="w-full h-[500px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+            />
+            {/* Elegant dark gradient at the bottom of the image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
+          </div>
+
+          {/* Premium Floating Trust Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="absolute -bottom-8 -left-6 md:-bottom-10 md:-left-10 bg-white p-6 rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 z-20 flex items-center space-x-5 animate-float"
+          >
+            <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+              <span className="text-3xl font-bold text-blue-600 font-PlayfairDisplay">10+</span>
             </div>
-          </div>
-        </motion.div>
-      </div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:gap-8 mb-8 lg:mt-20 sm:px-2 md:px-0">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col border rounded-lg px-4 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0"
-        >
-          <div className="font-PlayfairDisplay">
-            <h1 className="font-semibold my-4 ml-2 text-blue-600 text-2xl font-PlayfairDisplay ">
-              Misi Kami
-            </h1>
-          </div>
-          <div className="text-masala-700 ml-6">
-            <ul className="list-disc font-openSans leading-7">
-              <li className="mb-2">
-                Menyediakan solusi jasa yang inovatif dengan melibatkan sumber
-                daya terbaik dan relasi yang kuat
-              </li>
-              <li className="mb-2">
-                Meningkatkan nilai tambah bagi stakeholder secara berkelanjutan
-                melalui pertumbuhan dan keuntungan perusahaan
-              </li>
-              <li className="mb-2">
-                Fokus pada kualitas layanan serta human capital yang unggul dan
-                berakhlak
-              </li>
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col border rounded-lg px-8 pb-6 border-masala-300 p-2 sm:mx-2 lg:mx-0 sm:my-4 lg:my-0"
-        >
-          <div className="font-PlayfairDisplay font-semibold text-2xl">
-            <h1 className="font-semibold my-4 text-blue-600 text-2xl font-PlayfairDisplay">
-              Visi Kami
-            </h1>
-          </div>
-          <div className="text-masala-700 font-openSans leading-7">
-            Menjadi Perusahaan Konstruksi Terkemuka dan Professional di Jawa
-            Timur 2030
+            <div>
+              <p className="text-sm text-masala-500 font-medium uppercase tracking-wider mb-1">
+                Tahun Pengalaman
+              </p>
+              <p className="text-masala-900 font-bold font-PlayfairDisplay text-xl leading-tight">
+                Membangun<br />Kepercayaan
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Decorative Pattern */}
+          <div className="absolute -top-10 -right-10 w-32 h-32 opacity-10 z-0">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-blue-600">
+              <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor" />
+              </pattern>
+              <rect x="0" y="0" width="100" height="100" fill="url(#dots)" />
+            </svg>
           </div>
         </motion.div>
       </div>
     </div>
-    <hr />
   </section>
 );
+
 export default AboutContent;

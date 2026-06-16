@@ -2,71 +2,65 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
 import { useScrollStore } from "@/store/useScrollStore";
-import { ReactSVG } from "react-svg";
 import NavbarMobile from "./NavbarMobile";
-
-const NavbarMenu = [
-  { label: "Beranda", path: "/" },
-  { label: "Tentang Kami", path: "/tentang" },
-  { label: "Layanan", path: "/layanan" },
-  { label: "Proyek", path: "/proyek" },
-  { label: "Kontak", path: "/kontak" },
-];
+import { NavMenu } from "@/app/constants/navigation";
 
 export default function Navbar() {
   const { scrollToTop } = useScrollStore();
   const pathname = usePathname();
-  const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const isHomePage = pathname === "/";
 
   useEffect(() => {
+    // If not homepage, always consider it "scrolled" for solid background
     if (!isHomePage) {
-      setIsSticky(true);
+      setIsScrolled(true);
       return;
     }
+
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50); // Navbar becomes sticky after 50px scroll
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Initial check
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
   return (
     <nav
-      className={`${
-        isHomePage && !isSticky ? "fixed" : "sticky"
-      } top-0 w-full z-100 transition-all duration-300 ease-in-out py-4 ${
-        isSticky || !isHomePage ? "bg-white shadow-sm" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          : "bg-gradient-to-b from-black/60 via-black/20 to-transparent py-5"
       }`}
     >
-      <div className="max-w-screen-xl w-full flex items-center justify-between mx-auto py-2 ">
-        <div className="flex">
-          <div className="flex">
-            <Link
-              href="/"
-              onClick={scrollToTop}
-              className="flex items-center space-x-3 rtl:space-x-reverse mx-2 sm:w-24 sm:h-12 md:w-32 md:h-14 sm:ml-2"
-            >
-              <span className="self-center font-semibold whitespace-nowrap">
-                <Image
-                  src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/Logo-GCS.png"
-                  alt="Logo Gemilang Cipta Sentosa"
-                  width={400}
-                  height={400}
-                />
-              </span>
-            </Link>
-          </div>
-        </div>
-        <div className="items-center justify-between sm:hidden sm:w-full mx-4 md:flex md:w-auto md:text-lg">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blumine-100 rounded-lg bg-blumine-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent ">
-            {NavbarMenu.map(({ label, path }) => {
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link
+            href="/"
+            onClick={scrollToTop}
+            className="flex-shrink-0 flex items-center group"
+          >
+            <div className="relative w-32 sm:w-40 h-10 sm:h-12 transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src="https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/Logo-GCS.png"
+                alt="Logo PT Gemilang Cipta Sentosa"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-1">
+            {NavMenu.map(({ label, path }) => {
               const isActive =
                 pathname === path ||
                 (path === "/layanan" && pathname.startsWith("/layanan/")) ||
@@ -77,36 +71,48 @@ export default function Navbar() {
                   key={label}
                   href={path}
                   onClick={scrollToTop}
-                  // className={`pb-4 px-4  md:hover:bg-transparent md:p-0 `}
+                  className="relative group px-4 py-2"
                 >
-                  <li
-                    className={`pb-2 hover:text-blue-600 hover:border-b-2 hover:border-b-malachite-400 ${
+                  <span
+                    className={`text-sm font-semibold transition-colors duration-300 ${
                       isActive
-                        ? "font-bold text-blue-600 border-b-2 pb-2 border-b-malachite-400"
-                        : isSticky
-                        ? "text-masala-600"
-                        : "text-white"
+                        ? "text-blue-600"
+                        : isScrolled
+                        ? "text-masala-700 group-hover:text-blue-600"
+                        : "text-white/90 group-hover:text-white"
                     }`}
                   >
                     {label}
-                  </li>
+                  </span>
+                  {/* Underline animation */}
+                  <span
+                    className={`absolute bottom-0 left-0 w-full h-0.5 rounded-full transition-transform duration-300 origin-left ${
+                      isActive ? "bg-malachite-500 scale-x-100" : "bg-blue-500 scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  />
                 </Link>
               );
             })}
-          </ul>
-        </div>
-        <div>
-          <button className="sm:hidden lg:flex items-center px-4 py-2 font-semibold text-white bg-blue-700 hover:bg-blue-600 hover:text-gray-100 hover:cursor-pointer transition duration-300 rounded-lg">
-            <ReactSVG
-              className="text-blue-500 transition-colors duration-300"
-              src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/phone-icon.svg`}
-            />
-            <Link href="/kontak" className="font-medium ml-1 text-white p-1">
-              Dapatkan Penawaran
+          </div>
+
+          {/* CTA & Mobile Toggle */}
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/kontak"
+              className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white text-sm font-semibold shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 mr-2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Konsultasi Gratis
             </Link>
-          </button>
+
+            {/* Mobile Menu Component */}
+            <div className="lg:hidden">
+              <NavbarMobile isScrolled={isScrolled} />
+            </div>
+          </div>
         </div>
-        <NavbarMobile />
       </div>
     </nav>
   );

@@ -53,50 +53,69 @@ const clients: Client[] = [
 
 export default function AboutClients() {
   return (
-    <section className="flex justify-center">
-      <div className=" flex-1 max-w-7xl py-4 mx-auto md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center items-center sm:text-2xl md:text-3xl text-blue-600 font-bold mt-8"
-        >
-          <h2 className="">Klien Kami</h2>
-        </motion.div>
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center text-masala-400 font-openSans leading-7 text-lg mt-4 px-4 mb-12"
-        >
-          Membangun kepercayaan dengan organisasi dan institusi terkemuka di
-          Indonesia.
-        </motion.p>
+    <section className="py-24 bg-white border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center px-4 py-1.5 rounded-full bg-gray-50 border border-gray-200 mb-6"
+          >
+            <div className="w-2 h-2 rounded-full bg-blue-600 mr-2" />
+            <span className="text-masala-700 text-sm font-medium font-openSans uppercase tracking-wider">
+              Mitra Kepercayaan Kami
+            </span>
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-3xl md:text-4xl font-bold text-masala-900 mb-4 font-PlayfairDisplay"
+          >
+            Telah Dipercaya Oleh
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg text-masala-500 font-openSans font-light max-w-2xl mx-auto"
+          >
+            Membangun kepercayaan dan kolaborasi sukses dengan organisasi
+            serta institusi terkemuka di Indonesia.
+          </motion.p>
+        </div>
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 sm:mx-8 md:mx-0 lg:max-w-7xl sm:place-items-center">
+        {/* Client Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {clients.map((client, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
               key={index}
-              className="flex m-4 h-28 sm:w-76 lg:w-88 relative p-4 bg-white shadow rounded-lg items-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col items-center justify-center h-36 group hover:shadow-lg hover:border-blue-100 transition-all duration-300"
             >
-              <Image
-                src={client.src}
-                alt={client.alt}
-                width={208}
-                height={56}
-                sizes="(max-width: 640px) 120px, (max-width: 768px) 140px, 160px"
-                className="object-contain h-12 w-auto"
-                priority={index < 4} // Prioritize loading for first 4 images
-              />
-              <h3 className="font-semibold ml-4 text-masala-700">
+              <div className="relative w-full h-full flex items-center justify-center filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  fill
+                  sizes="(max-width: 640px) 120px, 160px"
+                  className="object-contain p-2"
+                  priority={index < 5}
+                />
+              </div>
+              {/* Tooltip for name (optional, but good for UX) */}
+              <div className="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs font-medium text-masala-600 bg-white px-3 py-1 rounded shadow-md pointer-events-none whitespace-nowrap z-10 hidden md:block">
                 {client.alt}
-              </h3>
+              </div>
             </motion.div>
           ))}
         </div>

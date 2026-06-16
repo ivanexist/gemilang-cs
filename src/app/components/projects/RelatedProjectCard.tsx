@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ReactSVG } from "react-svg";
 import { useStore } from "@/store/useStore";
 import { motion } from "framer-motion";
 
@@ -34,7 +33,6 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({
   const { getClientById, getServiceById } = useStore();
   const client = getClientById(project.clientid);
   const service = getServiceById(project.serviceid);
-  // Safely handle images array
   const images = project.images as string[];
 
   return (
@@ -42,58 +40,68 @@ const RelatedProjectCard: React.FC<RelatedProjectCardProps> = ({
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8, delay: index * 0.1 }}
-      className="bg-white overflow-hidden lg:my-0 lg:h-[420px] sm:h-full sm:w-full md:mr-0 lg:mr-0 hover:border-blue-500 hover:shadow-xl border border-transparent transition-all duration-300"
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-2 transition-all duration-500 flex flex-col h-full"
     >
-      <div>
-        <div className="bg-background border-0 border-transparent shadow-sm overflow-hidden group project-card">
-          <div className="relative h-52 overflow-hidden">
-            <Image
-              src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${images[0]}`}
-              loading="lazy"
-              alt={project.name}
-              width={1400}
-              height={2400}
-              className="project-image w-full h-full object-cover"
-            />
-            <div className="bg-malachite-600 rounded-full py-2 px-4 text-xs text-white font-semibold z-30   absolute top-2 left-2">
-              <Link href={`/layanan/${service?.url || ""}`}>
-                <p>{service?.name ?? "Unknown Service"}</p>
-              </Link>
-            </div>
+      {/* Image Section */}
+      <div className="relative h-64 overflow-hidden flex-shrink-0">
+        <Image
+          src={`https://raw.githubusercontent.com/ivanexist/gcs-new/refs/heads/master/public/images/${images[0]}`}
+          loading="lazy"
+          alt={project.name}
+          width={800}
+          height={600}
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+        />
+        
+        {/* Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-multiply" />
+
+        {/* Badges */}
+        <div className="absolute top-4 left-4 z-10 flex gap-2">
+          <span className="px-3 py-1.5 bg-malachite-600 backdrop-blur-md text-white text-xs font-semibold rounded-full tracking-wider border border-white/20">
+            {service?.name}
+          </span>
+        </div>
+
+        {/* Project Name overlapping image bottom */}
+        <div className="absolute bottom-4 left-6 right-6 z-10 transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
+          <h3 className="text-xl font-bold text-white font-PlayfairDisplay leading-tight drop-shadow-lg">
+            {project.name}
+          </h3>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="p-6 flex flex-col flex-1 bg-white">
+        {/* Metadata Details */}
+        <div className="flex flex-col gap-3 mb-6">
+          <div className="flex items-center gap-3 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-gray-400">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            <span className="text-masala-700 font-medium">{client?.name}</span>
           </div>
-          <div className="p-6">
-            <h3 className="text-lg font-semibold mb-2 text-blue-700 font-PlayfairDisplay">
-              {project.name}
-            </h3>
-            {/* <p className="text-muted-foreground text-sm mb-4">
-              {language === "en"
-                ? relatedProject.description
-                : relatedProject.descriptionId}
-            </p> */}
-            <div className="flex sm:flex-col md:flex-row justify-between text-sm text-gray-700">
-              <span className="flex items-center mr-4 sm:my-2 lg:my-0 sm:mt-0 lg:mt-4">
-                <ReactSVG
-                  src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/client-gray.svg`}
-                  className="mr-2"
-                />
-                {client?.name}
-              </span>
-              <span className="flex items-center sm:mt-0 lg:mt-2">
-                <ReactSVG
-                  className="text-center text-blue-500 transition-colors duration-300 mr-2 "
-                  src={`https://raw.githubusercontent.com/ivanexist/gemilang-cs/refs/heads/master/public/assets/icons/date-gray.svg`}
-                />
-                {project.yearcompleted.join(", ")}
-              </span>
-            </div>
-            <Link href={`/proyek/${project.url}`}>
-              <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:text-white h-9 rounded-md px-3 w-full sm:mt-4 md:mt-6 text-blue-700 hover:border-blue-700 hover:cursor-pointer hover:shadow-lg hover:bg-blue-700 duration-300">
-                Lihat Detail
-              </button>
-            </Link>
+          
+          <div className="flex items-center gap-3 text-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-gray-400">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            <span className="text-masala-500">{project.location}</span>
           </div>
         </div>
+
+        {/* CTA Button */}
+        <Link href={`/proyek/${project.url}`} className="mt-auto">
+          <div className="w-full flex items-center justify-between px-5 py-3.5 bg-gray-50 text-blue-700 text-sm font-bold rounded-xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+            <span>Lihat Detail</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 transform group-hover:translate-x-1 transition-transform">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </div>
+        </Link>
       </div>
     </motion.div>
   );

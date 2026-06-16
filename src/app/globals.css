@@ -239,4 +239,184 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Font-face declarations (fallback for components not using next/font) */
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("/font/PlayfairDisplay.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/font/OpenSans.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Marquee animation for client logo carousel */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Shimmer animation for premium card hover effects */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+/* Accordion Animations */
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.animate-slideUp {
+  animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+
+/* Counter fade-up animation for stats */
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUpIn 0.8s ease-out forwards;
+}
+
+/* Timeline connector line */
+.timeline-line {
+  position: relative;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: -20px;
+  width: 2px;
+  background: linear-gradient(to bottom, #2563eb, #dbeafe);
+}
+
+.timeline-line:last-child::before {
+  display: none;
+}
+
+/* Hover lift effect for premium cards */
+@keyframes hoverLift {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  100% {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Custom Swiper pagination styles for project details */
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2563eb !important;
+  width: 28px !important;
+  border-radius: 5px !important;
+}
+
+/* Project card image zoom */
+.project-card-image {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.08);
+}
+
+/* Gradient border shimmer for premium cards */
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: rgba(37, 99, 235, 0.1);
+  }
+  50% {
+    border-color: rgba(37, 99, 235, 0.3);
+  }
+}
+
+/* Subtle floating animation for decorative elements */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

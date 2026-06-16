@@ -1,13 +1,15 @@
-import Breadcrumb from "../components/common/Breadcrumb";
 import ContactContent from "../components/contact/ContactContent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontak",
+  description: "Hubungi PT Gemilang Cipta Sentosa untuk konsultasi dan penawaran proyek konstruksi Anda.",
+};
 
 export default function ContactPage() {
   return (
-    <div>
-      <Breadcrumb />
-      <div className="">
-        <ContactContent />
-      </div>
-    </div>
+    <main>
+      <ContactContent />
+    </main>
   );
 }
