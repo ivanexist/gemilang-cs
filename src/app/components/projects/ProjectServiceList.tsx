@@ -1,7 +1,6 @@
 "use client";
 
 import { useStore } from "@/store/useStore";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect } from "react";
 import { ReactSVG } from "react-svg";

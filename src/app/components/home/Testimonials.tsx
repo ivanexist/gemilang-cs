@@ -96,7 +96,7 @@ export default function Testimonials() {
               <StarRating />
 
               <p className={`text-lg leading-relaxed mb-8 font-openSans font-light ${activeIndex === index ? "text-blue-50" : "text-masala-600"}`}>
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
 
               <div className="flex items-center mt-auto">
@@ -119,7 +119,7 @@ export default function Testimonials() {
               <div className={`absolute top-4 right-8 text-8xl font-serif leading-none opacity-[0.03] select-none pointer-events-none ${
                 activeIndex === index ? "text-white" : "text-masala-900"
               }`}>
-                "
+                &quot;
               </div>
             </motion.div>
           ))}

@@ -47,11 +47,11 @@ const AboutCommitment = () => {
             </svg>
             
             <p className="text-xl md:text-2xl text-blue-50 font-openSans font-light leading-relaxed max-w-4xl mx-auto italic relative z-10">
-              "Seiring dengan program pemerintah tentang pembangunan
+              &quot;Seiring dengan program pemerintah tentang pembangunan
               berkesinambungan serta penggunaan energi alternatif, maka merupakan
               komitmen utama bagi kami untuk mampu berkarya sebaik mungkin, sehingga
               program pemerataan pembangunan untuk semua masyarakat dapat
-              terlayani dan tercukupi dengan baik."
+              terlayani dan tercukupi dengan baik.&quot;
             </p>
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-blue-500 absolute -bottom-4 -right-4 md:-right-8 opacity-50 transform rotate-180">

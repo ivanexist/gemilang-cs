@@ -94,7 +94,7 @@ const TrustIndicators = () => {
         className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl shadow-blue-900/10 border border-white"
       >
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 divide-x-0 lg:divide-x divide-gray-100">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="text-center group px-4">
               <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm border border-blue-100">
                 {stat.icon}

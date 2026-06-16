@@ -1,7 +1,6 @@
 "use client";
 import { useStore } from "@/store/useStore";
 import ServiceCard from "./ServiceCard";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Breadcrumb from "../common/Breadcrumb";
