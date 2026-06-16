@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ContactHero from "./ContactHero";
+import ContactHero from "@/app/components/contact/ContactHero";
 import TrustIndicators from "./TrustIndicators";
 import ContactSection from "./ContactSection";
 import ContactMap from "./ContactMap";
