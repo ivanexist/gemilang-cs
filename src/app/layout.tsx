@@ -72,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${playfairDisplay.variable} ${openSans.variable}`}>
+    <html lang="id" className={`${playfairDisplay.variable} ${openSans.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -105,7 +105,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased" suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import ProjectContent from "../components/projects/ProjectContent";
 import Link from "next/link";
 import { Metadata } from "next";
+import Breadcrumb from "../components/common/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Portofolio Proyek | PT Gemilang Cipta Sentosa",
@@ -21,11 +22,11 @@ export default function ProjectsPage() {
         </div>
       }
     >
-      {/* <div className="w-full bg-slate-50 border-b border-gray-100">
+      <div className="w-full bg-slate-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Breadcrumb />
         </div>
-      </div> */}
+      </div>
 
       {/* Main Content Area */}
       <ProjectContent />

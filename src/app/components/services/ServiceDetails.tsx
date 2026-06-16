@@ -97,7 +97,7 @@ export default function ServiceDetails() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 lg:-mt-32 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 lg:-mt-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           
           {/* Main Content Area (Left 2 columns) */}
