@@ -1,7 +1,6 @@
 "use client";
-import Breadcrumb from "@/app/components/common/Breadcrumb";
-import ServiceDetails from "@/app/components/services/ServiceDetails";
 import { useStore } from "@/store/useStore";
+import ServiceDetails from "@/app/components/services/ServiceDetails";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";

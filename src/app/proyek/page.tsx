@@ -1,8 +1,6 @@
 import { Suspense } from "react";
-import Breadcrumb from "../components/common/Breadcrumb";
 import ProjectContent from "../components/projects/ProjectContent";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

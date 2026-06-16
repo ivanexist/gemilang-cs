@@ -1,5 +1,4 @@
 "use client";
-import Breadcrumb from "@/app/components/common/Breadcrumb";
 import ProjectsDetailsContent from "@/app/components/projects/ProjectDetailsContent";
 import { useStore } from "@/store/useStore";
 import Link from "next/link";
